@@ -1,6 +1,6 @@
 <?php
 
-namespace Blogger\BlogBundle\DataFixtures\ORM;
+namespace Quak\OpenArenaBundle\DataFixtures\ORM;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
@@ -13,6 +13,8 @@ use Quak\OpenArenaBundle\Entity\Clash;
 use Quak\OpenArenaBundle\Entity\ClashResult;
 use Quak\OpenArenaBundle\Entity\Player;
 use Quak\OpenArenaBundle\Entity\PlayerResult;
+use Quak\OpenArenaBundle\Entity\Weapon;
+use Quak\OpenArenaBundle\Entity\WeaponResult;
 
 class Season1Fixtures implements FixtureInterface
 {
@@ -20,12 +22,14 @@ class Season1Fixtures implements FixtureInterface
     protected $teams;
     protected $manater;
     protected $players;
+    protected $weapons;
 
     public function load(ObjectManager $manager)
     {
         $this->manager = $manager;
 
         $this->loadMaps($manager);
+        $this->loadWeapons();
 
         $season = new Season();
         $season->setNumber(1);
@@ -194,6 +198,30 @@ class Season1Fixtures implements FixtureInterface
             $this->maps[$map] = new Map();
             $this->maps[$map]->setName($map);
             $manager->persist($this->maps[$map]);
+        }
+    }
+
+    protected function loadWeapons()
+    {
+        $weapons = array(
+            'gaunlet',
+            'machinegun',
+            'shotgun',
+            'lightning',
+            'grenade',
+            'plasma',
+            'rocket',
+            'railgun',
+            'nailgun',
+            'minelayer',
+            'kamikaze',
+            'bfg',
+            'chaingun'
+        );
+        foreach ($weapons as $weapon) {
+            $this->weapons[$weapon] = new Map();
+            $this->weapons[$weapon]->setName($weapon);
+            $this->manager->persist($this->weapons[$weapon]);
         }
     }
 
