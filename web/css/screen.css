@@ -1,0 +1,78 @@
+
+body {
+    background: url('../images/back.jpg') no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.clearfix {
+    clear: both;
+}
+
+#wrapper {
+    width: 1000px;
+    margin: auto;
+}
+
+#header {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+}
+#header ul, #header ul li {
+    padding: 0;
+    margin: auto;
+    list-style: none;
+}
+#header a, #header a:hover, #header a:visited {
+    text-decoration: none;
+    color: #fff;
+}
+
+.main-col {
+    background: #fff;
+    border: 1px solid black;
+}
+
+#currentSeason {
+    text-align: center;
+}
+
+#season #teams {
+    width: 24%;
+    margin: 0;
+    padding: 3px;
+    float: left;
+}
+
+#season #matchesUpcoming, #season #matchesPlayed, #season #players {
+    width: 24%;
+    margin: 0;
+    float: left;
+}
+
+#team #players, #team #matchesUpcoming, #team #matchesPlayed {
+    width: 33%;
+    margin: 0;
+    float: left;
+}
+
+#match #stats, #match #clashes .clash {
+    text-align: center;
+    clear: both;
+}
+
+#match #clashes .team1 {
+    text-align: right;
+    float: left;
+    width: 45%;
+    margin: 0;
+    padding: 10px;
+}
+#match #clashes .team2 {
+    text-align: left;
+    float: left;
+    width: 45%;
+    margin: 0;
+    padding: 10px;
+}

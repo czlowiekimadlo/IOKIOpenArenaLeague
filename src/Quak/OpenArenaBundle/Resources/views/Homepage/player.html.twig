@@ -1,0 +1,32 @@
+{# src/Quak/OpenArenaBundle/Resources/views/Homepage/player.html.twig #}
+{% extends 'QuakOpenArenaBundle::layout.html.twig' %}
+
+{% block title %}
+    {{ player.name }}, Season {{ player.team.season.number }}
+{% endblock %}
+
+{% block body %}
+<div id="player">
+    <div id="stats">
+        <h1>{{ player.name }}</h1>
+        <h1>Team: {{ player.team.name }}</h1>
+        <h1>Average score: {{ player.getAverageScore() }}</h1>
+        <h1>Total score: {{ player.getTotalScore() }}</h1>
+        <h1>Best match:
+            {% if player.getTopResult() is null %}
+            N/A
+            {% else %}
+            <a href="{{ path('QuakOpenArenaBundle_match', { id: player.getTopResult().clash.match.id }) }}">Round {{ player.getTopResult().clash.match.round.number }}, Match {{ player.getTopResult().clash.match.number }}</a>
+            {% endif %}
+        </h1>
+    </div>
+    <div id="matches">
+        <h1>Matches played</h1>
+        <ul>
+        {% for result in player.results %}
+            <li><a href="{{ path('QuakOpenArenaBundle_match', { id : result.clash.match.id }) }}">{{ result.clash.map.name }}</a>: {{ result.score }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

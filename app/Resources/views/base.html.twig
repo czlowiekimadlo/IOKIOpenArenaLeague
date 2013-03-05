@@ -1,0 +1,41 @@
+<!-- app/Resources/views/base.html.twig -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html"; charset=utf-8" />
+        <title>{% block title %}Fight!{% endblock %} - IOKI OpenArena League</title>
+        {% block stylesheets %}
+            <link href="{{ asset('css/screen.css') }}" type="text/css" rel="stylesheet" />
+        {% endblock %}
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header">
+                <a href="{{ path('QuakOpenArenaBundle_homepage') }}">
+                    <h2>{% block blog_title %}IOKI OpenArena League{% endblock %}</h2>
+                    <h3>{% block blog_tagline %}Honor. Valor. Symfony 2.x{% endblock %}</h3>
+                </a>
+                {% block seasonsnav %}
+                <ul class="seasons">
+                {% for season in seasons %}
+                    <li><a href="{{ path('QuakOpenArenaBundle_season', { id : season.number }) }}">Season {{ season.number }}</a></li>
+                {% endfor %}
+                </ul>
+                {% endblock %}
+            </div>
+
+            <div class="main-col">
+                {% block body %}{% endblock %}
+                <div class="clearfix"></div>
+            </div>
+
+            <div id="footer">
+                {% block footer %}
+                    IOKI OpenArena League - created by <a href="mailto:wchojnacki@ioki.com.pl">CzlowiekImadlo</a>
+                {% endblock %}
+            </div>
+        </div>
+
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

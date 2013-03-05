@@ -1,0 +1,34 @@
+# src/Quak/OpenArenaBundle/Resources/config/routing.yml
+QuakOpenArenaBundle_homepage:
+    pattern:  /
+    defaults: { _controller: QuakOpenArenaBundle:Homepage:index }
+    requirements:
+        _method:  GET
+
+QuakOpenArenaBundle_season:
+    pattern: /season/{id}
+    defaults: { _controller: QuakOpenArenaBundle:Homepage:season }
+    requirements:
+        _method:  GET
+        _id:      \d+
+
+QuakOpenArenaBundle_team:
+    pattern: /team/{id}
+    defaults: { _controller: QuakOpenArenaBundle:Homepage:team }
+    requirements:
+        _method:  GET
+        _id:      \d+
+
+QuakOpenArenaBundle_match:
+    pattern: /match/{id}
+    defaults: { _controller: QuakOpenArenaBundle:Homepage:match }
+    requirements:
+        _method:  GET
+        _id:      \d+
+
+QuakOpenArenaBundle_player:
+    pattern: /player/{id}
+    defaults: { _controller: QuakOpenArenaBundle:Homepage:player }
+    requirements:
+        _method:  GET
+        _id:      \d+

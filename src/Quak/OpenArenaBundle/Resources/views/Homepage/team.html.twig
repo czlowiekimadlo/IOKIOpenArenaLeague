@@ -1,0 +1,61 @@
+{# src/Quak/OpenArenaBundle/Resources/views/Homepage/team.html.twig #}
+{% extends 'QuakOpenArenaBundle::layout.html.twig' %}
+
+{% block title %}
+    {{ team.name }}
+{% endblock %}
+
+{% block body %}
+<div id="team">
+    <div id="stats">
+        <h1>{{ team.name }}</h1>
+        <h1>Average score: {{ team.getAverageScore() }}</h1>
+        <h1>Total score: {{ team.getTotalScore() }}</h1>
+        <h1>Best match:
+            {% if team.getTopResult() is null %}
+            N/A
+            {% else %}
+            <a href="{{ path('QuakOpenArenaBundle_match', { id: team.getTopResult().clash.match.id }) }}">Round {{ team.getTopResult().clash.match.round.number }}, Match {{ team.getTopResult().clash.match.number }}</a>
+            {% endif %}
+        </h1>
+    </div>
+    <div id="players">
+        <h1>Players</h1>
+        <ul>
+        {% for player in team.players %}
+            <li><a href="{{ path('QuakOpenArenaBundle_player', { id : player.id }) }}">{{ player.name }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+    <div id="matchesUpcoming">
+        <h1>Upcoming matches</h1>
+        <ul>
+        {% for match in team.getUpcominMatches() %}
+            <li>
+                <p><a href="{{ path('QuakOpenArenaBundle_match', { id: match.id }) }}">Round {{ match.round.number }}, Match {{ match.number }}</a></p>
+                <p>{{ match.date.format('Y-m-d H:i') }}</p>
+                <p>{{ match.teams[0].name }} vs {{ match.teams[1].name }}</p>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+    <div id="matchesPlayed">
+        <h1>Played matches</h1>
+        <ul>
+        {% for match in team.getPlayedMatches() %}
+            <li>
+                <p><a href="{{ path('QuakOpenArenaBundle_match', { id: match.id }) }}">Round {{ match.round.number }}, Match {{ match.number }}</a></p>
+                <p>{{ match.date.format('Y-m-d H:i') }}</p>
+                {% for clash in match.clashes %}
+                    <p>{{ clash.map.name }}
+                    {% if clash.clashResults.count > 0 %}
+                        <br />{{ clash.clashResults[0].team.name }} {{ clash.clashResults[0].score }} : {{ clash.clashResults[1].score }} {{ clash.clashResults[1].team.name }}
+                    {% endif %}
+                    </p>
+                {% endfor %}
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

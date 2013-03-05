@@ -1,0 +1,40 @@
+{# src/Quak/OpenArenaBundle/Resources/views/Homepage/match.html.twig #}
+{% extends 'QuakOpenArenaBundle::layout.html.twig' %}
+
+{% block title %}
+    Season {{ match.round.season.number }}, Round {{ match.round.number }}, Match {{ match.number }}
+{% endblock %}
+
+{% block body %}
+<div id="match">
+    <div id="stats">
+        <h1><a href="{{ path('QuakOpenArenaBundle_season', { id : match.round.season.number }) }}">Season {{ match.round.season.number }}</a>, Round {{ match.round.number }}, Match {{ match.number }}</h1>
+        <h1><a href="{{ path('QuakOpenArenaBundle_team', { id : match.teams[0].id}) }}">{{ match.teams[0].name }}</a><h1>
+        <h2>vs</h2>
+        <h1><a href="{{ path('QuakOpenArenaBundle_team', { id : match.teams[1].id}) }}">{{ match.teams[1].name }}</a></h1>
+    </div>
+    <div id="clashes">
+    {% for clash in match.clashes %}
+        <div class="clash">
+            <h1>{{ clash.map.name }}</h1>
+            <h2><a href="{{ clash.screen }}">Screenshot</a></h2>
+            <h2><a href="{{ clash.replay }}">Replay</a></h2>
+        </div>
+        {% if clash.clashResults.count > 0 %}
+        <div class="team1">
+            <h1>{{ match.teams[0].name }} {{ clash.getScoreForTeam(match.teams[0].id) }}</h1>
+            {% for result in clash.getPlayerResultsForTeam(match.teams[0].id) %}
+            <h2><a href="{{ path('QuakOpenArenaBundle_player', { id : result.player.id }) }}">{{ result.player.name }}</a> {{ result.score }}</h2>
+            {% endfor %}
+        </div>
+        <div class="team2">
+            <h1>{{ clash.getScoreForTeam(match.teams[1].id) }} {{ match.teams[1].name }}</h1>
+            {% for result in clash.getPlayerResultsForTeam(match.teams[1].id) %}
+            <h2>{{ result.score }} <a href="{{ path('QuakOpenArenaBundle_player', { id : result.player.id }) }}">{{ result.player.name }}</a></h2>
+            {% endfor %}
+        </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+</div>
+{% endblock %}

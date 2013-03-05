@@ -1,0 +1,7 @@
+parameters:
+#    quak_open_arena.example.class: Quak\OpenArenaBundle\Example
+
+services:
+#    quak_open_arena.example:
+#        class: %quak_open_arena.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

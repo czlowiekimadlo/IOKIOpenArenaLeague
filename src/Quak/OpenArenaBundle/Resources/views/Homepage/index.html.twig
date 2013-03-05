@@ -1,0 +1,27 @@
+{# src/Quak/OpenArenaBundle/Resources/views/Homepage/index.html.twig #}
+{% extends 'QuakOpenArenaBundle::layout.html.twig' %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block body %}
+<div id="currentSeason">
+	<h1><a href="{{ path('QuakOpenArenaBundle_season', { id : latestSeason.number }) }}">Season {{ latestSeason.number }}</a></h1>
+	<div id="nextMatch">
+		<h2><a href="{{ path('QuakOpenArenaBundle_match', { id: nextMatch.id }) }}">Round {{ nextMatch.round.number }}, Match {{ nextMatch.number }}</a></h2>
+		<h3>{{ nextMatch.date.format('Y-m-d H:i') }}</h3>
+        <h3>{{ nextMatch.teams[0].name }} vs {{ nextMatch.teams[1].name }}</h3>
+	</div>
+	<div id="lastMatch">
+		<h2><a href="{{ path('QuakOpenArenaBundle_match', { id: lastMatch.id }) }}">Round {{ lastMatch.round.number }}, Match {{ lastMatch.number }}</a></h2>
+		<h3>{{ lastMatch.date.format('Y-m-d H:i') }}</h3>
+        {% for clash in lastMatch.clashes %}
+            <h3>{{ clash.map.name }}</h3>
+            {% if clash.clashResults.count > 0 %}
+                <h3>{{ clash.clashResults[0].team.name }} {{ clash.clashResults[0].score }} : {{ clash.clashResults[1].score }} {{ clash.clashResults[1].team.name }}</h3>
+            {% endif %}
+        {% endfor %}
+	</div>
+</div>
+{% endblock %}
