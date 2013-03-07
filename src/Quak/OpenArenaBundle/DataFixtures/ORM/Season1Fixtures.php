@@ -147,8 +147,36 @@ class Season1Fixtures implements FixtureInterface
             )
         ));
         $match = $this->createMatch(5, '06.03.2013 16:15', $round1, 'bn', 'w', array(
-            'ctf_gate1' => array(),
-            'am_thornish' => array()
+            'ctf_gate1' => array(
+                'team_results' => array('bn' => 11, 'w' => 0),
+                'player_results' => array(
+                    'kpiwowarczyk' => 73,
+                    'wchojnacki' => 56,
+                    'spawlowski' => 50,
+                    'mmucha' => 25,
+                    'lrozniakowski' => 36,
+                    'ddykszak' => 33,
+                    'lpospiech' => 23,
+                    'dbudynek' => 8
+                ),
+                'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-03-06-BN-W-gate1.jpg',
+                'replay' => 'http://youtu.be/-L-39snLUsE'
+            ),
+            'am_thornish' => array(
+                'team_results' => array('bn' => 8, 'w' => 2),
+                'player_results' => array(
+                    'wchojnacki' => 100,
+                    'kpiwowarczyk' => 73,
+                    'spawlowski' => 59,
+                    'mmucha' => 40,
+                    'lrozniakowski' => 60,
+                    'ddykszak' => 47,
+                    'lpospiech' => 45,
+                    'dbudynek' => 10
+                ),
+                'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-03-06-BN-W-thornish.jpg',
+                'replay' => 'http://youtu.be/Dh4d_PS4S7A'
+            )
         ));
         $match = $this->createMatch(6, '12.03.2013 16:30', $round1, 'tau', 'sd');
         $match = $this->createMatch(7, '19.03.2013 16:30', $round1, 'bn', 'sd');
@@ -232,7 +260,8 @@ class Season1Fixtures implements FixtureInterface
             'tau' => 'TAMA AZS UWM Indykpol Wkrętmet Majonez Kętrzyński Rataje',
             'bn'  => 'Bad News',
             'sd'  => 'S&D',
-            'w'   => 'Whatever'
+            'w'   => 'Whatever',
+            'na'  => 'No team'
         );
 
         $players = array(
@@ -265,6 +294,9 @@ class Season1Fixtures implements FixtureInterface
                 'ddykszak' => 'Daniel Dykszak',
                 'dkacban' => 'Dariusz Kacban',
                 'dbudynek' => 'Dariusz Budynek'
+            ),
+            'na'  => array(
+                'lpospiech' => 'Łukasz Pospiech'
             )
         );
 
