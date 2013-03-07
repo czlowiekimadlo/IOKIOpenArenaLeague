@@ -296,7 +296,9 @@ class Season1Fixtures implements FixtureInterface
                 'dbudynek' => 'Dariusz Budynek'
             ),
             'na'  => array(
-                'lpospiech' => 'Łukasz Pospiech'
+                'mwlodek' => 'Mateusz Włodek',
+                'lpospiech' => 'Łukasz Pospiech',
+                'wsurmacz' => 'Wojciech Surmacz'
             )
         );
 
