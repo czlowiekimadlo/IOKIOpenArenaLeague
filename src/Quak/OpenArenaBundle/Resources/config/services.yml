@@ -1,7 +1,7 @@
 parameters:
-#    quak_open_arena.example.class: Quak\OpenArenaBundle\Example
+    logParser.class: Quak\OpenArenaBundle\Service\LogParser
 
 services:
-#    quak_open_arena.example:
-#        class: %quak_open_arena.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+    logParser:
+        class: %logParser.class%
+        arguments: [ @kernel ]

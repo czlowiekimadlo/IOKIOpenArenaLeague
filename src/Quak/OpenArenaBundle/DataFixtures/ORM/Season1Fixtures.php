@@ -3,6 +3,8 @@
 namespace Quak\OpenArenaBundle\DataFixtures\ORM;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
+use Symfony\Component\DependencyInjection\ContainerAwareInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Quak\OpenArenaBundle\Entity\Season;
 use Quak\OpenArenaBundle\Entity\Round;
@@ -16,13 +18,20 @@ use Quak\OpenArenaBundle\Entity\PlayerResult;
 use Quak\OpenArenaBundle\Entity\Weapon;
 use Quak\OpenArenaBundle\Entity\WeaponResult;
 
-class Season1Fixtures implements FixtureInterface
+class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
 {
     protected $maps;
     protected $teams;
     protected $manater;
     protected $players;
     protected $weapons;
+
+    protected $container;
+
+    public function setContainer(ContainerInterface $container = null)
+    {
+        $this->container = $container;
+    }
 
     public function load(ObjectManager $manager)
     {
@@ -64,7 +73,8 @@ class Season1Fixtures implements FixtureInterface
                     'tnebes' => 14
                 ),
                 'screen' => 'http://dev112.ioki.com.pl/%7Ewchojnacki/openarena/league/2013-02-13-TAU-W-bases3plus3.jpg',
-                'replay' => 'http://youtu.be/Yd4ZCrdRHJM'
+                'replay' => 'http://youtu.be/Yd4ZCrdRHJM',
+                'log' => '2013-02-13-tau-w-bases3plus3.txt'
             ),
             'am_thornish' => array(
                 'team_results' => array('w' => 3, 'tau' => 4),
@@ -79,7 +89,8 @@ class Season1Fixtures implements FixtureInterface
                     'aadamczewski' => 56
                 ),
                 'screen' => 'http://dev112.ioki.com.pl/%7Ewchojnacki/openarena/league/2013-02-13-TAU-W-thornish.jpg',
-                'replay' => 'http://youtu.be/fS12N3WYZ6c'
+                'replay' => 'http://youtu.be/fS12N3WYZ6c',
+                'log' => '2013-02-13-tau-w-thornish.txt'
             )
         ));
         $match = $this->createMatch(3, '22.02.2013 16:00', $round1, 'mef', 'tau', array(
@@ -96,7 +107,8 @@ class Season1Fixtures implements FixtureInterface
                     'akucyrka' => 28
                 ),
                 'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-02-22-MEF-TAU-bases3plus3.jpg',
-                'replay' => 'http://youtu.be/oBwSMwVk35Y'
+                'replay' => 'http://youtu.be/oBwSMwVk35Y',
+                'log' => '2013-02-22-MEF-TAU-bases3plus3.txt'
             ),
             'ctf_gate1' => array(
                 'team_results' => array('mef' => 2, 'tau' => 4),
@@ -111,7 +123,8 @@ class Season1Fixtures implements FixtureInterface
                     'mzimny' => 34
                 ),
                 'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-02-22-MEF-TAU-gate1.jpg',
-                'replay' => 'http://youtu.be/SSnQS6evpyM'
+                'replay' => 'http://youtu.be/SSnQS6evpyM',
+                'log' => '2013-02-22-MEF-TAU-gate1.txt'
             )
         ));
         $match = $this->createMatch(4, '27.02.2013 16:15', $round1, 'sd', 'w', array(
@@ -128,7 +141,8 @@ class Season1Fixtures implements FixtureInterface
                     'dbudynek' => 3
                 ),
                 'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-02-27-SD-W-gate1.jpg',
-                'replay' => 'http://youtu.be/Vrdd00qHePo'
+                'replay' => 'http://youtu.be/Vrdd00qHePo',
+                '2013-02-27-SD-W-gate1.txt'
             ),
             'oa_reptctf11' => array(
                 'team_results' => array('sd' => 5, 'w' => 4),
@@ -143,7 +157,8 @@ class Season1Fixtures implements FixtureInterface
                     'dbudynek' => 18
                 ),
                 'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-02-27-SD-W-reptctf11.jpg',
-                'replay' => 'http://youtu.be/6HLgcv50Smc'
+                'replay' => 'http://youtu.be/6HLgcv50Smc',
+                'log' => '2013-02-27-SD-W-reptctf11.txt'
             )
         ));
         $match = $this->createMatch(5, '06.03.2013 16:15', $round1, 'bn', 'w', array(
@@ -232,23 +247,23 @@ class Season1Fixtures implements FixtureInterface
     protected function loadWeapons()
     {
         $weapons = array(
-            'gaunlet',
-            'machinegun',
-            'shotgun',
-            'lightning',
-            'grenade',
-            'plasma',
-            'rocket',
-            'railgun',
-            'nailgun',
-            'minelayer',
-            'kamikaze',
-            'bfg',
-            'chaingun'
+            'gaunlet' => 'Gaunlet',
+            'machinegun' => 'Machinegun',
+            'shotgun' => 'Shotgun',
+            'lightning' => 'Lightning Gun',
+            'grenade' => 'Grenade Launcher',
+            'plasma' => 'Plasmagun',
+            'rocket' => 'Rocket Launcher',
+            'rail' => 'Railgun',
+            'nailgun' => 'Nailgun',
+            'proxy' => 'Minelayer',
+            'kamikaze' => 'Kamikaze Strike',
+            'bfg' => 'BFG',
+            'chaingun' => 'Chaingun'
         );
-        foreach ($weapons as $weapon) {
-            $this->weapons[$weapon] = new Map();
-            $this->weapons[$weapon]->setName($weapon);
+        foreach ($weapons as $weapon => $name) {
+            $this->weapons[$weapon] = new Weapon();
+            $this->weapons[$weapon]->setName($name);
             $this->manager->persist($this->weapons[$weapon]);
         }
     }
@@ -337,6 +352,11 @@ class Season1Fixtures implements FixtureInterface
             $this->manager->persist($clash);
             $match->addClash($clash);
 
+            if (isset($mapresults['log'])) {
+                $playersStats = $this->container->get('logParser')->parseLog($mapresults['log']);
+            } else {
+                $playersStats = array();
+            }
 
             if (isset($mapresults['team_results'])) {
                 foreach ($mapresults['team_results'] as $team => $score) {
@@ -353,6 +373,13 @@ class Season1Fixtures implements FixtureInterface
                     $playerResult->setScore($score);
                     $playerResult->setClash($clash);
                     $playerResult->setPlayer($this->players[$nick]);
+
+                    $playerStats = $this->matchPlayerStats($nick, $playersStats);
+
+                    if (!empty($playerStats)) {
+                        $this->appendPlayerStats($playerResult, $playerStats);
+                    }
+
                     $this->manager->persist($playerResult);
                 }
             }
@@ -365,6 +392,62 @@ class Season1Fixtures implements FixtureInterface
         }
 
         return $match;
+    }
+
+    protected function matchPlayerStats($nick, $stats)
+    {
+        $nickmap = array(
+            'mgoraj' => 'Kaczumbinator',
+            'awaleska' => 'Ketrzynski ssie',
+            'rslocinski' => 'SirHeadly',
+            'mwozniak' => 'MarW',
+            'tnebes' => array('vagino_rossi', 'TNebes'),
+            'akucyrka' => 'kuyk',
+            'mzimny' => array('Kaltgesicht', 'Coldface'),
+            'aadamczewski' => array('Bozenka', 'AAdAmCzEwSkI'),
+            'kpiwowarczyk' => 'KrysPiwo',
+            'wchojnacki' => 'CzlowiekImadlo',
+            'spawlowski' => 'kit',
+            'mmucha' => 'MM',
+            'fgorny' => 'Filip',
+            'lciolek' => 'EloRap',
+            'rpalczynski' => 'radepal',
+            'sdudek' => 'd3dik',
+            'lrozniakowski' => 'lrozniakowski',
+            'ddykszak' => 'WhySoSerious',
+            'dkacban' => 'Kot Schrodingera',
+            'dbudynek' => 'Dario',
+            'mwlodek' => null,
+            'lpospiech' => 'ZoCiM',
+            'wsurmacz' => null
+        );
+
+        if(is_array($nickmap[$nick])) {
+            foreach ($nickmap[$nick] as $matchnick) {
+                if (isset($stats[$matchnick])) return $stats[$matchnick];
+            }
+        } else {
+            if (isset($stats[$nickmap[$nick]])) return $stats[$nickmap[$nick]];
+        }
+
+        return array();
+    }
+
+    protected function appendPlayerStats(PlayerResult $result, $stats)
+    {
+        $result->setKills($stats['killed']);
+        $result->setCarrierKills($stats['carriers_killed']);
+        $result->setFlagCaptures($stats['flag_captures']);
+        $result->setFlagPickups($stats['flag_pickups']);
+        $result->setFlagReturns($stats['flag_returns']);
+        $result->setSprees($stats['spree']);
+        foreach ($stats['kills'] as $weaponName => $kills) {
+            $weaponResult = new WeaponResult();
+            $weaponResult->setScore($kills);
+            $weaponResult->setWeapon($this->weapons[$weaponName]);
+            $weaponResult->setPlayerResult($result);
+            $this->manager->persist($weaponResult);
+        }
     }
 
     public function getOrder()

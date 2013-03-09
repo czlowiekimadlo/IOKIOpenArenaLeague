@@ -186,7 +186,7 @@ class Season
         }
 
         usort($players, function($a, $b) {
-            return $a->getAverageScore() < $b->getAverageScore() ? 1 : -1;
+            return ($a->getAverageScore() < $b->getAverageScore()) ? 1 : -1;
         });
 
         return $players;

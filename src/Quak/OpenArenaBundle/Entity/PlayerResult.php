@@ -48,6 +48,11 @@ class PlayerResult
     protected $sprees;
 
     /**
+     * @ORM\Column(type="integer")
+     */
+    protected $kills;
+
+    /**
      * @ORM\OneToMany(targetEntity="\Quak\OpenArenaBundle\Entity\WeaponResult", mappedBy="playerResult", cascade={"all"})
      */
     protected $weaponResults;
@@ -75,6 +80,7 @@ class PlayerResult
         $this->flagReturns = 0;
         $this->carrierKills = 0;
         $this->sprees = 0;
+        $this->kills = 0;
     }
 
     public function getId()
@@ -165,6 +171,16 @@ class PlayerResult
     public function getSprees()
     {
         return $this->sprees;
+    }
+
+    public function setKills($kills)
+    {
+        $this->kills = $kills;
+    }
+
+    public function getKills()
+    {
+        return $this->kills;
     }
 
     public function addWeaponResult(\Quak\OpenArenaBundle\Entity\WeaponResult $result)
