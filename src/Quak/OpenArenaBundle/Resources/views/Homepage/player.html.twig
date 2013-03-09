@@ -10,8 +10,13 @@
     <div id="stats">
         <h1>{{ player.name }}</h1>
         <h1>Team: {{ player.team.name }}</h1>
-        <h1>Average score: {{ player.getAverageScore() }}</h1>
-        <h1>Total score: {{ player.getTotalScore() }}</h1>
+        <h1>Score: {{ player.getTotalScore() }} ({{ player.getAverageScore() }})</h1>
+        <h1>Kills: {{ player.getTotalKills() }} ({{ player.getAverageKills() }})</h1>
+        <h1>Carrier kills: {{ player.getTotalCarrierKills() }} ({{ player.getAverageCarrierKills() }})</h1>
+        <h1>Flag pickups: {{ player.getTotalFlagPickups() }} ({{ player.getAverageFlagPickups() }})</h1>
+        <h1>Flag returns: {{ player.getTotalFlagReturns() }} ({{ player.getAverageFlagReturns() }})</h1>
+        <h1>Flag captures: {{ player.getTotalFlagCaptures() }} ({{ player.getAverageFlagCaptures() }})</h1>
+        <h1>Sprees: {{ player.getTotalSprees() }} ({{ player.getAverageSprees() }})</h1>
         <h1>Best match:
             {% if player.getTopResult() is null %}
             N/A

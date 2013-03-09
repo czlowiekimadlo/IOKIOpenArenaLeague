@@ -75,7 +75,7 @@ class Player
         return $this->results;
     }
 
-    public function getAverageScore()
+    public function getAverageStat($name)
     {
         if (count($this->results) == 0) {
             return 0;
@@ -86,12 +86,32 @@ class Player
 
         foreach ($this->results as $result) {
             $count++;
-            $sum += $result->getScore();
+            $sum += $result->$name();
         }
 
         $average = $sum / $count;
 
         return floor($average + 0.5);
+    }
+
+    public function getTotalStat($name)
+    {
+        if (empty($this->results)) {
+            return 0;
+        }
+
+        $sum = 0;
+
+        foreach ($this->results as $result) {
+            $sum += $result->$name();
+        }
+
+        return $sum;
+    }
+
+    public function getAverageScore()
+    {
+        return $this->getAverageStat('getScore');
     }
 
     public function getTopResult()
@@ -113,16 +133,60 @@ class Player
 
     public function getTotalScore()
     {
-        if (empty($this->results)) {
-            return 0;
-        }
+        return $this->getTotalStat('getScore');
+    }
 
-        $sum = 0;
+    public function getAverageKills()
+    {
+        return $this->getAverageStat('getKills');
+    }
+    public function getTotalKills()
+    {
+        return $this->getTotalStat('getKills');
+    }
 
-        foreach ($this->results as $result) {
-            $sum += $result->getScore();
-        }
+    public function getAverageCarrierKills()
+    {
+        return $this->getAverageStat('getCarrierKills');
+    }
+    public function getTotalCarrierKills()
+    {
+        return $this->getTotalStat('getCarrierKills');
+    }
 
-        return $sum;
+    public function getAverageFlagCaptures()
+    {
+        return $this->getAverageStat('getFlagCaptures');
+    }
+    public function getTotalFlagCaptures()
+    {
+        return $this->getTotalStat('getFlagCaptures');
+    }
+
+    public function getAverageFlagPickups()
+    {
+        return $this->getAverageStat('getFlagPickups');
+    }
+    public function getTotalFlagPickups()
+    {
+        return $this->getTotalStat('getFlagPickups');
+    }
+
+    public function getAverageFlagReturns()
+    {
+        return $this->getAverageStat('getFlagReturns');
+    }
+    public function getTotalFlagReturns()
+    {
+        return $this->getTotalStat('getFlagReturns');
+    }
+
+    public function getAverageSprees()
+    {
+        return $this->getAverageStat('getSprees');
+    }
+    public function getTotalSprees()
+    {
+        return $this->getTotalStat('getSprees');
     }
 }
