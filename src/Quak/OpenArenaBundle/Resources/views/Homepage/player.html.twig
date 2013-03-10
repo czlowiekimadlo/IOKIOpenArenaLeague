@@ -17,6 +17,12 @@
         <h1>Flag returns: {{ player.getTotalFlagReturns() }} ({{ player.getAverageFlagReturns() }})</h1>
         <h1>Flag captures: {{ player.getTotalFlagCaptures() }} ({{ player.getAverageFlagCaptures() }})</h1>
         <h1>Sprees: {{ player.getTotalSprees() }} ({{ player.getAverageSprees() }})</h1>
+        <h1>Total kills by weapon:</h1>
+        <ul>
+        {% for weaponResult in player.getTotalWeaponResults() %}
+            <li>{{ weaponResult.weapon.name }}: {{ weaponResult.score }}</li>
+        {% endfor %}
+        </ul>
         <h1>Best match:
             {% if player.getTopResult() is null %}
             N/A

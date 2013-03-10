@@ -4,6 +4,8 @@ namespace Quak\OpenArenaBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+use Quak\OpenArenaBundle\Entity\WeaponResult;
+
 /**
  * @ORM\Entity
  * @ORM\Table(name="players")
@@ -188,5 +190,24 @@ class Player
     public function getTotalSprees()
     {
         return $this->getTotalStat('getSprees');
+    }
+
+    public function getTotalWeaponResults()
+    {
+        $out = array();
+
+        foreach ($this->results as $result) {
+            foreach ($result->getWeaponResults() as $weaponResult) {
+                if ($weaponResult->getScore() > 0) {
+                    if (empty($out[$weaponResult->getWeapon()->getName()])) {
+                        $out[$weaponResult->getWeapon()->getName()] = new WeaponResult();
+                        $out[$weaponResult->getWeapon()->getName()]->setWeapon($weaponResult->getWeapon());
+                    }
+                    $out[$weaponResult->getWeapon()->getName()]->setScore($out[$weaponResult->getWeapon()->getName()]->getScore() + $weaponResult->getScore());
+                }
+            }
+        }
+
+        return $out;
     }
 }

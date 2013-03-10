@@ -142,7 +142,7 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
                 ),
                 'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-02-27-SD-W-gate1.jpg',
                 'replay' => 'http://youtu.be/Vrdd00qHePo',
-                '2013-02-27-SD-W-gate1.txt'
+                'log' => '2013-02-27-SD-W-gate1.txt'
             ),
             'oa_reptctf11' => array(
                 'team_results' => array('sd' => 5, 'w' => 4),

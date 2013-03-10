@@ -25,12 +25,38 @@
             <h1>{{ match.teams[0].name }} {{ clash.getScoreForTeam(match.teams[0].id) }}</h1>
             {% for result in clash.getPlayerResultsForTeam(match.teams[0].id) %}
             <h2><a href="{{ path('QuakOpenArenaBundle_player', { id : result.player.id }) }}">{{ result.player.name }}</a> {{ result.score }}</h2>
+            <ul>
+                <li>Kills: {{ result.kills }}</li>
+                <li>Carrier Kills: {{ result.carrierKills }}</li>
+                <li>Flag Captures: {{ result.flagCaptures }}</li>
+                <li>Flag Pickups: {{ result.flagPickups }}</li>
+                <li>Flag Returns: {{ result.flagReturns }}</li>
+                <li>Sprees: {{ result.sprees }}</li>
+                {% for weaponResult in result.weaponResults %}
+                {% if weaponResult.score > 0 %}
+                <li>{{ weaponResult.weapon.name }}: {{ weaponResult.score }}</li>
+                {% endif %}
+                {% endfor %}
+            </ul>
             {% endfor %}
         </div>
         <div class="team2">
             <h1>{{ clash.getScoreForTeam(match.teams[1].id) }} {{ match.teams[1].name }}</h1>
             {% for result in clash.getPlayerResultsForTeam(match.teams[1].id) %}
             <h2>{{ result.score }} <a href="{{ path('QuakOpenArenaBundle_player', { id : result.player.id }) }}">{{ result.player.name }}</a></h2>
+            <ul>
+                <li>Kills: {{ result.kills }}</li>
+                <li>Carrier Kills: {{ result.carrierKills }}</li>
+                <li>Flag Captures: {{ result.flagCaptures }}</li>
+                <li>Flag Pickups: {{ result.flagPickups }}</li>
+                <li>Flag Returns: {{ result.flagReturns }}</li>
+                <li>Sprees: {{ result.sprees }}</li>
+                {% for weaponResult in result.weaponResults %}
+                {% if weaponResult.score > 0 %}
+                <li>{{ weaponResult.weapon.name }}: {{ weaponResult.score }}</li>
+                {% endif %}
+                {% endfor %}
+            </ul>
             {% endfor %}
         </div>
         {% endif %}

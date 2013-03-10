@@ -63,7 +63,7 @@ class WeaponResult
         $this->weapon = $weapon;
     }
 
-    public function setPlaye()
+    public function getWeapon()
     {
         return $this->weapon;
     }
