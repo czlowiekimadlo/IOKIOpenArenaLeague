@@ -18,7 +18,7 @@ class LogParser
     public function parseLog($filename)
     {
         $path = $this->kernel->locateResource(self::LOGS_DIR . $filename);
-        $lines = explode("\n", str_replace(array("\r", "^7"), "", file_get_contents($path)));
+        $lines = explode("\n", str_replace(array("\r", "^7", "^1"), "", file_get_contents($path)));
         $stats = array();
 
         foreach ($lines as $line) {

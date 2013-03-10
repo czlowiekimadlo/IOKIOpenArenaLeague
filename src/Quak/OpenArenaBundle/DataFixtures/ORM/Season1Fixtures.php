@@ -175,7 +175,8 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
                     'dbudynek' => 8
                 ),
                 'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-03-06-BN-W-gate1.jpg',
-                'replay' => 'http://youtu.be/-L-39snLUsE'
+                'replay' => 'http://youtu.be/-L-39snLUsE',
+                'log' => '2013-03-06-BN-W-gate1.txt'
             ),
             'am_thornish' => array(
                 'team_results' => array('bn' => 8, 'w' => 2),
@@ -190,7 +191,8 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
                     'dbudynek' => 10
                 ),
                 'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-03-06-BN-W-thornish.jpg',
-                'replay' => 'http://youtu.be/Dh4d_PS4S7A'
+                'replay' => 'http://youtu.be/Dh4d_PS4S7A',
+                'log' => '2013-03-06-BN-W-thornish.txt'
             )
         ));
         $match = $this->createMatch(6, '12.03.2013 16:30', $round1, 'tau', 'sd');
