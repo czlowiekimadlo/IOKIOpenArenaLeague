@@ -195,7 +195,7 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
                 'log' => '2013-03-06-BN-W-thornish.txt'
             )
         ));
-        $match = $this->createMatch(6, '12.03.2013 16:30', $round1, 'tau', 'sd');
+        $match = $this->createMatch(6, '15.03.2013 16:30', $round1, 'tau', 'sd');
         $match = $this->createMatch(7, '19.03.2013 16:30', $round1, 'bn', 'sd');
         $match = $this->createMatch(8, '02.04.2013 16:30', $round1, 'w', 'mef');
         $match = $this->createMatch(9, '09.04.2013 16:30', $round1, 'tau', 'bn');
