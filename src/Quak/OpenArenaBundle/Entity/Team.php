@@ -135,7 +135,7 @@ class Team
 
         $average = $sum / $count;
 
-        return floor($average + 0.5);
+        return round($average, 1);
     }
 
     public function getTopResult()

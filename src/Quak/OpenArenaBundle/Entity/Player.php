@@ -93,7 +93,7 @@ class Player
 
         $average = $sum / $count;
 
-        return floor($average + 0.5);
+        return round($average, 1);
     }
 
     public function getTotalStat($name)
