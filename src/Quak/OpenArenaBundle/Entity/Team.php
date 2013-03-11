@@ -47,6 +47,11 @@ class Team
      */
     protected $players;
 
+    /**
+     * @ORM\OneToMany(targetEntity="\Quak\OpenArenaBundle\Entity\Substitute", mappedBy="team", cascade={"all"})
+     */
+    protected $substitutes;
+
     public function __construct()
     {
         $this->matches = new ArrayCollection();
@@ -209,5 +214,15 @@ class Team
         $found = array_reverse($found);
 
         return $found;
+    }
+
+    public function addSubstitute(\Quak\OpenArenaBundle\Entity\Substitute $substitute)
+    {
+        $this->substitutes[] = $substitute;
+    }
+
+    public function getSubstitutes()
+    {
+        return $this->substitutes;
     }
 }

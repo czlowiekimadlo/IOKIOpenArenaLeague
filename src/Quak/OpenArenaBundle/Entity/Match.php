@@ -51,6 +51,11 @@ class Match
      */
     protected $clashes;
 
+    /**
+     * @ORM\OneToMany(targetEntity="\Quak\OpenArenaBundle\Entity\Substitute", mappedBy="match", cascade={"all"})
+     */
+    protected $substitutes;
+
     public function __construct()
     {
         $this->walkover = false;
@@ -125,5 +130,15 @@ class Match
     public function getClashes()
     {
         return $this->clashes;
+    }
+
+    public function addSubstitute(\Quak\OpenArenaBundle\Entity\Substitute $substitute)
+    {
+        $this->substitutes[] = $substitute;
+    }
+
+    public function getSubstitutes()
+    {
+        return $this->substitutes;
     }
 }

@@ -37,6 +37,11 @@ class Player
      */
     protected $results;
 
+    /**
+     * @ORM\OneToMany(targetEntity="\Quak\OpenArenaBundle\Entity\Substitute", mappedBy="player", cascade={"all"})
+     */
+    protected $substitutes;
+
     public function getId()
     {
         return $this->id;
@@ -209,5 +214,15 @@ class Player
         }
 
         return $out;
+    }
+
+    public function addSubstitute(\Quak\OpenArenaBundle\Entity\Substitute $substitute)
+    {
+        $this->substitutes[] = $substitute;
+    }
+
+    public function getSubstitutes()
+    {
+        return $this->substitutes;
     }
 }
