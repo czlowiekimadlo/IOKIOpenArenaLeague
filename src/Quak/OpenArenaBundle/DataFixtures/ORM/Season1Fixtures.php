@@ -17,6 +17,7 @@ use Quak\OpenArenaBundle\Entity\Player;
 use Quak\OpenArenaBundle\Entity\PlayerResult;
 use Quak\OpenArenaBundle\Entity\Weapon;
 use Quak\OpenArenaBundle\Entity\WeaponResult;
+use Quak\OpenArenaBundle\Entity\Substitute;
 
 class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
 {
@@ -194,6 +195,11 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
                 'replay' => 'http://youtu.be/Dh4d_PS4S7A',
                 'log' => '2013-03-06-BN-W-thornish.txt'
             )
+        ), false, array(
+            array(
+                'player' => 'lpospiech',
+                'team' => 'w'
+            )
         ));
         $match = $this->createMatch(6, '15.03.2013 16:30', $round1, 'tau', 'sd');
         $match = $this->createMatch(7, '19.03.2013 16:30', $round1, 'bn', 'sd');
@@ -346,7 +352,7 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
         }
     }
 
-    protected function createMatch($num, $date, $round, $team1, $team2, $maps = array(), $walkover = false)
+    protected function createMatch($num, $date, $round, $team1, $team2, $maps = array(), $walkover = false, $substitutes = array())
     {
         $match = new Match();
         $match->setNumber($num);
@@ -356,6 +362,14 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
         $this->teams[$team1]->addMatch($match);
         $this->teams[$team2]->addMatch($match);
         $this->manager->persist($match);
+
+        foreach ($substitutes as $substitute) {
+            $newSubstitute = new Substitute();
+            $newSubstitute->setTeam($this->teams[$substitute['team']]);
+            $newSubstitute->setPlayer($this->players[$substitute['player']]);
+            $newSubstitute->setMatch($match);
+            $this->manager->persist($newSubstitute);
+        }
 
         foreach ($maps as $mapname => $mapresults) {
             $clash = new Clash();

@@ -148,6 +148,12 @@ class Clash
             if ($result->getPlayer()->getTeam()->getId() == $id) {
                 $results[] = $result;
             }
+
+            foreach ($this->match->getSubstitutes() as $substitute) {
+                if ($substitute->getTeam()->getId() == $id && $substitute->getPlayer()->getId() == $result->getPlayer()->getId()) {
+                    $results[] = $result;
+                }
+            }
         }
 
         return $results;
