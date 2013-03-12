@@ -9,7 +9,7 @@
 <div id="player">
     <div id="stats">
         <h1>{{ player.name }}</h1>
-        <h1>Team: {{ player.team.name }}</h1>
+        <h1>Team: <a href="{{ path('QuakOpenArenaBundle_team', { id : player.team.id }) }}">{{ player.team.name }}</a></h1>
         <h1>Score: {{ player.getTotalScore() }} ({{ player.getAverageScore() }})</h1>
         <h1>Kills: {{ player.getTotalKills() }} ({{ player.getAverageKills() }})</h1>
         <h1>Carrier kills: {{ player.getTotalCarrierKills() }} ({{ player.getAverageCarrierKills() }})</h1>

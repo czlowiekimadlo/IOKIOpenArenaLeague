@@ -8,7 +8,7 @@
 {% block body %}
 <div id="team">
     <div id="stats">
-        <h1>{{ team.name }}</h1>
+        <h1>{{ team.name }}, <a href="{{ path('QuakOpenArenaBundle_season', { id: team.season.number }) }}">Season {{ team.season.number }}</a></h1>
         <h1>Points: {{ team.getScore() }}</h1>
         <h1>Average flags: {{ team.getAverageScore() }}</h1>
         <h1>Total flags: {{ team.getTotalScore() }}</h1>
