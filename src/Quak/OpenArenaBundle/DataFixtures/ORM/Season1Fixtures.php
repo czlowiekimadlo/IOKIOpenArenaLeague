@@ -319,10 +319,20 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
             )
         );
 
+        $scores = array(
+            'mef' => 3,
+            'tau' => 6,
+            'bn'  => 3,
+            'sd'  => 0,
+            'w'   => 3,
+            'na'  => 0
+        );
+
         foreach ($teams as $key => $team) {
             $newTeam = new Team();
             $newTeam->setName($team);
             $newTeam->setSeason($season);
+            $newTeam->setScore($scores[$key]);
             $manager->persist($newTeam);
             $this->teams[$key] = $newTeam;
 

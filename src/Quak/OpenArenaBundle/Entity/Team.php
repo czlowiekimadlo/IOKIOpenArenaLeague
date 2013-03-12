@@ -52,9 +52,15 @@ class Team
      */
     protected $substitutes;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    protected $score;
+
     public function __construct()
     {
         $this->matches = new ArrayCollection();
+        $this->score = 0;
     }
 
     public function getId()
@@ -224,5 +230,15 @@ class Team
     public function getSubstitutes()
     {
         return $this->substitutes;
+    }
+
+    public function getScore()
+    {
+        return $this->score;
+    }
+
+    public function setScore($score)
+    {
+        $this->score = $score;
     }
 }

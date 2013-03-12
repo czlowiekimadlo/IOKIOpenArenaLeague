@@ -11,7 +11,7 @@
         <h1>Top teams</h1>
 		<ul>
 		{% for team in season.getTopTeams() %}
-			<li><a href="{{ path('QuakOpenArenaBundle_team', { id: team.id }) }}">{{ team.name }}</a> ({{ team.getAverageScore() }})</li>
+			<li><a href="{{ path('QuakOpenArenaBundle_team', { id: team.id }) }}">{{ team.name }}</a> ({{ team.getScore() }})</li>
 		{% endfor %}
 		</ul>
 	</div>

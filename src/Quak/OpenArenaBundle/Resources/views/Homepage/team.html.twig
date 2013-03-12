@@ -9,8 +9,9 @@
 <div id="team">
     <div id="stats">
         <h1>{{ team.name }}</h1>
-        <h1>Average score: {{ team.getAverageScore() }}</h1>
-        <h1>Total score: {{ team.getTotalScore() }}</h1>
+        <h1>Points: {{ team.getScore() }}</h1>
+        <h1>Average flags: {{ team.getAverageScore() }}</h1>
+        <h1>Total flags: {{ team.getTotalScore() }}</h1>
         <h1>Best match:
             {% if team.getTopResult() is null %}
             N/A

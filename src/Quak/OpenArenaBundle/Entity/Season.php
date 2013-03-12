@@ -200,7 +200,8 @@ class Season
         }
 
         usort($teams, function($a, $b) {
-            return $a->getAverageScore() < $b->getAverageScore() ? 1 : -1;
+            if ($a->getScore() == $b->getScore()) return $a->getAverageScore() < $b->getAverageScore() ? 1 : -1;
+            return $a->getScore() < $b->getScore() ? 1 : -1;
         });
 
         return $teams;
