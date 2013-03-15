@@ -202,8 +202,43 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
             )
         ));
         $match = $this->createMatch(6, '15.03.2013 16:00', $round1, 'tau', 'sd', array(
-            'oa_bases3plus3' => array(),
-            'am_thornish' => array()
+            'oa_bases3plus3' => array(
+                'team_results' => array('tau' => 8, 'sd' => 1),
+                'player_results' => array(
+                    'aadamczewski' => 59,
+                    'akucyrka' => 53,
+                    'mzimny' => 45,
+                    'dmasztalerz' => 17,
+                    'fgorny' => 38,
+                    'sdudek' => 28,
+                    'lciolek' => 16,
+                    'rpalczynski' => 5
+                ),
+                'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-03-15-TAU-SD-bases3plus3.jpg',
+                'replay' => 'http://youtu.be/iPIsY_Wfh2M',
+                'log' => '2013-03-15-TAU-SD-bases3plus3.txt'
+            ),
+            'oa_reptctf11' => array(
+                'team_results' => array('tau' => 1, 'sd' => 3),
+                'player_results' => array(
+                    'aadamczewski' => 68,
+                    'akucyrka' => 51,
+                    'mzimny' => 35,
+                    'dmasztalerz' => 15,
+                    'fgorny' => 85,
+                    'sdudek' => 38,
+                    'rpalczynski' => 36,
+                    'lciolek' => 30
+                ),
+                'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-03-15-TAU-SD-reptctf11.jpg',
+                'replay' => 'http://youtu.be/dTks20cfDL0',
+                'log' => '2013-03-15-TAU-SD-reptctf11.txt'
+            )
+        ), false, array(
+            array(
+                'player' => 'dmasztalerz',
+                'team' => 'tau'
+            )
         ));
         $match = $this->createMatch(7, '19.03.2013 16:30', $round1, 'bn', 'sd');
         $match = $this->createMatch(8, '02.04.2013 16:30', $round1, 'w', 'mef');
@@ -324,7 +359,8 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
             'na'  => array(
                 'mwlodek' => 'Mateusz Włodek',
                 'lpospiech' => 'Łukasz Pospiech',
-                'wsurmacz' => 'Wojciech Surmacz'
+                'wsurmacz' => 'Wojciech Surmacz',
+                'dmasztalerz' => 'Dariusz Masztalerz'
             )
         );
 
@@ -439,7 +475,7 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
             'spawlowski' => 'kit',
             'mmucha' => 'MM',
             'fgorny' => 'Filip',
-            'lciolek' => 'EloRap',
+            'lciolek' => array('EloRap', 'BackendDeveloper'),
             'rpalczynski' => 'radepal',
             'sdudek' => 'd3dik',
             'lrozniakowski' => 'lrozniakowski',
@@ -448,7 +484,8 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
             'dbudynek' => 'Dario',
             'mwlodek' => null,
             'lpospiech' => 'ZoCiM',
-            'wsurmacz' => null
+            'wsurmacz' => null,
+            'dmasztalerz' => 'MASZTI'
         );
 
         if(is_array($nickmap[$nick])) {
