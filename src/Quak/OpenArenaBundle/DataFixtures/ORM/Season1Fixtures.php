@@ -366,7 +366,7 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
 
         $scores = array(
             'mef' => 3,
-            'tau' => 6,
+            'tau' => 9,
             'bn'  => 3,
             'sd'  => 0,
             'w'   => 3,
