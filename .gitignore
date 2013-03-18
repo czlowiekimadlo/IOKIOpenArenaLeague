@@ -17,3 +17,6 @@ src/Quak/OpenArenaBundle/Entity/*.php~
 
 # composer
 composer.phar
+
+#sublime files
+*.sublime-*
