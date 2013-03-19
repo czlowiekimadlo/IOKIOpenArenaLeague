@@ -240,7 +240,40 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
                 'team' => 'tau'
             )
         ));
-        $match = $this->createMatch(7, '19.03.2013 16:30', $round1, 'bn', 'sd');
+        $match = $this->createMatch(7, '19.03.2013 16:30', $round1, 'bn', 'sd', array(
+            'ctf_gate1' => array(
+                'team_results' => array('bn' => 9, 'sd' => 2),
+                'player_results' => array(
+                    'kpiwowarczyk' => 89,
+                    'wchojnacki' => 79,
+                    'spawlowski' => 39,
+                    'mmucha' => 36,
+                    'fgorny' => 47,
+                    'lciolek' => 35,
+                    'rpalczynski' => 34,
+                    'sdudek' => 30
+                ),
+                'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-03-19-BN-SD-gate1.jpg',
+                'replay' => 'http://youtu.be/hRRiYHAv8i0',
+                'log' => '2013-03-19-BN-SD-gate1.txt'
+            ),
+            'oa_reptctf11' => array(
+                'team_results' => array('bn' => 7, 'sd' => 0),
+                'player_results' => array(
+                    'kpiwowarczyk' => 96,
+                    'wchojnacki' => 87,
+                    'spawlowski' => 49,
+                    'mmucha' => 48,
+                    'fgorny' => 59,
+                    'rpalczynski' => 36,
+                    'sdudek' => 26,
+                    'lciolek' => 23
+                ),
+                'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-03-19-BN-SD-reptctf11.jpg',
+                'replay' => 'http://youtu.be/9A0OfDZ-bjg',
+                'log' => '2013-03-19-BN-SD-reptctf11.txt'
+            )
+        ));
         $match = $this->createMatch(8, '02.04.2013 16:30', $round1, 'w', 'mef');
         $match = $this->createMatch(9, '09.04.2013 16:30', $round1, 'tau', 'bn');
         $match = $this->createMatch(10, '16.04.2013 16:30', $round1, 'sd', 'mef');
@@ -367,7 +400,7 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
         $scores = array(
             'mef' => 3,
             'tau' => 9,
-            'bn'  => 3,
+            'bn'  => 6,
             'sd'  => 0,
             'w'   => 3,
             'na'  => 0
