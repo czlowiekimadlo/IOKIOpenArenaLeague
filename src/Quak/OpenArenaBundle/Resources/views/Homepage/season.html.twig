@@ -9,11 +9,11 @@
 <div id="season">
 	<div id="teams">
         <h1>Top teams</h1>
-		<ul>
+		<ol>
 		{% for team in season.getTopTeams() %}
 			<li><a href="{{ path('QuakOpenArenaBundle_team', { id: team.id }) }}">{{ team.name }}</a> ({{ team.getScore() }})</li>
 		{% endfor %}
-		</ul>
+		</ol>
 	</div>
 	<div id="matchesUpcoming">
 		<h1>Upcoming matches</h1>
@@ -47,11 +47,11 @@
 	</div>
 	<div id="players">
         <h1>Top players</h1>
-        <ul>
+        <ol>
         {% for player in season.getTopPlayers() %}
             <li><a href="{{ path('QuakOpenArenaBundle_player', { id : player.id }) }}">{{ player.name }}</a> ({{ player.getAverageScore() }})</li>
         {% endfor %}
-        </ul>
+        </ol>
     </div>
 </div>
 {% endblock %}
