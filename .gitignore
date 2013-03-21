@@ -18,5 +18,11 @@ src/Quak/OpenArenaBundle/Entity/*.php~
 # composer
 composer.phar
 
-#sublime files
+# sublime files
 *.sublime-*
+
+# unrelated files
+league
+web/league
+page
+web/index.php
