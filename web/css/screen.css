@@ -5,6 +5,22 @@ body {
     background-position: center;
 }
 
+a, a:visited {
+    text-decoration: none;
+    color: #eee;
+}
+a:hover {
+    text-decoration: underline;
+    color: #ddd;
+}
+
+#header ul, .main-col, .main-col h1 {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+}
+
 .clearfix {
     clear: both;
 }
@@ -19,6 +35,21 @@ body {
     text-align: center;
     padding-bottom: 10px;
 }
+
+#homelink {
+    display: block;
+    background: url('../images/banner2.png') no-repeat;
+    height: 240px;
+    width: 320px;
+    margin: auto;
+}
+
+#header ul {
+    background: rgba(200,200,200,0.8);
+    border: 1px solid #bbb;
+    font-size: 1.5em;
+}
+
 #header ul, #header ul li {
     padding: 0;
     margin: auto;
@@ -30,8 +61,22 @@ body {
 }
 
 .main-col {
-    background: #fff;
+    background: rgba(200,200,200,0.8);
     border: 1px solid black;
+}
+.main-col h1 {
+    background: rgba(200,200,200,0.8);
+    margin: 0;
+}
+.main-col h2 {
+    background: rgba(200,200,200,0.5);
+    margin: 0;
+}
+.main-col h3 {
+    margin-top: 0;
+}
+.main-col h1 a, .main-col h1 a:hover, .main-col h1 a:visited {
+    color: #000;
 }
 
 #currentSeason {

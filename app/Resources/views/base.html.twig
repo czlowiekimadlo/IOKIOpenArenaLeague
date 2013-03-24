@@ -11,10 +11,7 @@
     <body>
         <div id="wrapper">
             <div id="header">
-                <a href="{{ path('QuakOpenArenaBundle_homepage') }}">
-                    <h2>{% block blog_title %}IOKI OpenArena League{% endblock %}</h2>
-                    <h3>{% block blog_tagline %}Honor. Valor. Symfony 2.x{% endblock %}</h3>
-                </a>
+                <a id="homelink" href="{{ path('QuakOpenArenaBundle_homepage') }}"></a>
                 {% block seasonsnav %}
                 <ul class="seasons">
                 {% for season in seasons %}
