@@ -274,7 +274,14 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
                 'log' => '2013-03-19-BN-SD-reptctf11.txt'
             )
         ));
-        $match = $this->createMatch(8, '02.04.2013 16:30', $round1, 'w', 'mef');
+        $match = $this->createMatch(8, '05.04.2013 16:00', $round1, 'w', 'mef', array(
+
+        ), false, array(
+            array(
+                'player' => 'mwlodek',
+                'team' => 'mef'
+            )
+        ));
         $match = $this->createMatch(9, '09.04.2013 16:30', $round1, 'tau', 'bn');
         $match = $this->createMatch(10, '16.04.2013 16:30', $round1, 'sd', 'mef');
 

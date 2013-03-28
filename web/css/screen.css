@@ -178,6 +178,12 @@ a:hover {
     margin: 10px 0;
     background: none;
 }
+#match #teams h2 {
+    font-size: 2.5em;
+}
+#match .clash {
+    margin-top: 80px;
+}
 
 #match #clashes .team1 {
     text-align: right;
@@ -214,4 +220,18 @@ a:hover {
 
 #match .team1 h2:hover, #match .team2 h2:hover {
     background: blue;
+}
+
+#footer {
+    text-align: center;
+    background: rgba(200,200,200,0.8);
+    border: 1px solid #bbb;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+#footer a {
+    color: black;
 }
