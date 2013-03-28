@@ -37,9 +37,24 @@ class HomepageController extends Controller
 
     	$seasons = $this->getSeasons();
 
+        $playerStats = array(
+            'getAverageScore' => 'Average Score',
+            'getTotalScore' => 'Total Score',
+            'getAverageKills' => 'Average Kills',
+            'getTotalKills' => 'Total Kills',
+            'getAverageFlagCaptures' => 'Average Flag Captures',
+            'getTotalFlagCaptures' => 'Total Flag Captures',
+            'getAverageFlagReturns' => 'Average Flag Returns',
+            'getTotalFlagReturns' => 'Total Flag Returns',
+            'getAverageCarrierKills' => 'Average Carrier Kills',
+            'getTotalCarrierKills' => 'Total Carrier Kills'
+
+        );
+
         return $this->render('QuakOpenArenaBundle:Homepage:season.html.twig', array(
         	'seasons' => $seasons,
-        	'season' => $season
+        	'season' => $season,
+            'playerStats' => $playerStats
         ));
     }
 

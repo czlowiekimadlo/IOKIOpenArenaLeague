@@ -73,7 +73,7 @@ a:hover {
     margin: 0;
 }
 .main-col h3 {
-    margin-top: 0;
+
 }
 .main-col h1 a, .main-col h1 a:hover, .main-col h1 a:visited {
     color: #000;
@@ -83,20 +83,87 @@ a:hover {
     text-align: center;
 }
 
-#season #teams {
-    width: 24%;
+#lastMatch {
+    margin-bottom: 10px;
+}
+#lastMatch .mapname {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+#lastMatch p {
     margin: 0;
-    padding: 3px;
+    padding: 5px 0 5px 0;
+    text-align: center;
+    display: block;
+    float: left;
+    vertical-align: middle;
+}
+#lastMatch p.teamname {
+    width: 45%;
+}
+#lastMatch p.result {
+    width: 5%;
+}
+
+#season .column {
+    width: 25%;
+    margin: 0;
+    padding: 0;
     float: left;
 }
 
-#season #matchesUpcoming, #season #matchesPlayed, #season #players {
-    width: 24%;
+.column h1 {
+    font-size: 1.6em;
+    text-align: center;
+}
+
+.column a {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+#matchesUpcoming ul li, #matchesPlayed ul li {
+    list-style: none;
+    padding: 0 0 10px 0;
+    margin: 10px 5px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+#matchesUpcoming ul, #matchesPlayed ul {
     margin: 0;
-    float: left;
+    padding: 0;
+}
+#matchesUpcoming ul li p, #matchesPlayed ul li p {
+    margin: 0;
+}
+#matchesUpcoming ul li p.name, #matchesPlayed ul li p.name {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+#team h1, #player h1, #match h1, #match #teams h2, #match .clash h2 {
+    text-align: center;
+}
+#team table {
+    border: 0;
+    padding: 10px;
+    font-size: 1.2em;
+}
+#team .statLabel, #player .statLabel {
+    text-align: right;
+    padding-right: 5px;
+}
+#team .statValue, #player .statValue {
+    text-align: left;
+    padding-left: 5px;
 }
 
 #team #players, #team #matchesUpcoming, #team #matchesPlayed {
+    width: 33%;
+    margin: 0;
+    float: left;
+}
+
+#player .column {
     width: 33%;
     margin: 0;
     float: left;
@@ -107,17 +174,44 @@ a:hover {
     clear: both;
 }
 
+#match h2 {
+    margin: 10px 0;
+    background: none;
+}
+
 #match #clashes .team1 {
     text-align: right;
     float: left;
-    width: 45%;
+    width: 50%;
     margin: 0;
-    padding: 10px;
+    padding: 0;
 }
 #match #clashes .team2 {
     text-align: left;
     float: left;
-    width: 45%;
+    width: 50%;
     margin: 0;
-    padding: 10px;
+    padding: 0;
+}
+
+.team1 h2 {
+    text-align: right;
+    padding-right: 10px;
+}
+.team2 h2 {
+    text-align: left;
+    padding-left: 10px;
+}
+
+#match .playerStats {
+    display: none;
+    list-style: none;
+}
+
+#match .team1 h2:hover .playerStats, #match .team2. h2:hover .playerStats {
+    display: block !important;
+}
+
+#match .team1 h2:hover, #match .team2 h2:hover {
+    background: blue;
 }

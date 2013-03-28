@@ -7,31 +7,64 @@
 
 {% block body %}
 <div id="player">
-    <div id="stats">
+    <div id="name">
         <h1>{{ player.name }}</h1>
-        <h1>Team: <a href="{{ path('QuakOpenArenaBundle_team', { id : player.team.id }) }}">{{ player.team.name }}</a></h1>
-        <h1>Score: {{ player.getTotalScore() }} ({{ player.getAverageScore() }})</h1>
-        <h1>Kills: {{ player.getTotalKills() }} ({{ player.getAverageKills() }})</h1>
-        <h1>Carrier kills: {{ player.getTotalCarrierKills() }} ({{ player.getAverageCarrierKills() }})</h1>
-        <h1>Flag pickups: {{ player.getTotalFlagPickups() }} ({{ player.getAverageFlagPickups() }})</h1>
-        <h1>Flag returns: {{ player.getTotalFlagReturns() }} ({{ player.getAverageFlagReturns() }})</h1>
-        <h1>Flag captures: {{ player.getTotalFlagCaptures() }} ({{ player.getAverageFlagCaptures() }})</h1>
-        <h1>Sprees: {{ player.getTotalSprees() }} ({{ player.getAverageSprees() }})</h1>
+        <h1><a href="{{ path('QuakOpenArenaBundle_team', { id : player.team.id }) }}">{{ player.team.name }}</a></h1>
+    </div>
+    <div id="stats" class="column">
+        <h1>Stats</h1>
+        <table align="center">
+            <tbody>
+                <tr>
+                    <td class="statLabel">Score</td>
+                    <td class="statValue">{{ player.getTotalScore() }} ({{ player.getAverageScore() }})</td>
+                </tr>
+                <tr>
+                    <td class="statLabel">Kills</td>
+                    <td class="statValue">{{ player.getTotalKills() }} ({{ player.getAverageKills() }})</td>
+                </tr>
+                <tr>
+                    <td class="statLabel">Carrier kills</td>
+                    <td class="statValue">{{ player.getTotalCarrierKills() }} ({{ player.getAverageCarrierKills() }})</td>
+                </tr>
+                <tr>
+                    <td class="statLabel">Flag pickups</td>
+                    <td class="statValue">{{ player.getTotalFlagPickups() }} ({{ player.getAverageFlagPickups() }})</td>
+                </tr>
+                <tr>
+                    <td class="statLabel">Flag returns</td>
+                    <td class="statValue">{{ player.getTotalFlagReturns() }} ({{ player.getAverageFlagReturns() }})</td>
+                </tr>
+                <tr>
+                    <td class="statLabel">Flag captures</td>
+                    <td class="statValue">{{ player.getTotalFlagCaptures() }} ({{ player.getAverageFlagCaptures() }})</td>
+                </tr>
+                <tr>
+                    <td class="statLabel">Sprees</td>
+                    <td class="statValue">{{ player.getTotalSprees() }} ({{ player.getAverageSprees() }})</td>
+                </tr>
+                <tr>
+                    <td class="statLabel">Best match</td>
+                    <td class="statValue">
+                        {% if player.getTopResult() is null %}
+                        N/A
+                        {% else %}
+                        <a href="{{ path('QuakOpenArenaBundle_match', { id: player.getTopResult().clash.match.id }) }}">Round {{ player.getTopResult().clash.match.round.number }}, Match {{ player.getTopResult().clash.match.number }}</a>
+                        {% endif %}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="weapons" class="column">
         <h1>Total kills by weapon:</h1>
         <ul>
         {% for weaponResult in player.getTotalWeaponResults() %}
             <li>{{ weaponResult.weapon.name }}: {{ weaponResult.score }}</li>
         {% endfor %}
         </ul>
-        <h1>Best match:
-            {% if player.getTopResult() is null %}
-            N/A
-            {% else %}
-            <a href="{{ path('QuakOpenArenaBundle_match', { id: player.getTopResult().clash.match.id }) }}">Round {{ player.getTopResult().clash.match.round.number }}, Match {{ player.getTopResult().clash.match.number }}</a>
-            {% endif %}
-        </h1>
     </div>
-    <div id="matches">
+    <div id="matches" class="column">
         <h1>Matches played</h1>
         <ul>
         {% for result in player.results %}
@@ -39,5 +72,6 @@
         {% endfor %}
         </ul>
     </div>
+    <div class="clearfix"></div>
 </div>
 {% endblock %}

@@ -175,7 +175,7 @@ class Season
         return $found;
     }
 
-    public function getTopPlayers()
+    public function getTopPlayers($method = 'getAverageScore')
     {
         $players = array();
 
@@ -185,23 +185,24 @@ class Season
             }
         }
 
-        usort($players, function($a, $b) {
-            return ($a->getAverageScore() < $b->getAverageScore()) ? 1 : -1;
+        usort($players, function($a, $b) use($method) {
+            return ($a->$method() < $b->$method()) ? 1 : -1;
         });
 
         return $players;
     }
 
-    public function getTopTeams()
+    public function getTopTeams($method = 'getScore')
     {
         $teams = array();
         foreach ($this->teams as $team) {
+            if ($team->getName() == "No team") continue;
             $teams[] = $team;
         }
 
-        usort($teams, function($a, $b) {
-            if ($a->getScore() == $b->getScore()) return $a->getAverageScore() < $b->getAverageScore() ? 1 : -1;
-            return $a->getScore() < $b->getScore() ? 1 : -1;
+        usort($teams, function($a, $b) use($method) {
+            if ($a->$method() == $b->$method()) return $a->getAverageScore() < $b->getAverageScore() ? 1 : -1;
+            return $a->$method() < $b->$method() ? 1 : -1;
         });
 
         return $teams;

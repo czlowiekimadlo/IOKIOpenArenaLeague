@@ -7,27 +7,46 @@
 
 {% block body %}
 <div id="season">
-	<div id="teams">
+	<div id="teams" class="column">
         <h1>Top teams</h1>
-		<ol>
+        <form>
+            <select>
+                <option value="teamsScore" selected="selected">Points</option>
+                <option value="teamsAverageScore">Average flags</option>
+                <option value="teamsTotalScore">Total flags</option>
+            </select>
+        </form>
+		<ol id="teamsScore">
 		{% for team in season.getTopTeams() %}
 			<li><a href="{{ path('QuakOpenArenaBundle_team', { id: team.id }) }}">{{ team.name }}</a> ({{ team.getScore() }})</li>
 		{% endfor %}
 		</ol>
+        <ol id="teamsAverageScore">
+        {% for team in season.getTopTeams('getAverageScore') %}
+            <li><a href="{{ path('QuakOpenArenaBundle_team', { id: team.id }) }}">{{ team.name }}</a> ({{ team.getAverageScore() }})</li>
+        {% endfor %}
+        </ol>
+        <ol id="teamsTotalScore">
+        {% for team in season.getTopTeams('getTotalScore') %}
+            <li><a href="{{ path('QuakOpenArenaBundle_team', { id: team.id }) }}">{{ team.name }}</a> ({{ team.getTotalScore() }})</li>
+        {% endfor %}
+        </ol>
 	</div>
-	<div id="matchesUpcoming">
+	<div id="matchesUpcoming" class="column">
 		<h1>Upcoming matches</h1>
 		<ul>
 		{% for match in season.getUpcominMatches() %}
 			<li>
 				<p><a href="{{ path('QuakOpenArenaBundle_match', { id: match.id }) }}">Round {{ match.round.number }}, Match {{ match.number }}</a></p>
 				<p>{{ match.date.format('Y-m-d H:i') }}</p>
-        		<p>{{ match.teams[0].name }} vs {{ match.teams[1].name }}</p>
+        		<p class="name">{{ match.teams[0].name }}</p>
+                <p>vs</p>
+                <p class="name">{{ match.teams[1].name }}</p>
 			</li>
 		{% endfor %}
 		</ul>
 	</div>
-	<div id="matchesPlayed">
+	<div id="matchesPlayed" class="column">
 		<h1>Played matches</h1>
 		<ul>
 		{% for match in season.getPlayedMatches() %}
@@ -35,23 +54,33 @@
                 <p><a href="{{ path('QuakOpenArenaBundle_match', { id: match.id }) }}">Round {{ match.round.number }}, Match {{ match.number }}</a></p>
                 <p>{{ match.date.format('Y-m-d H:i') }}</p>
                 {% for clash in match.clashes %}
-                    <p>{{ clash.map.name }}
+                    <p class="name">{{ clash.map.name }}</p>
                     {% if clash.clashResults.count > 0 %}
-                        <br />{{ clash.clashResults[0].team.name }} {{ clash.clashResults[0].score }} : {{ clash.clashResults[1].score }} {{ clash.clashResults[1].team.name }}
+                        <p>{{ clash.clashResults[0].team.name }}</p>
+                        <p>{{ clash.clashResults[0].score }} : {{ clash.clashResults[1].score }}</p>
+                        <p>{{ clash.clashResults[1].team.name }}</p>
                     {% endif %}
-                    </p>
                 {% endfor %}
             </li>
 		{% endfor %}
 		</ul>
 	</div>
-	<div id="players">
+	<div id="players" class="column">
         <h1>Top players</h1>
-        <ol>
-        {% for player in season.getTopPlayers() %}
-            <li><a href="{{ path('QuakOpenArenaBundle_player', { id : player.id }) }}">{{ player.name }}</a> ({{ player.getAverageScore() }})</li>
-        {% endfor %}
+        <form>
+            <select>
+                {% for key, element in playerStats %}
+                <option value="{{ key }}">{{ element }}</option>
+                {% endfor %}
+            </select>
+        </form>
+        {% for key, element in playerStats %}
+        <ol id="{{ key }}">
+            {% for player in season.getTopPlayers(key) %}
+            <li><a href="{{ path('QuakOpenArenaBundle_player', { id : player.id }) }}">{{ player.name }}</a> ({{ player.callMethod(key) }})</li>
+            {% endfor %}
         </ol>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

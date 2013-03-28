@@ -11,19 +11,23 @@
 	<div id="nextMatch">
         <h2>Next match</h2>
 		<h2><a href="{{ path('QuakOpenArenaBundle_match', { id: nextMatch.id }) }}">Round {{ nextMatch.round.number }}, Match {{ nextMatch.number }}</a></h2>
-		<h3>{{ nextMatch.date.format('Y-m-d H:i') }}</h3>
-        <h3>{{ nextMatch.teams[0].name }}</h3>
-        <h3>vs</h3>
-        <h3>{{ nextMatch.teams[1].name }}</h3>
+		<h3>{{ nextMatch.date.format('Y-m-d H:i') }}<br /><br />
+        {{ nextMatch.teams[0].name }}<br />
+        vs<br />
+        {{ nextMatch.teams[1].name }}</h3>
 	</div>
 	<div id="lastMatch">
         <h2>Last match</h2>
 		<h2><a href="{{ path('QuakOpenArenaBundle_match', { id: lastMatch.id }) }}">Round {{ lastMatch.round.number }}, Match {{ lastMatch.number }}</a></h2>
 		<h3>{{ lastMatch.date.format('Y-m-d H:i') }}</h3>
         {% for clash in lastMatch.clashes %}
-            <h3>{{ clash.map.name }}</h3>
+            <h3 class="mapname">{{ clash.map.name }}</h3>
             {% if clash.clashResults.count > 0 %}
-                <h3>{{ clash.clashResults[0].team.name }} {{ clash.clashResults[0].score }} : {{ clash.clashResults[1].score }} {{ clash.clashResults[1].team.name }}</h3>
+                <p class="teamname">{{ clash.clashResults[0].team.name }}</p>
+                <p class="result">{{ clash.clashResults[0].score }}</p>
+                <p class="result">{{ clash.clashResults[1].score }}</p>
+                <p class="teamname">{{ clash.clashResults[1].team.name }}</p>
+                <div class="clearfix"></div>
             {% endif %}
         {% endfor %}
 	</div>

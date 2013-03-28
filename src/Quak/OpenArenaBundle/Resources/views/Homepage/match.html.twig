@@ -7,11 +7,11 @@
 
 {% block body %}
 <div id="match">
-    <div id="stats">
+    <div id="teams">
         <h1><a href="{{ path('QuakOpenArenaBundle_season', { id : match.round.season.number }) }}">Season {{ match.round.season.number }}</a>, Round {{ match.round.number }}, Match {{ match.number }}</h1>
-        <h1><a href="{{ path('QuakOpenArenaBundle_team', { id : match.teams[0].id}) }}">{{ match.teams[0].name }}</a><h1>
-        <h2>vs</h2>
-        <h1><a href="{{ path('QuakOpenArenaBundle_team', { id : match.teams[1].id}) }}">{{ match.teams[1].name }}</a></h1>
+        <h2><a href="{{ path('QuakOpenArenaBundle_team', { id : match.teams[0].id}) }}">{{ match.teams[0].name }}</a>
+        <br />vs<br />
+        <a href="{{ path('QuakOpenArenaBundle_team', { id : match.teams[1].id}) }}">{{ match.teams[1].name }}</a></h2>
     </div>
     <div id="clashes">
     {% for clash in match.clashes %}
@@ -22,10 +22,11 @@
         </div>
         {% if clash.clashResults.count > 0 %}
         <div class="team1">
-            <h1>{{ match.teams[0].name }} {{ clash.getScoreForTeam(match.teams[0].id) }}</h1>
+            <h1>{{ match.teams[0].name }}<br />{{ clash.getScoreForTeam(match.teams[0].id) }}</h1>
             {% for result in clash.getPlayerResultsForTeam(match.teams[0].id) %}
-            <h2><a href="{{ path('QuakOpenArenaBundle_player', { id : result.player.id }) }}">{{ result.player.name }}</a> {{ result.score }}</h2>
-            <ul>
+            <h2><a href="{{ path('QuakOpenArenaBundle_player', { id : result.player.id }) }}">{{ result.player.name }}</a> {{ result.score }}
+            </h2>
+            <ul class="playerStats">
                 <li>Kills: {{ result.kills }}</li>
                 <li>Carrier Kills: {{ result.carrierKills }}</li>
                 <li>Flag Captures: {{ result.flagCaptures }}</li>
@@ -41,10 +42,11 @@
             {% endfor %}
         </div>
         <div class="team2">
-            <h1>{{ clash.getScoreForTeam(match.teams[1].id) }} {{ match.teams[1].name }}</h1>
+            <h1>{{ match.teams[1].name }}<br />{{ clash.getScoreForTeam(match.teams[1].id) }}</h1>
             {% for result in clash.getPlayerResultsForTeam(match.teams[1].id) %}
-            <h2>{{ result.score }} <a href="{{ path('QuakOpenArenaBundle_player', { id : result.player.id }) }}">{{ result.player.name }}</a></h2>
-            <ul>
+            <h2>{{ result.score }} <a href="{{ path('QuakOpenArenaBundle_player', { id : result.player.id }) }}">{{ result.player.name }}</a>
+            </h2>
+            <ul class="playerStats">
                 <li>Kills: {{ result.kills }}</li>
                 <li>Carrier Kills: {{ result.carrierKills }}</li>
                 <li>Flag Captures: {{ result.flagCaptures }}</li>

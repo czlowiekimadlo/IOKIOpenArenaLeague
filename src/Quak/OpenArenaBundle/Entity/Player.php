@@ -225,4 +225,9 @@ class Player
     {
         return $this->substitutes;
     }
+
+    public function callMethod($name)
+    {
+        return $this->$name();
+    }
 }

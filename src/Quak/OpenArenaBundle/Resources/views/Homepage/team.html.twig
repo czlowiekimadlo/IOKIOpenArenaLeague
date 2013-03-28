@@ -8,19 +8,36 @@
 {% block body %}
 <div id="team">
     <div id="stats">
-        <h1>{{ team.name }}, <a href="{{ path('QuakOpenArenaBundle_season', { id: team.season.number }) }}">Season {{ team.season.number }}</a></h1>
-        <h1>Points: {{ team.getScore() }}</h1>
-        <h1>Average flags: {{ team.getAverageScore() }}</h1>
-        <h1>Total flags: {{ team.getTotalScore() }}</h1>
-        <h1>Best match:
-            {% if team.getTopResult() is null %}
-            N/A
-            {% else %}
-            <a href="{{ path('QuakOpenArenaBundle_match', { id: team.getTopResult().clash.match.id }) }}">Round {{ team.getTopResult().clash.match.round.number }}, Match {{ team.getTopResult().clash.match.number }}</a>
-            {% endif %}
-        </h1>
+        <h1><a href="{{ path('QuakOpenArenaBundle_season', { id: team.season.number }) }}">Season {{ team.season.number }}</a></h1>
+        <h1>{{ team.name }}</h1>
+        <table align="center">
+            <tbody>
+                <tr>
+                    <td class="statLabel">Points</td>
+                    <td class="statValue">{{ team.getScore() }}</td>
+                </tr>
+                <tr>
+                    <td class="statLabel">Average flags</td>
+                    <td class="statValue">{{ team.getAverageScore() }}</td>
+                </tr>
+                <tr>
+                    <td class="statLabel">Total flags</td>
+                    <td class="statValue">{{ team.getTotalScore() }}</td>
+                </tr>
+                <tr>
+                    <td class="statLabel">Best match</td>
+                    <td class="statValue">
+                        {% if team.getTopResult() is null %}
+                        N/A
+                        {% else %}
+                        <a href="{{ path('QuakOpenArenaBundle_match', { id: team.getTopResult().clash.match.id }) }}">Round {{ team.getTopResult().clash.match.round.number }}, Match {{ team.getTopResult().clash.match.number }}</a>
+                        {% endif %}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    <div id="players">
+    <div id="players" class="column">
         <h1>Players</h1>
         <ul>
         {% for player in team.players %}
@@ -28,19 +45,21 @@
         {% endfor %}
         </ul>
     </div>
-    <div id="matchesUpcoming">
+    <div id="matchesUpcoming" class="column">
         <h1>Upcoming matches</h1>
         <ul>
         {% for match in team.getUpcominMatches() %}
             <li>
                 <p><a href="{{ path('QuakOpenArenaBundle_match', { id: match.id }) }}">Round {{ match.round.number }}, Match {{ match.number }}</a></p>
                 <p>{{ match.date.format('Y-m-d H:i') }}</p>
-                <p>{{ match.teams[0].name }} vs {{ match.teams[1].name }}</p>
+                <p class="name">{{ match.teams[0].name }}</p>
+                <p>vs</p>
+                <p class="name">{{ match.teams[1].name }}</p>
             </li>
         {% endfor %}
         </ul>
     </div>
-    <div id="matchesPlayed">
+    <div id="matchesPlayed" class="column">
         <h1>Played matches</h1>
         <ul>
         {% for match in team.getPlayedMatches() %}
@@ -48,11 +67,12 @@
                 <p><a href="{{ path('QuakOpenArenaBundle_match', { id: match.id }) }}">Round {{ match.round.number }}, Match {{ match.number }}</a></p>
                 <p>{{ match.date.format('Y-m-d H:i') }}</p>
                 {% for clash in match.clashes %}
-                    <p>{{ clash.map.name }}
+                    <p class="name">{{ clash.map.name }}</p>
                     {% if clash.clashResults.count > 0 %}
-                        <br />{{ clash.clashResults[0].team.name }} {{ clash.clashResults[0].score }} : {{ clash.clashResults[1].score }} {{ clash.clashResults[1].team.name }}
+                        <p>{{ clash.clashResults[0].team.name }}</p>
+                        <p>{{ clash.clashResults[0].score }} : {{ clash.clashResults[1].score }}</p>
+                        <p>{{ clash.clashResults[1].team.name }}</p>
                     {% endif %}
-                    </p>
                 {% endfor %}
             </li>
         {% endfor %}
