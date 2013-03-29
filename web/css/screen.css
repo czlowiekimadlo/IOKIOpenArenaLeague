@@ -192,6 +192,16 @@ a:hover {
     width: 400px;
     height: 225px;
 }
+#match h1 table {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#match h1 table td {
+    width: 50%;
+    text-align: center;
+}
 
 #match #clashes .team1 {
     text-align: right;

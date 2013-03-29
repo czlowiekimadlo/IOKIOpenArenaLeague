@@ -19,10 +19,22 @@
             <h1>{{ clash.map.name }}</h1>
             <h2 class="image"><a href="{{ clash.screen }}"><img src="{{ clash.screen }}" alt="Screenshot" /></a></h2>
             <h2 class="yt"><iframe width="400" height="225" src="http://www.youtube.com/embed/{{ clash.replayCode }}" frameborder="0" allowfullscreen></iframe></h2>
+            <div class="clearfix"></div>
         </div>
         {% if clash.clashResults.count > 0 %}
+        <h1>
+            <table>
+                <tr>
+                    <td>{{ match.teams[0].name }}</td>
+                    <td>{{ match.teams[1].name }}</td>
+                </tr>
+                <tr>
+                    <td>{{ clash.getScoreForTeam(match.teams[0].id) }}</td>
+                    <td>{{ clash.getScoreForTeam(match.teams[1].id) }}</td>
+                </tr>
+            </table>
+        </h1>
         <div class="team1">
-            <h1>{{ match.teams[0].name }}<br />{{ clash.getScoreForTeam(match.teams[0].id) }}</h1>
             {% for result in clash.getPlayerResultsForTeam(match.teams[0].id) %}
             <h2><a href="{{ path('QuakOpenArenaBundle_player', { id : result.player.id }) }}">{{ result.player.name }}</a> {{ result.score }}
             </h2>
@@ -42,7 +54,6 @@
             {% endfor %}
         </div>
         <div class="team2">
-            <h1>{{ match.teams[1].name }}<br />{{ clash.getScoreForTeam(match.teams[1].id) }}</h1>
             {% for result in clash.getPlayerResultsForTeam(match.teams[1].id) %}
             <h2>{{ result.score }} <a href="{{ path('QuakOpenArenaBundle_player', { id : result.player.id }) }}">{{ result.player.name }}</a>
             </h2>
