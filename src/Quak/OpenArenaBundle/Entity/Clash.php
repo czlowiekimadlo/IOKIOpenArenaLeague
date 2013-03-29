@@ -124,6 +124,11 @@ class Clash
         return $this->replay;
     }
 
+    public function getReplayCode()
+    {
+        return str_replace("http://youtu.be/", "", $this->replay);
+    }
+
     public function setReplay($replay)
     {
         $this->replay = $replay;

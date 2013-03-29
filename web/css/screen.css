@@ -113,12 +113,12 @@ a:hover {
 }
 
 .column h1 {
-    font-size: 1.6em;
+    font-size: 1.4em;
     text-align: center;
 }
 
 .column a {
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: bold;
 }
 #matchesUpcoming ul li, #matchesPlayed ul li {
@@ -183,6 +183,14 @@ a:hover {
 }
 #match .clash {
     margin-top: 80px;
+}
+#match .clash .image, #match .clash .yt {
+    width: 50%;
+    float: left;
+}
+#match .clash .image img {
+    width: 400px;
+    height: 225px;
 }
 
 #match #clashes .team1 {

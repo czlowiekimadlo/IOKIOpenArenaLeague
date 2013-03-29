@@ -17,8 +17,8 @@
     {% for clash in match.clashes %}
         <div class="clash">
             <h1>{{ clash.map.name }}</h1>
-            <h2><a href="{{ clash.screen }}">Screenshot</a></h2>
-            <h2><a href="{{ clash.replay }}">Replay</a></h2>
+            <h2 class="image"><a href="{{ clash.screen }}"><img src="{{ clash.screen }}" alt="Screenshot" /></a></h2>
+            <h2 class="yt"><iframe width="400" height="225" src="http://www.youtube.com/embed/{{ clash.replayCode }}" frameborder="0" allowfullscreen></iframe></h2>
         </div>
         {% if clash.clashResults.count > 0 %}
         <div class="team1">
