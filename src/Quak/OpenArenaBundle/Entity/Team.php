@@ -24,6 +24,11 @@ class Team
     protected $name;
 
     /**
+     * @ORM\Column(type="string")
+     */
+    protected $logo;
+
+    /**
      * @ORM\ManyToOne(targetEntity="\Quak\OpenArenaBundle\Entity\Season", inversedBy="teams")
      * @ORM\JoinColumns({
      *      @ORM\JoinColumn(name="season_id", referencedColumnName="id", onDelete="CASCADE")
@@ -81,6 +86,16 @@ class Team
     public function setName($name)
     {
         $this->name = $name;
+    }
+
+    public function getLogo()
+    {
+        return "images/logos/" . $this->logo;
+    }
+
+    public function setLogo($logo)
+    {
+        $this->logo = $logo;
     }
 
     public function setSeason(\Quak\OpenArenaBundle\Entity\Season $season)

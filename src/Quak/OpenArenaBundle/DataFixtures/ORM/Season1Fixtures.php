@@ -413,11 +413,21 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
             'na'  => 0
         );
 
+        $logos = array(
+            'mef' => 'team_logo.png',
+            'tau' => 'team_logo.png',
+            'bn'  => 'bn.jpg',
+            'sd'  => 'team_logo.png',
+            'w'   => 'team_logo.png',
+            'na'  => 'team_logo.png',
+        );
+
         foreach ($teams as $key => $team) {
             $newTeam = new Team();
             $newTeam->setName($team);
             $newTeam->setSeason($season);
             $newTeam->setScore($scores[$key]);
+            $newTeam->setLogo($logos[$key]);
             $manager->persist($newTeam);
             $this->teams[$key] = $newTeam;
 

@@ -9,9 +9,11 @@
 <div id="match">
     <div id="teams">
         <h1><a href="{{ path('QuakOpenArenaBundle_season', { id : match.round.season.number }) }}">Season {{ match.round.season.number }}</a>, Round {{ match.round.number }}, Match {{ match.number }}</h1>
+        <h2><a href="{{ path('QuakOpenArenaBundle_team', { id : match.teams[0].id}) }}"><img width="200" height="200" src="{{ asset(match.teams[0].logo) }}" /></a></h2>
         <h2><a href="{{ path('QuakOpenArenaBundle_team', { id : match.teams[0].id}) }}">{{ match.teams[0].name }}</a>
         <br />vs<br />
         <a href="{{ path('QuakOpenArenaBundle_team', { id : match.teams[1].id}) }}">{{ match.teams[1].name }}</a></h2>
+        <h2><a href="{{ path('QuakOpenArenaBundle_team', { id : match.teams[1].id}) }}"><img width="200" height="200" src="{{ asset(match.teams[1].logo) }}" /></a></h2>
     </div>
     <div id="clashes">
     {% for clash in match.clashes %}
