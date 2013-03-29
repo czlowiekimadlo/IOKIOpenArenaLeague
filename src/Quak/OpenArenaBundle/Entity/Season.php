@@ -186,6 +186,7 @@ class Season
         }
 
         usort($players, function($a, $b) use($method) {
+            if ($a->$method() == $b->$method()) return $a->getAverageScore() < $b->getAverageScore() ? 1 : -1;
             return ($a->$method() < $b->$method()) ? 1 : -1;
         });
 

@@ -140,7 +140,7 @@ a:hover {
     font-weight: bold;
 }
 
-#team h1, #player h1, #match h1, #match #teams h2, #match .clash h2 {
+#team h1, #player h1, #match h1, #match #teams h2, #match .clash h2, form {
     text-align: center;
 }
 #team table {
@@ -232,10 +232,6 @@ a:hover {
     list-style: none;
 }
 
-#match .team1 h2:hover .playerStats, #match .team2. h2:hover .playerStats {
-    display: block !important;
-}
-
 #match .team1 h2:hover, #match .team2 h2:hover {
     background: blue;
 }
@@ -252,4 +248,8 @@ a:hover {
 }
 #footer a {
     color: black;
+}
+
+a {
+    text-decoration: underline;
 }
