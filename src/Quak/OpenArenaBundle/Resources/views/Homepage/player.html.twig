@@ -57,7 +57,7 @@
         </table>
     </div>
     <div id="weapons" class="column">
-        <h1>Total kills by weapon:</h1>
+        <h1>Total kills by weapon</h1>
         <ul>
         {% for weaponResult in player.getTotalWeaponResults() %}
             <li>{{ weaponResult.weapon.name }}: {{ weaponResult.score }}</li>
