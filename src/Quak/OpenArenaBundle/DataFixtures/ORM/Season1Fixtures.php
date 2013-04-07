@@ -275,7 +275,38 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
             )
         ));
         $match = $this->createMatch(8, '05.04.2013 16:00', $round1, 'w', 'mef', array(
-
+            'am_thornish' => array(
+                'team_results' => array('w' => 3, 'mef' => 8),
+                'player_results' => array(
+                    'mgoraj' => 122,
+                    'rslocinski' => 62,
+                    'mwozniak' => 59,
+                    'mwlodek' => 38,
+                    'ddykszak' => 93,
+                    'lrozniakowski' => 73,
+                    'dkacban' => 38,
+                    'dbudynek' => 16
+                ),
+                'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-04-05-W-MEF-thornish.jpg',
+                'replay' => 'http://youtu.be/qATbjHTH7v8',
+                'log' => '2013-04-05-W-MEF-thornish.txt'
+            ),
+            'ctf_gate1' => array(
+                'team_results' => array('w' => 0, 'mef' => 11),
+                'player_results' => array(
+                    'mwozniak' => 74,
+                    'mgoraj' => 61,
+                    'mwlodek' => 61,
+                    'rslocinski' => 58,
+                    'ddykszak' => 85,
+                    'lrozniakowski' => 30,
+                    'dkacban' => 14,
+                    'dbudynek' => 4
+                ),
+                'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-04-05-W-MEF-gate1.jpg',
+                'replay' => 'http://youtu.be/xgWJiC9bP7E',
+                'log' => '2013-04-05-W-MEF-gate1.txt'
+            )
         ), false, array(
             array(
                 'player' => 'mwlodek',
@@ -405,7 +436,7 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
         );
 
         $scores = array(
-            'mef' => 3,
+            'mef' => 6,
             'tau' => 9,
             'bn'  => 6,
             'sd'  => 0,
@@ -512,10 +543,10 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
     protected function matchPlayerStats($nick, $stats)
     {
         $nickmap = array(
-            'mgoraj' => 'Kaczumbinator',
+            'mgoraj' => array('Kaczumbinator', 'Kaczumba'),
             'awaleska' => 'Ketrzynski ssie',
             'rslocinski' => 'SirHeadly',
-            'mwozniak' => 'MarW',
+            'mwozniak' => array('MarW', "Don't Shoot"),
             'tnebes' => array('vagino_rossi', 'TNebes'),
             'akucyrka' => 'kuyk',
             'mzimny' => array('Kaltgesicht', 'Coldface'),
@@ -532,7 +563,7 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
             'ddykszak' => 'WhySoSerious',
             'dkacban' => 'Kot Schrodingera',
             'dbudynek' => 'Dario',
-            'mwlodek' => null,
+            'mwlodek' => 'Wolodymyr',
             'lpospiech' => 'ZoCiM',
             'wsurmacz' => null,
             'dmasztalerz' => 'MASZTI'

@@ -1,0 +1,607 @@
+ioq3+oa 1.36_SVN1910M win_mingw-x86 Dec 25 2011
+----- FS_Startup -----
+Current search path:
+C:\Users\Hrabia Quak Metzger\AppData\Roaming\OpenArena/baseoa
+E:\gry\openarena-0.8.8\baseoa\pak6-patch088.pk3 (711 files)
+E:\gry\openarena-0.8.8\baseoa\pak6-patch085.pk3 (559 files)
+E:\gry\openarena-0.8.8\baseoa\pak6-misc.pk3 (229 files)
+E:\gry\openarena-0.8.8\baseoa\pak5-TA.pk3 (139 files)
+E:\gry\openarena-0.8.8\baseoa\pak4-textures.pk3 (1753 files)
+E:\gry\openarena-0.8.8\baseoa\pak2-players.pk3 (669 files)
+E:\gry\openarena-0.8.8\baseoa\pak2-players-mature.pk3 (231 files)
+E:\gry\openarena-0.8.8\baseoa\pak1-maps.pk3 (100 files)
+E:\gry\openarena-0.8.8\baseoa\pak0.pk3 (1042 files)
+E:\gry\openarena-0.8.8/baseoa
+
+----------------------
+5433 files in pk3 files
+execing default.cfg
+execing q3config.cfg
+execing autoexec.cfg
+Hunk_Clear: reset the hunk ok
+----- Client Initialization -----
+----- Initializing Renderer ----
+-------------------------------
+QKEY found.
+----- Client Initialization Complete -----
+----- R_Init -----
+SDL using driver "directx"
+Initializing OpenGL display
+Estimated display aspect: 1.250
+...setting mode 8: 1280 1024
+Using 8/8/8 Color bits, 24 depth, 0 stencil display.
+Available modes: '720x576 1280x1024 640x480 800x600 1024x768 1152x864 1280x960 720x480 1280x800 1280x768 1280x720'
+GL_RENDERER: GeForce 8800 GT/PCIe/SSE2
+Initializing OpenGL extensions
+...ignoring GL_EXT_texture_compression_s3tc
+...ignoring GL_S3_s3tc
+...using GL_EXT_texture_env_add
+...using GL_ARB_multitexture
+...using GL_EXT_compiled_vertex_array
+...ignoring GL_EXT_texture_filter_anisotropic
+...ignoring GL_ARB_vertex_shader
+
+GL_VENDOR: NVIDIA Corporation
+GL_RENDERER: GeForce 8800 GT/PCIe/SSE2
+GL_VERSION: 3.3.0
+GL_EXTENSIONS: GL_ARB_base_instance GL_ARB_blend_func_extended GL_ARB_color_buffer_float GL_ARB_compatibility GL_ARB_compressed_texture_pixel_storage GL_ARB_conservative_depth GL_ARB_copy_buffer GL_ARB_depth_buffer_float GL_ARB_depth_clamp GL_ARB_depth_texture GL_ARB_draw_buffers GL_ARB_draw_elements_base_vertex GL_ARB_draw_instanced GL_ARB_ES2_compatibility GL_ARB_explicit_attrib_location GL_ARB_fragment_coord_conventions GL_ARB_fragment_program GL_ARB_fragment_program_shadow GL_ARB_fragment_shader GL_ARB_framebuffer_object GL_ARB_framebuffer_sRGB GL_ARB_geometry_shader4 GL_ARB_get_program_binary GL_ARB_half_float_pixel GL_ARB_half_float_vertex GL_ARB_imaging GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_map_buffer_alignment GL_ARB_map_buffer_range GL_ARB_multisample GL_ARB_multitexture GL_ARB_occlusion_query GL_ARB_occlusion_query2 GL_ARB_pixel_buffer_object GL_ARB_point_parameters GL_ARB_point_sprite GL_ARB_provoking_vertex GL_ARB_robustness GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_separate_shader_objects GL_ARB_shader_bit_encoding GL_ARB_shader_objects GL_ARB_shader_texture_lod GL_ARB_shading_language_100 GL_ARB_shading_language_420pack GL_ARB_shading_language_include GL_ARB_shading_language_packing GL_ARB_shadow GL_ARB_sync GL_ARB_texture_border_clamp GL_ARB_texture_buffer_object GL_ARB_texture_compression GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map GL_ARB_texture_env_add GL_ARB_texture_env_combine GL_ARB_texture_env_crossbar GL_ARB_texture_env_dot3 GL_ARB_texture_float GL_ARB_texture_mirrored_repeat GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_storage GL_ARB_texture_swizzle GL_ARB_timer_query GL_ARB_transpose_matrix GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_buffer_object GL_ARB_vertex_program GL_ARB_vertex_shader GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_ARB_window_pos GL_ATI_draw_buffers GL_ATI_texture_float GL_ATI_texture_mirror_once GL_S3_s3tc GL_EXT_texture_env_add GL_EXT_abgr GL_EXT_bgra GL_EXT_bindable_uniform GL_EXT_blend_color GL_EXT_blend_equation_separate GL_EXT_blend_func_separate GL_EXT_blend_minmax GL_EXT_blend_subtract GL_EXT_compiled_vertex_array GL_EXT_Cg_shader GL_EXT_depth_bounds_test GL_EXT_direct_state_access GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_draw_range_elements GL_EXT_fog_coord GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXTX_framebuffer_mixed_formats GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_geometry_shader4 GL_EXT_gpu_program_parameters GL_EXT_gpu_shader4 GL_EXT_multi_draw_arrays GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_packed_pixels GL_EXT_pixel_buffer_object GL_EXT_point_parameters GL_EXT_provoking_vertex GL_EXT_rescale_normal GL_EXT_secondary_color GL_EXT_separate_shader_objects GL_EXT_separate_specular_color GL_EXT_shadow_funcs GL_EXT_stencil_two_side GL_EXT_stencil_wrap GL_EXT_texture3D GL_EXT_texture_array GL_EXT_texture_buffer_object GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_latc GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_cube_map GL_EXT_texture_edge_clamp GL_EXT_texture_env_combine GL_EXT_texture_env_dot3 GL_EXT_texture_filter_anisotropic GL_EXT_texture_format_BGRA8888 GL_EXT_texture_integer GL_EXT_texture_lod GL_EXT_texture_lod_bias GL_EXT_texture_mirror_clamp GL_EXT_texture_object GL_EXT_texture_shared_exponent GL_EXT_texture_sRGB GL_EXT_texture_sRGB_decode GL_EXT_texture_storage GL_EXT_texture_swizzle GL_EXT_texture_type_2_10_10_10_REV GL_EXT_timer_query GL_EXT_vertex_array GL_EXT_vertex_array_bgra GL_EXT_import_sync_object GL_IBM_rasterpos_clip GL_IBM_texture_mirrored_repeat GL_KTX_buffer_region GL_NV_alpha_test GL_NV_blend_minmax GL_NV_blend_square GL_NV_complex_primitives GL_NV_conditional_render GL_NV_copy_depth_to_color GL_NV_copy_image GL_NV_depth_buffer_float GL_NV_depth_clamp GL_NV_ES1_1_compatibility GL_NV_explicit_multisample GL_NV_fbo_color_attachments GL_NGL_MAX_TEXTURE_SIZE: 8192
+GL_MAX_TEXTURE_UNITS_ARB: 4
+
+PIXELFORMAT: color(24-bits) Z(24-bit) stencil(0-bits)
+MODE: 8, 1280 x 1024 fullscreen hz:N/A
+GAMMA: hardware w/ 0 overbright bits
+rendering primitives: single glDrawElements
+texturemode: GL_LINEAR_MIPMAP_NEAREST
+picmip: 16
+texture bits: 0
+multitexture: enabled
+compiled vertex arrays: enabled
+texenv add: enabled
+compressed textures: disabled
+glsl programs: disabled
+Initializing Shaders
+----- finished R_Init -----
+------ Initializing Sound ------
+Loading "OpenAL32.dll"...
+Failed to load library: "OpenAL32.dll".
+SDL_Init( SDL_INIT_AUDIO )... OK
+SDL audio driver is "dsound".
+SDL_AudioSpec:
+  Format:   AUDIO_S16LSB
+  Freq:     22050
+  Samples:  512
+  Channels: 2
+Starting SDL audio callback...
+SDL audio initialized.
+----- Sound Info -----
+    1 stereo
+16384 samples
+   16 samplebits
+    1 submission_chunk
+22050 speed
+0x21f88f8 dma buffer
+No background file.
+----------------------
+Sound initialization successful.
+--------------------------------
+Sound memory manager started
+Loading vm file vm/ui.qvm...
+File "vm/ui.qvm" found in "E:\gry\openarena-0.8.8\baseoa\pak6-patch088.pk3"
+...which has vmMagic VM_MAGIC_VER2
+Loading 1555 jump table targets
+VM file ui compiled to 739068 bytes of code
+ui loaded in 1451648 bytes on the hunk
+58 arenas parsed
+33 bots parsed
+--- Common Initialization Complete ---
+Winsock Initialized
+Hostname: SAL-9000
+IP6: fe80::38e2:13c4:3f57:fe9a%16
+IP: 192.168.1.101
+IP6: 2001:0:9d38:6ab8:38e2:13c4:3f57:fe9a
+Opening IP6 socket: [::]:27960
+Opening IP socket: 0.0.0.0:27960
+]\demo 2013-0
+    2013-02-13-TAU-W-bases3plus3
+    2013-02-13-TAU-W-thornish
+    2013-02-22-MEF-TAU-bases3plus3
+    2013-02-22-MEF-TAU-gate1
+    2013-02-27-SD-W-gate1
+    2013-02-27-SD-W-reptctf11
+    2013-03-06-BN-W-gate1
+    2013-03-06-BN-W-thornish
+    2013-03-15-TAU-SD-bases3plus3
+    2013-03-15-TAU-SD-reptctf11
+    2013-03-19-BN-SD-gate1
+    2013-03-19-BN-SD-reptctf11
+    2013-04-05-W-MEF-gate1
+    2013-04-05-W-MEF-thornish
+]\demo 2013-04-05-W-MEF-
+    2013-04-05-W-MEF-gate1
+    2013-04-05-W-MEF-thornish
+]\demo 2013-04-05-W-MEF-thornish 
+Not found: demos/2013-04-05-W-MEF-thornish.dm_66
+Not found: demos/2013-04-05-W-MEF-thornish.dm_67
+Not found: demos/2013-04-05-W-MEF-thornish.dm_68
+Not found: demos/2013-04-05-W-MEF-thornish.dm_69
+Not found: demos/2013-04-05-W-MEF-thornish.dm_70
+Demo file: demos/2013-04-05-W-MEF-thornish.dm_71
+----- FS_Startup -----
+Current search path:
+C:\Users\Hrabia Quak Metzger\AppData\Roaming\OpenArena/baseoa
+E:\gry\openarena-0.8.8\baseoa\pak6-patch088.pk3 (711 files)
+E:\gry\openarena-0.8.8\baseoa\pak6-patch085.pk3 (559 files)
+E:\gry\openarena-0.8.8\baseoa\pak6-misc.pk3 (229 files)
+E:\gry\openarena-0.8.8\baseoa\pak5-TA.pk3 (139 files)
+E:\gry\openarena-0.8.8\baseoa\pak4-textures.pk3 (1753 files)
+E:\gry\openarena-0.8.8\baseoa\pak2-players.pk3 (669 files)
+E:\gry\openarena-0.8.8\baseoa\pak2-players-mature.pk3 (231 files)
+E:\gry\openarena-0.8.8\baseoa\pak1-maps.pk3 (100 files)
+E:\gry\openarena-0.8.8\baseoa\pak0.pk3 (1042 files)
+E:\gry\openarena-0.8.8/baseoa
+
+handle 1: demos/2013-04-05-W-MEF-thornish.dm_71
+----------------------
+5433 files in pk3 files
+RE_Shutdown( 0 )
+Hunk_Clear: reset the hunk ok
+----- R_Init -----
+
+GL_VENDOR: NVIDIA Corporation
+GL_RENDERER: GeForce 8800 GT/PCIe/SSE2
+GL_VERSION: 3.3.0
+GL_EXTENSIONS: GL_ARB_base_instance GL_ARB_blend_func_extended GL_ARB_color_buffer_float GL_ARB_compatibility GL_ARB_compressed_texture_pixel_storage GL_ARB_conservative_depth GL_ARB_copy_buffer GL_ARB_depth_buffer_float GL_ARB_depth_clamp GL_ARB_depth_texture GL_ARB_draw_buffers GL_ARB_draw_elements_base_vertex GL_ARB_draw_instanced GL_ARB_ES2_compatibility GL_ARB_explicit_attrib_location GL_ARB_fragment_coord_conventions GL_ARB_fragment_program GL_ARB_fragment_program_shadow GL_ARB_fragment_shader GL_ARB_framebuffer_object GL_ARB_framebuffer_sRGB GL_ARB_geometry_shader4 GL_ARB_get_program_binary GL_ARB_half_float_pixel GL_ARB_half_float_vertex GL_ARB_imaging GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_map_buffer_alignment GL_ARB_map_buffer_range GL_ARB_multisample GL_ARB_multitexture GL_ARB_occlusion_query GL_ARB_occlusion_query2 GL_ARB_pixel_buffer_object GL_ARB_point_parameters GL_ARB_point_sprite GL_ARB_provoking_vertex GL_ARB_robustness GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_separate_shader_objects GL_ARB_shader_bit_encoding GL_ARB_shader_objects GL_ARB_shader_texture_lod GL_ARB_shading_language_100 GL_ARB_shading_language_420pack GL_ARB_shading_language_include GL_ARB_shading_language_packing GL_ARB_shadow GL_ARB_sync GL_ARB_texture_border_clamp GL_ARB_texture_buffer_object GL_ARB_texture_compression GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map GL_ARB_texture_env_add GL_ARB_texture_env_combine GL_ARB_texture_env_crossbar GL_ARB_texture_env_dot3 GL_ARB_texture_float GL_ARB_texture_mirrored_repeat GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_storage GL_ARB_texture_swizzle GL_ARB_timer_query GL_ARB_transpose_matrix GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_buffer_object GL_ARB_vertex_program GL_ARB_vertex_shader GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_ARB_window_pos GL_ATI_draw_buffers GL_ATI_texture_float GL_ATI_texture_mirror_once GL_S3_s3tc GL_EXT_texture_env_add GL_EXT_abgr GL_EXT_bgra GL_EXT_bindable_uniform GL_EXT_blend_color GL_EXT_blend_equation_separate GL_EXT_blend_func_separate GL_EXT_blend_minmax GL_EXT_blend_subtract GL_EXT_compiled_vertex_array GL_EXT_Cg_shader GL_EXT_depth_bounds_test GL_EXT_direct_state_access GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_draw_range_elements GL_EXT_fog_coord GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXTX_framebuffer_mixed_formats GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_geometry_shader4 GL_EXT_gpu_program_parameters GL_EXT_gpu_shader4 GL_EXT_multi_draw_arrays GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_packed_pixels GL_EXT_pixel_buffer_object GL_EXT_point_parameters GL_EXT_provoking_vertex GL_EXT_rescale_normal GL_EXT_secondary_color GL_EXT_separate_shader_objects GL_EXT_separate_specular_color GL_EXT_shadow_funcs GL_EXT_stencil_two_side GL_EXT_stencil_wrap GL_EXT_texture3D GL_EXT_texture_array GL_EXT_texture_buffer_object GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_latc GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_cube_map GL_EXT_texture_edge_clamp GL_EXT_texture_env_combine GL_EXT_texture_env_dot3 GL_EXT_texture_filter_anisotropic GL_EXT_texture_format_BGRA8888 GL_EXT_texture_integer GL_EXT_texture_lod GL_EXT_texture_lod_bias GL_EXT_texture_mirror_clamp GL_EXT_texture_object GL_EXT_texture_shared_exponent GL_EXT_texture_sRGB GL_EXT_texture_sRGB_decode GL_EXT_texture_storage GL_EXT_texture_swizzle GL_EXT_texture_type_2_10_10_10_REV GL_EXT_timer_query GL_EXT_vertex_array GL_EXT_vertex_array_bgra GL_EXT_import_sync_object GL_IBM_rasterpos_clip GL_IBM_texture_mirrored_repeat GL_KTX_buffer_region GL_NV_alpha_test GL_NV_blend_minmax GL_NV_blend_square GL_NV_complex_primitives GL_NV_conditional_render GL_NV_copy_depth_to_color GL_NV_copy_image GL_NV_depth_buffer_float GL_NV_depth_clamp GL_NV_ES1_1_compatibility GL_NV_explicit_multisample GL_NV_fbo_color_attachments GL_NGL_MAX_TEXTURE_SIZE: 8192
+GL_MAX_TEXTURE_UNITS_ARB: 4
+
+PIXELFORMAT: color(24-bits) Z(24-bit) stencil(0-bits)
+MODE: 8, 1280 x 1024 fullscreen hz:N/A
+GAMMA: hardware w/ 0 overbright bits
+rendering primitives: single glDrawElements
+texturemode: GL_LINEAR_MIPMAP_NEAREST
+picmip: 16
+texture bits: 0
+multitexture: enabled
+compiled vertex arrays: enabled
+texenv add: enabled
+compressed textures: disabled
+glsl programs: disabled
+Initializing Shaders
+----- finished R_Init -----
+Loading vm file vm/ui.qvm...
+File "vm/ui.qvm" found in "E:\gry\openarena-0.8.8\baseoa\pak6-patch088.pk3"
+...which has vmMagic VM_MAGIC_VER2
+Loading 1555 jump table targets
+VM file ui compiled to 739068 bytes of code
+ui loaded in 1451648 bytes on the hunk
+58 arenas parsed
+33 bots parsed
+Loading vm file vm/cgame.qvm...
+File "vm/cgame.qvm" found in "E:\gry\openarena-0.8.8\baseoa\pak6-patch088.pk3"
+...which has vmMagic VM_MAGIC_VER2
+Loading 1235 jump table targets
+VM file cgame compiled to 1079730 bytes of code
+cgame loaded in 4743488 bytes on the hunk
+^3WARNING: could not find sound/items/cl_ammoregen.wav - using default
+^3WARNING: could not find sound/weapons/nailgun/wnalimpd.wav - using default
+^3WARNING: could not find sound/weapons/vulcan/wvulimpd.wav - using default
+^3WARNING: could not find sound/weapons/vulcan/wvulimpl.wav - using default
+^3WARNING: could not find sound/weapons/vulcan/wvulimpm.wav - using default
+^3WARNING: could not find sound/misc/yousuck.wav - using default
+stitched 0 LoD cracks
+...loaded 2145 faces, 520 meshes, 226 trisurfs, 135 flares
+WARNING: reused image textures/flares/flarey.tga with mixed glWrapClampMode parm
+WARNING: reused image textures/flares/lava.tga with mixed glWrapClampMode parm
+WARNING: reused image textures/flares/wide.tga with mixed glWrapClampMode parm
+^3WARNING: music file music/OA14.ogg is not 22k stereo
+CL_InitCGame:  3.31 seconds
+4 msec to draw all images
+Com_TouchMemory: 0 msec
+Kaczumba^7: ^2ok zaczynamy? :)
+Kot Schrodingera^7 got the BLUE flag!
+SirHeadly^7 fragged RED's flag carrier!
+Kot Schrodingera^7 ate SirHeadly^7's rocket
+^3WARNING: music file music/OA14.ogg is not 22k stereo
+Full lag compensation is ON!
+lrozniakowski^7 entered the game
+Kaczumba^7 entered the game
+WhySoSerious^7 entered the game
+SirHeadly^7 entered the game
+Wolodymyr^7 entered the game
+Don't Shoot^7 entered the game
+Dario^7 entered the game
+Kot Schrodingera^7 entered the game
+^3WARNING: music file music/OA14.ogg is not 22k stereo
+Full lag compensation is ON!
+lrozniakowski^7 entered the game
+Kaczumba^7 entered the game
+WhySoSerious^7 entered the game
+SirHeadly^7 entered the game
+Wolodymyr^7 entered the game
+Don't Shoot^7 entered the game
+Dario^7 entered the game
+Kot Schrodingera^7 entered the game
+^3WARNING: music file music/OA14.ogg is not 22k stereo
+Full lag compensation is ON!
+lrozniakowski^7 entered the game
+Kaczumba^7 entered the game
+WhySoSerious^7 entered the game
+SirHeadly^7 entered the game
+Wolodymyr^7 entered the game
+Don't Shoot^7 entered the game
+Dario^7 entered the game
+Kot Schrodingera^7 entered the game
+Kot Schrodingera^7 was gunned down by Kaczumba^7
+Wolodymyr^7 got the RED flag!
+lrozniakowski^7 fragged BLUE's flag carrier!
+Wolodymyr^7 was melted by lrozniakowski^7's plasmagun
+lrozniakowski^7 returned the RED flag!
+Kaczumba^7 was nailed by WhySoSerious^7
+SirHeadly^7 was nailed by WhySoSerious^7
+Kot Schrodingera^7 was gunned down by Kaczumba^7
+Wolodymyr^7 got the RED flag!
+Dario^7 was gunned down by Kaczumba^7
+WhySoSerious^7 fragged BLUE's flag carrier!
+Wolodymyr^7 was nailed by WhySoSerious^7
+Don't Shoot^7 was nailed by WhySoSerious^7
+WhySoSerious^7 returned the RED flag!
+Kaczumba^7 got the RED flag!
+WhySoSerious^7 ate Kaczumba^7's rocket
+Kot Schrodingera^7 fragged BLUE's flag carrier!
+Kaczumba^7 was gunned down by Kot Schrodingera^7
+Dario^7 ate SirHeadly^7's rocket
+lrozniakowski^7 returned the RED flag!
+Kot Schrodingera^7 was gunned down by Don't Shoot^7
+Wolodymyr^7 got lead poisoning from WhySoSerious^7's Chaingun
+Kot Schrodingera^7 was machinegunned by Don't Shoot^7
+SirHeadly^7 got lead poisoning from WhySoSerious^7's Chaingun
+Kaczumba^7 melted himself.
+lrozniakowski^7 was gunned down by Don't Shoot^7
+Don't Shoot^7 got the RED flag!
+Kot Schrodingera^7 was gunned down by Wolodymyr^7
+Kot Schrodingera^7 was melted by Wolodymyr^7's plasmagun
+SirHeadly^7 goes out with a bang.
+Wolodymyr^7 was killed by ^1TEAMMATE^7 SirHeadly^7
+lrozniakowski^7 got the BLUE flag!
+WhySoSerious^7 fragged BLUE's flag carrier!
+Don't Shoot^7 was melted by WhySoSerious^7's plasmagun
+WhySoSerious^7 was gunned down by Kaczumba^7
+Wolodymyr^7 got the RED flag!
+Dario^7 was melted by Kaczumba^7's plasmagun
+Kot Schrodingera^7 ate Wolodymyr^7's rocket
+SirHeadly^7 was gunned down by Kot Schrodingera^7
+Dario^7 was melted by Kaczumba^7's plasmagun
+Kaczumba^7 ate Kot Schrodingera^7's rocket
+WhySoSerious^7 fragged BLUE's flag carrier!
+Wolodymyr^7 almost dodged WhySoSerious^7's rocket
+Kot Schrodingera^7 was machinegunned by Don't Shoot^7
+WhySoSerious^7 returned the RED flag!
+Kaczumba^7 got the RED flag!
+WhySoSerious^7 fragged BLUE's flag carrier!
+Don't Shoot^7 ate Dario^7's rocket
+Kaczumba^7 was nailed by WhySoSerious^7
+^3WARNING: music file music/OA14.ogg is not 22k stereo
+Kot Schrodingera^7 returned the RED flag!
+lrozniakowski^7 captured the BLUE flag!
+SirHeadly^7 got the RED flag!
+Kot Schrodingera^7 almost dodged Kaczumba^7's rocket
+Dario^7 got the BLUE flag!
+Kaczumba^7 fragged RED's flag carrier!
+Dario^7 was melted by Kaczumba^7's plasmagun
+Kaczumba^7 returned the BLUE flag!
+lrozniakowski^7 almost dodged SirHeadly^7's rocket
+Kot Schrodingera^7 fragged BLUE's flag carrier!
+SirHeadly^7 was gunned down by Kot Schrodingera^7
+Kot Schrodingera^7 returned the RED flag!
+Kaczumba^7 got the RED flag!
+WhySoSerious^7 was melted by Don't Shoot^7's plasmagun
+Don't Shoot^7 was nailed by WhySoSerious^7
+Kaczumba^7 captured the RED flag!
+Kot Schrodingera^7 ate SirHeadly^7's rocket
+Dario^7 got the BLUE flag!
+SirHeadly^7 fragged RED's flag carrier!
+lrozniakowski^7 almost dodged SirHeadly^7's rocket
+Dario^7 almost dodged SirHeadly^7's rocket
+SirHeadly^7 returned the BLUE flag!
+Kaczumba^7 was nailed by WhySoSerious^7
+Wolodymyr^7 got the RED flag!
+lrozniakowski^7 fragged BLUE's flag carrier!
+Wolodymyr^7 was gunned down by lrozniakowski^7
+lrozniakowski^7 returned the RED flag!
+Dario^7 ate SirHeadly^7's rocket
+Kot Schrodingera^7 got the BLUE flag!
+lrozniakowski^7 was nailed by Kaczumba^7
+Kaczumba^7 got the RED flag!
+lrozniakowski^7 fragged BLUE's flag carrier!
+Kaczumba^7 was gunned down by lrozniakowski^7
+lrozniakowski^7 returned the RED flag!
+Don't Shoot^7 almost dodged WhySoSerious^7's rocket
+SirHeadly is on a killing spree with 5 kills
+SirHeadly^7 fragged RED's flag carrier!
+Kot Schrodingera^7 almost dodged SirHeadly^7's rocket
+SirHeadly^7 returned the BLUE flag!
+WhySoSerious is on a killing spree with 5 kills
+Wolodymyr^7 ate WhySoSerious^7's rocket
+SirHeadly^7 almost dodged WhySoSerious^7's rocket
+Kaczumba^7 was nailed by WhySoSerious^7
+lrozniakowski^7 was gunned down by Don't Shoot^7
+Kot Schrodingera^7 got the BLUE flag!
+Wolodymyr^7 fragged RED's flag carrier!
+Kot Schrodingera^7 was gunned down by Wolodymyr^7
+Dario^7 was gunned down by Don't Shoot^7
+Wolodymyr^7 returned the BLUE flag!
+Kaczumba^7 got the RED flag!
+Dario^7 fragged BLUE's flag carrier!
+Kaczumba^7 was melted by Dario^7's plasmagun
+Dario^7 was melted by SirHeadly^7's plasmagun
+Wolodymyr^7 was electrocuted by lrozniakowski^7
+lrozniakowski^7 was melted by SirHeadly^7's plasmagun
+Kot Schrodingera^7 returned the RED flag!
+Kot Schrodingera^7 ate Don't Shoot^7's grenade
+WhySoSerious^7 got the BLUE flag!
+Don't Shoot^7 almost dodged WhySoSerious^7's rocket
+Dario^7 ate Kaczumba^7's grenade
+Kot Schrodingera^7 was electrocuted by Kaczumba^7
+Wolodymyr^7 was gunned down by Dario^7
+WhySoSerious^7 captured the BLUE flag!
+Dario^7 almost dodged Kaczumba^7's rocket
+Don't Shoot^7 got the RED flag!
+WhySoSerious^7 fragged BLUE's flag carrier!
+Don't Shoot^7 ate WhySoSerious^7's rocket
+WhySoSerious^7 returned the RED flag!
+WhySoSerious^7 almost dodged Wolodymyr^7's rocket
+lrozniakowski^7 almost dodged Wolodymyr^7's rocket
+Kaczumba^7 got the RED flag!
+Wolodymyr^7 ate WhySoSerious^7's rocket
+WhySoSerious^7 almost dodged Wolodymyr^7's rocket
+lrozniakowski^7 fragged BLUE's flag carrier!
+Kaczumba^7 was nailed by lrozniakowski^7
+lrozniakowski^7 returned the RED flag!
+lrozniakowski^7 was nailed by Don't Shoot^7
+Don't Shoot^7 got the RED flag!
+Kot Schrodingera^7 almost dodged Kaczumba^7's rocket
+^3WARNING: music file music/OA14.ogg is not 22k stereo
+Wolodymyr^7 was gunned down by Dario^7
+Kaczumba^7 was gunned down by Kot Schrodingera^7
+lrozniakowski^7 got the BLUE flag!
+Kaczumba^7 fragged RED's flag carrier!
+lrozniakowski^7 was gunned down by Kaczumba^7
+SirHeadly^7 returned the BLUE flag!
+Don't Shoot^7 captured the RED flag!
+Kot Schrodingera^7 was gunned down by Kaczumba^7
+Wolodymyr^7 got the RED flag!
+Kaczumba^7 ate WhySoSerious^7's rocket
+lrozniakowski^7 fragged BLUE's flag carrier!
+Wolodymyr^7 was nailed by lrozniakowski^7
+WhySoSerious^7 was gunned down by Kaczumba^7
+lrozniakowski^7 returned the RED flag!
+Kot Schrodingera^7 was nailed by SirHeadly^7
+Kaczumba^7 got the RED flag!
+WhySoSerious^7 fragged BLUE's flag carrier!
+Wolodymyr^7 ate WhySoSerious^7's rocket
+Kaczumba^7 almost dodged WhySoSerious^7's rocket
+WhySoSerious^7 returned the RED flag!
+Kot Schrodingera^7 was gunned down by Kaczumba^7
+Wolodymyr^7 was nailed by lrozniakowski^7
+WhySoSerious^7 got the BLUE flag!
+Dario^7 was nailed by SirHeadly^7
+Don't Shoot^7 was melted by lrozniakowski^7's plasmagun
+Wolodymyr^7 fragged RED's flag carrier!
+WhySoSerious^7 ate Wolodymyr^7's grenade
+Kaczumba^7 returned the BLUE flag!
+Dario^7 almost dodged Kaczumba^7's rocket
+Kot Schrodingera^7 got the BLUE flag!
+Kaczumba^7 fragged RED's flag carrier!
+Kot Schrodingera^7 almost dodged Kaczumba^7's rocket
+Kaczumba^7 returned the BLUE flag!
+Wolodymyr^7 was nailed by lrozniakowski^7
+Kaczumba^7 ate WhySoSerious^7's rocket
+WhySoSerious^7 was gunned down by Kaczumba^7
+lrozniakowski is on a killing spree with 5 kills
+Don't Shoot^7 was nailed by lrozniakowski^7
+Kot Schrodingera^7 got the BLUE flag!
+lrozniakowski^7 ate Wolodymyr^7's grenade
+Wolodymyr^7 got the RED flag!
+WhySoSerious^7 fragged BLUE's flag carrier!
+Wolodymyr^7 was gunned down by WhySoSerious^7
+lrozniakowski^7 returned the RED flag!
+Dario^7 blew himself up.
+Kot Schrodingera^7 captured the BLUE flag!
+Kot Schrodingera^7 was gunned down by Don't Shoot^7
+SirHeadly^7 ate lrozniakowski^7's rocket
+Wolodymyr^7 got the RED flag!
+Kaczumba^7 ate lrozniakowski^7's rocket
+Don't Shoot^7 was gunned down by WhySoSerious^7
+lrozniakowski^7 fragged BLUE's flag carrier!
+Wolodymyr^7 almost dodged lrozniakowski^7's rocket
+lrozniakowski^7 returned the RED flag!
+Dario^7 was gunned down by SirHeadly^7
+Kaczumba^7 ate WhySoSerious^7's rocket
+WhySoSerious^7 was gunned down by Don't Shoot^7
+Don't Shoot^7 got the RED flag!
+lrozniakowski^7 fragged BLUE's flag carrier!
+Don't Shoot^7 ate lrozniakowski^7's rocket
+lrozniakowski^7 returned the RED flag!
+Wolodymyr^7 ate Kot Schrodingera^7's rocket
+^3WARNING: music file music/OA14.ogg is not 22k stereo
+Dario^7 almost dodged Kaczumba^7's rocket
+Kot Schrodingera^7 was nailed by Don't Shoot^7
+WhySoSerious^7 got the BLUE flag!
+Kaczumba^7 got the RED flag!
+Wolodymyr^7 fragged RED's flag carrier!
+WhySoSerious^7 was gunned down by Wolodymyr^7
+Wolodymyr^7 returned the BLUE flag!
+Kaczumba^7 captured the RED flag!
+lrozniakowski^7 was gunned down by Wolodymyr^7
+SirHeadly^7 ate WhySoSerious^7's rocket
+Dario^7 got the BLUE flag!
+Kaczumba^7 got the RED flag!
+WhySoSerious^7 was nailed by Don't Shoot^7
+SirHeadly^7 got lead poisoning from Kot Schrodingera^7's Chaingun
+Don't Shoot^7 fragged RED's flag carrier!
+Dario^7 was gunned down by Don't Shoot^7
+Don't Shoot^7 returned the BLUE flag!
+Kaczumba^7 captured the RED flag!
+lrozniakowski^7 was gunned down by Kaczumba^7
+Wolodymyr^7 almost dodged WhySoSerious^7's rocket
+Kaczumba^7 almost dodged WhySoSerious^7's rocket
+WhySoSerious^7 got the BLUE flag!
+Don't Shoot^7 got the RED flag!
+Kaczumba^7 fragged RED's flag carrier!
+WhySoSerious^7 was gunned down by Kaczumba^7
+Kaczumba^7 returned the BLUE flag!
+lrozniakowski^7 got the BLUE flag!
+Dario^7 almost dodged SirHeadly^7's rocket
+Wolodymyr^7 was nailed by Kot Schrodingera^7
+WhySoSerious^7 was gunned down by Kaczumba^7
+Kaczumba^7 ate WhySoSerious^7's rocket
+Wolodymyr^7 was gunned down by WhySoSerious^7
+Kaczumba^7 fragged RED's flag carrier!
+lrozniakowski^7 almost dodged Kaczumba^7's rocket
+Kaczumba^7 returned the BLUE flag!
+Don't Shoot^7 captured the RED flag!
+Wolodymyr^7 got the RED flag!
+Dario^7 ate SirHeadly^7's rocket
+WhySoSerious^7 got the BLUE flag!
+lrozniakowski^7 fragged BLUE's flag carrier!
+Wolodymyr^7 almost dodged lrozniakowski^7's rocket
+lrozniakowski^7 returned the RED flag!
+lrozniakowski^7 was nailed by Kaczumba^7
+Wolodymyr^7 was gunned down by WhySoSerious^7
+Kaczumba^7 got the RED flag!
+Dario^7 was gunned down by Wolodymyr^7
+Don't Shoot^7 was gunned down by lrozniakowski^7
+lrozniakowski^7 almost dodged SirHeadly^7's rocket
+^3WARNING: music file music/OA14.ogg is not 22k stereo
+Kot Schrodingera^7 fragged BLUE's flag carrier!
+Kaczumba^7 ate Kot Schrodingera^7's grenade
+Kot Schrodingera^7 returned the RED flag!
+SirHeadly^7 fragged RED's flag carrier!
+WhySoSerious^7 was melted by SirHeadly^7's plasmagun
+SirHeadly^7 returned the BLUE flag!
+lrozniakowski^7 got the BLUE flag!
+Don't Shoot^7 got the RED flag!
+WhySoSerious^7 almost dodged Wolodymyr^7's rocket
+Kot Schrodingera^7 was killed by ^1TEAMMATE^7 WhySoSerious^7
+SirHeadly is on a killing spree with 5 kills
+SirHeadly^7 fragged RED's flag carrier!
+lrozniakowski^7 was machinegunned by SirHeadly^7
+SirHeadly^7 returned the BLUE flag!
+WhySoSerious^7 fragged BLUE's flag carrier!
+Don't Shoot^7 was gunned down by WhySoSerious^7
+WhySoSerious^7 returned the RED flag!
+SirHeadly^7 was electrocuted by Dario^7
+Kaczumba^7 ate Kot Schrodingera^7's grenade
+WhySoSerious^7 got the BLUE flag!
+Wolodymyr^7 got the RED flag!
+lrozniakowski^7 fragged BLUE's flag carrier!
+Kaczumba^7 fragged RED's flag carrier!
+Wolodymyr^7 was gunned down by lrozniakowski^7
+WhySoSerious^7 was gunned down by Kaczumba^7
+Kaczumba^7 returned the BLUE flag!
+lrozniakowski^7 returned the RED flag!
+SirHeadly^7 got the RED flag!
+lrozniakowski^7 fragged BLUE's flag carrier!
+SirHeadly^7 was gunned down by lrozniakowski^7
+Dario^7 ate Kaczumba^7's rocket
+WhySoSerious^7 returned the RED flag!
+Kot Schrodingera^7 was gunned down by SirHeadly^7
+lrozniakowski^7 was gunned down by Wolodymyr^7
+Wolodymyr^7 was nailed by WhySoSerious^7
+Wolodymyr^7 was nailed by Kot Schrodingera^7
+SirHeadly^7 was nailed by Kot Schrodingera^7
+Kot Schrodingera^7 got the BLUE flag!
+WhySoSerious^7 almost dodged Kaczumba^7's rocket
+Kaczumba^7 got the RED flag!
+SirHeadly^7 fragged RED's flag carrier!
+Kot Schrodingera^7 was gunned down by SirHeadly^7
+SirHeadly^7 returned the BLUE flag!
+lrozniakowski^7 was machinegunned by Don't Shoot^7
+lrozniakowski^7 was gunned down by Wolodymyr^7
+Wolodymyr^7 was gunned down by Kot Schrodingera^7
+Kaczumba^7 captured the RED flag!
+Dario^7 ate Kaczumba^7's grenade
+WhySoSerious^7 got the BLUE flag!
+SirHeadly^7 got the RED flag!
+lrozniakowski^7 fragged BLUE's flag carrier!
+SirHeadly^7 ate lrozniakowski^7's rocket
+Kaczumba is on a killing spree with 5 kills
+Kaczumba^7 fragged RED's flag carrier!
+WhySoSerious^7 was nailed by Kaczumba^7
+lrozniakowski^7 returned the RED flag!
+Kaczumba^7 returned the BLUE flag!
+Kot Schrodingera^7 was nailed by Don't Shoot^7
+Wolodymyr^7 got the RED flag!
+Dario^7 fragged BLUE's flag carrier!
+Wolodymyr^7 was gunned down by Dario^7
+Dario^7 returned the RED flag!
+Dario^7 was nailed by Don't Shoot^7
+WhySoSerious^7 was nailed by Don't Shoot^7
+Don't Shoot^7 got the RED flag!
+Kot Schrodingera^7 almost dodged Kaczumba^7's rocket
+Dario^7 was gunned down by Wolodymyr^7
+lrozniakowski^7 got the BLUE flag!
+Kaczumba^7 fragged RED's flag carrier!
+lrozniakowski^7 almost dodged Kaczumba^7's rocket
+Kaczumba^7 returned the BLUE flag!
+WhySoSerious^7 got the BLUE flag!
+SirHeadly^7 ate Kot Schrodingera^7's grenade
+Kot Schrodingera^7 almost dodged Kaczumba^7's rocket
+Wolodymyr^7 was gunned down by Dario^7
+Kaczumba^7 goes out with a bang.
+Don't Shoot is on a killing spree with 5 kills
+Don't Shoot^7 fragged RED's flag carrier!
+WhySoSerious^7 got lead poisoning from Don't Shoot^7's Chaingun
+Kaczumba^7 returned the BLUE flag!
+^3WARNING: music file music/OA14.ogg is not 22k stereo
+Don't Shoot^7 captured the RED flag!
+WhySoSerious^7 was gunned down by SirHeadly^7
+Wolodymyr^7 got the RED flag!
+lrozniakowski^7 fragged BLUE's flag carrier!
+Wolodymyr^7 was gunned down by lrozniakowski^7
+lrozniakowski^7 returned the RED flag!
+Dario^7 got the BLUE flag!
+Kot Schrodingera^7 ate Kaczumba^7's rocket
+Don't Shoot^7 fragged RED's flag carrier!
+Dario^7 got lead poisoning from Don't Shoot^7's Chaingun
+Don't Shoot^7 returned the BLUE flag!
+Wolodymyr^7 got lead poisoning from lrozniakowski^7's Chaingun
+SirHeadly^7 ate WhySoSerious^7's rocket
+Don't Shoot^7 got the RED flag!
+Dario^7 ate Kaczumba^7's rocket
+WhySoSerious^7 was nailed by Don't Shoot^7
+Kot Schrodingera^7 was gunned down by SirHeadly^7
+Dario^7 ate Kaczumba^7's rocket
+Wolodymyr^7 almost dodged WhySoSerious^7's rocket
+lrozniakowski^7 got the BLUE flag!
+WhySoSerious^7 fragged BLUE's flag carrier!
+Don't Shoot^7 almost dodged WhySoSerious^7's rocket
+Kaczumba^7 fragged RED's flag carrier!
+Kaczumba^7 returned the BLUE flag!
+Kot Schrodingera^7 got the BLUE flag!
+lrozniakowski^7 was gunned down by Kaczumba^7
+Kot Schrodingera^7 returned the RED flag!
+WhySoSerious^7 was gunned down by Don't Shoot^7
+SirHeadly^7 got the RED flag!
+Dario^7 was nailed by Don't Shoot^7
+Kaczumba is on a killing spree with 5 kills
+Kaczumba^7 fragged RED's flag carrier!
+Kot Schrodingera^7 ate Kaczumba^7's rocket
+Kaczumba^7 returned the BLUE flag!
+WhySoSerious^7 was gunned down by Wolodymyr^7
+Dario^7 almost dodged Kaczumba^7's rocket
+SirHeadly^7 captured the RED flag!
+Don't Shoot^7 almost dodged lrozniakowski^7's rocket
+Kaczumba^7 blew himself up.
+lrozniakowski^7 got the BLUE flag!
+Kaczumba^7 fragged RED's flag carrier!
+lrozniakowski^7 ate Kaczumba^7's grenade
+SirHeadly^7 almost dodged WhySoSerious^7's rocket
+Kaczumba^7 returned the BLUE flag!
+Kot Schrodingera^7 got the BLUE flag!
+Timelimit hit.
+Kaczumba^7: ^2gg
+----- Client Shutdown (Client quit) -----
+Closing SDL audio device...
+SDL audio device shut down.
+RE_Shutdown( 1 )
+-----------------------
