@@ -313,7 +313,10 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
                 'team' => 'mef'
             )
         ));
-        $match = $this->createMatch(9, '09.04.2013 16:30', $round1, 'tau', 'bn');
+        $match = $this->createMatch(9, '12.04.2013 16:30', $round1, 'tau', 'bn' array(
+            'oa_bases3plus3' => array(),
+            'ctf_gate1' => array()
+        ));
         $match = $this->createMatch(10, '16.04.2013 16:30', $round1, 'sd', 'mef');
 
         $round2 = new Round();
