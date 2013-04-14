@@ -314,8 +314,38 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
             )
         ));
         $match = $this->createMatch(9, '12.04.2013 16:30', $round1, 'tau', 'bn', array(
-            'oa_bases3plus3' => array(),
-            'ctf_gate1' => array()
+            'oa_bases3plus3' => array(
+                'team_results' => array('tau' => 1, 'bn' => 6),
+                'player_results' => array(
+                    'mzimny' => 45,
+                    'tnebes' => 28,
+                    'aadamczewski' => 18,
+                    'akucyrka' => 15,
+                    'wchojnacki' => 78,
+                    'kpiwowarczyk' => 48,
+                    'spawlowski' => 36,
+                    'mmucha' => 25
+                ),
+                'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-04-12-TAU-BN-bases3plus3.jpg',
+                'replay' => 'http://youtu.be/a5m6GPBktWI',
+                'log' => '2013-04-12-TAU-BN-bases3plus3.txt'
+            ),
+            'ctf_gate1' => array(
+                'team_results' => array('tau' => 3, 'bn' => 4),
+                'player_results' => array(
+                    'mzimny' => 47,
+                    'tnebes' => 45,
+                    'aadamczewski' => 38,
+                    'akucyrka' => 36,
+                    'kpiwowarczyk' => 62,
+                    'mmucha' => 45,
+                    'spawlowski' => 40,
+                    'wchojnacki' => 38
+                ),
+                'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-04-12-TAU-BN-gate1.jpg',
+                'replay' => 'http://youtu.be/4p3NWiSrH-w',
+                'log' => '2013-04-12-TAU-BN-gate1.txt'
+            )
         ));
         $match = $this->createMatch(10, '16.04.2013 16:30', $round1, 'sd', 'mef');
 
@@ -441,7 +471,7 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
         $scores = array(
             'mef' => 6,
             'tau' => 9,
-            'bn'  => 6,
+            'bn'  => 9,
             'sd'  => 0,
             'w'   => 3,
             'na'  => 0
@@ -550,7 +580,7 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
             'awaleska' => 'Ketrzynski ssie',
             'rslocinski' => 'SirHeadly',
             'mwozniak' => array('MarW', "Don't Shoot"),
-            'tnebes' => array('vagino_rossi', 'TNebes'),
+            'tnebes' => array('vagino_rossi', 'TNebes', 'vaginoRossi'),
             'akucyrka' => 'kuyk',
             'mzimny' => array('Kaltgesicht', 'Coldface'),
             'aadamczewski' => array('Bozenka', 'AAdAmCzEwSkI'),
