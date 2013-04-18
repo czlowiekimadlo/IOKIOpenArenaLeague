@@ -127,6 +127,11 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
                 'replay' => 'http://youtu.be/SSnQS6evpyM',
                 'log' => '2013-02-22-MEF-TAU-gate1.txt'
             )
+        ), false, array(
+            array(
+                'player' => 'awaleska',
+                'team' => 'mef'
+            )
         ));
         $match = $this->createMatch(4, '27.02.2013 16:15', $round1, 'sd', 'w', array(
             'ctf_gate1' => array(
@@ -307,12 +312,7 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
                 'replay' => 'http://youtu.be/xgWJiC9bP7E',
                 'log' => '2013-04-05-W-MEF-gate1.txt'
             )
-        ), false, array(
-            array(
-                'player' => 'mwlodek',
-                'team' => 'mef'
-            )
-        ));
+        ), false);
         $match = $this->createMatch(9, '12.04.2013 16:30', $round1, 'tau', 'bn', array(
             'oa_bases3plus3' => array(
                 'team_results' => array('tau' => 1, 'bn' => 6),
@@ -347,23 +347,26 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
                 'log' => '2013-04-12-TAU-BN-gate1.txt'
             )
         ));
-        $match = $this->createMatch(10, '16.04.2013 16:30', $round1, 'sd', 'mef');
+        $match = $this->createMatch(10, '26.04.2013 16:30', $round1, 'sd', 'mef', array(
+            'oa_reptctf11' => array(),
+            'ctf_gate1' => array()
+        ));
 
         $round2 = new Round();
         $round2->setNumber(2);
         $round2->setSeason($season);
         $manager->persist($round2);
 
-        $match = $this->createMatch(1, '23.04.2013 16:30', $round2, 'mef', 'bn');
-        $match = $this->createMatch(2, '30.04.2013 16:30', $round2, 'tau', 'w');
-        $match = $this->createMatch(3, '07.05.2013 16:30', $round2, 'tau', 'mef');
-        $match = $this->createMatch(4, '14.05.2013 16:30', $round2, 'w', 'sd');
-        $match = $this->createMatch(5, '21.05.2013 16:30', $round2, 'w', 'bn');
-        $match = $this->createMatch(6, '28.05.2013 16:30', $round2, 'sd', 'tau');
-        $match = $this->createMatch(7, '04.06.2013 16:30', $round2, 'sd', 'bn');
-        $match = $this->createMatch(8, '11.06.2013 16:30', $round2, 'mef', 'w');
-        $match = $this->createMatch(9, '18.06.2013 16:30', $round2, 'bn', 'tau');
-        $match = $this->createMatch(10, '25.06.2013 16:30', $round2, 'mef', 'sd');
+        $match = $this->createMatch(1, '07.05.2013 16:30', $round2, 'mef', 'bn');
+        $match = $this->createMatch(2, '14.05.2013 16:30', $round2, 'tau', 'w');
+        $match = $this->createMatch(3, '21.05.2013 16:30', $round2, 'tau', 'mef');
+        $match = $this->createMatch(4, '28.05.2013 16:30', $round2, 'w', 'sd');
+        $match = $this->createMatch(5, '04.06.2013 16:30', $round2, 'w', 'bn');
+        $match = $this->createMatch(6, '11.06.2013 16:30', $round2, 'sd', 'tau');
+        $match = $this->createMatch(7, '18.06.2013 16:30', $round2, 'sd', 'bn');
+        $match = $this->createMatch(8, '25.06.2013 16:30', $round2, 'mef', 'w');
+        $match = $this->createMatch(9, '02.07.2013 16:30', $round2, 'bn', 'tau');
+        $match = $this->createMatch(10, '09.07.2013 16:30', $round2, 'mef', 'sd');
 
         $manager->flush();
     }
@@ -432,7 +435,7 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
         $players = array(
             'mef' => array(
                 'mgoraj' => 'Małgorzata Góraj',
-                'awaleska' => 'Adam Wałęska',
+                'mwlodek' => 'Mateusz Włodek',
                 'rslocinski' => 'Roman Słociński',
                 'mwozniak' => 'Marcin Woźniak'
             ),
@@ -461,7 +464,7 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
                 'dbudynek' => 'Dariusz Budynek'
             ),
             'na'  => array(
-                'mwlodek' => 'Mateusz Włodek',
+                'awaleska' => 'Adam Wałęska',
                 'lpospiech' => 'Łukasz Pospiech',
                 'wsurmacz' => 'Wojciech Surmacz',
                 'dmasztalerz' => 'Dariusz Masztalerz'
