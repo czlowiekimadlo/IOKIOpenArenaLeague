@@ -455,7 +455,8 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
                 'fgorny' => 'Filip Górny',
                 'lciolek' => 'Łukasz Ciołek',
                 'rpalczynski' => 'Radosław Palczyński',
-                'sdudek' => 'Sebastian Dudek'
+                'sdudek' => 'Sebastian Dudek',
+                'djurga' => 'Dawid Jurga'
             ),
             'w'   => array(
                 'lrozniakowski' => 'Leszek Rożniakowski',
@@ -467,7 +468,8 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
                 'awaleska' => 'Adam Wałęska',
                 'lpospiech' => 'Łukasz Pospiech',
                 'wsurmacz' => 'Wojciech Surmacz',
-                'dmasztalerz' => 'Dariusz Masztalerz'
+                'dmasztalerz' => 'Dariusz Masztalerz',
+                'khorowski' => 'Karol Horowski'
             )
         );
 
