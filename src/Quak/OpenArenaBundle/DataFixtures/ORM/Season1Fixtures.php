@@ -348,8 +348,43 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
             )
         ));
         $match = $this->createMatch(10, '26.04.2013 16:30', $round1, 'sd', 'mef', array(
-            'oa_reptctf11' => array(),
-            'ctf_gate1' => array()
+            'oa_reptctf11' => array(
+                'team_results' => array('sd' => 0, 'mef' => 14),
+                'player_results' => array(
+                    'djurga' => 40,
+                    'lciolek' => 33,
+                    'sdudek' => 26,
+                    'khorowski' => 23,
+                    'mwozniak' => 89,
+                    'mgoraj' => 73,
+                    'rslocinski' => 55,
+                    'mwlodek' => 48
+                ),
+                'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-04-26-SD-MEF-reptctf11.jpg',
+                'replay' => 'http://youtu.be/Vfrk5iNta88',
+                'log' => '2013-04-26-SD-MEF-reptctf11.txt'
+            ),
+            'ctf_gate1' => array(
+                'team_results' => array('sd' => 0, 'mef' => 13),
+                'player_results' => array(
+                    'khorowski' => 35,
+                    'djurga' => 28,
+                    'sdudek' => 18,
+                    'lciolek' => 14,
+                    'mgoraj' => 101,
+                    'rslocinski' => 75,
+                    'mwozniak' => 53,
+                    'mwlodek' => 47
+                ),
+                'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-04-26-SD-MEF-gate1.jpg',
+                'replay' => 'http://youtu.be/rmEjq4Ug6K0',
+                'log' => '2013-04-26-SD-MEF-gate1.txt'
+            )
+        ), false, array(
+            array(
+                'player' => 'khorowski',
+                'team' => 'sd'
+            )
         ));
 
         $round2 = new Round();
@@ -474,7 +509,7 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
         );
 
         $scores = array(
-            'mef' => 6,
+            'mef' => 9,
             'tau' => 9,
             'bn'  => 9,
             'sd'  => 0,
@@ -483,11 +518,11 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
         );
 
         $logos = array(
-            'mef' => 'team_logo.png',
-            'tau' => 'team_logo.png',
+            'mef' => 'mef.jpg',
+            'tau' => 'majonez.jpg',
             'bn'  => 'bn.jpg',
-            'sd'  => 'team_logo.png',
-            'w'   => 'team_logo.png',
+            'sd'  => 'sd.jpg',
+            'w'   => 'w.jpg',
             'na'  => 'team_logo.png',
         );
 
@@ -596,15 +631,17 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
             'fgorny' => 'Filip',
             'lciolek' => array('EloRap', 'BackendDeveloper'),
             'rpalczynski' => 'radepal',
-            'sdudek' => 'd3dik',
+            'sdudek' => array('d3dik', 'beriba'),
             'lrozniakowski' => 'lrozniakowski',
             'ddykszak' => 'WhySoSerious',
             'dkacban' => 'Kot Schrodingera',
             'dbudynek' => 'Dario',
-            'mwlodek' => 'Wolodymyr',
+            'mwlodek' => array('Wolodymyr', 'Wladyslaw'),
             'lpospiech' => 'ZoCiM',
             'wsurmacz' => null,
-            'dmasztalerz' => 'MASZTI'
+            'dmasztalerz' => 'MASZTI',
+            'djurga' => 'Gummmibear',
+            'khorowski' => 'karol',
         );
 
         if(is_array($nickmap[$nick])) {
