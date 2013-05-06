@@ -524,7 +524,7 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
 
         $logos = array(
             'mef' => 'mef.jpg',
-            'tau' => 'majonez.jpg',
+            'tau' => 'logoindyk.jpg',
             'bn'  => 'bn.jpg',
             'sd'  => 'sd.jpg',
             'w'   => 'w.jpg',
