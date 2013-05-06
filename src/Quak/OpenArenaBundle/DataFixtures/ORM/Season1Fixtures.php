@@ -353,7 +353,7 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
                 'player_results' => array(
                     'djurga' => 40,
                     'lciolek' => 33,
-                    'sdudek' => 26,
+                    'ssadlo' => 26,
                     'khorowski' => 23,
                     'mwozniak' => 89,
                     'mgoraj' => 73,
@@ -369,7 +369,7 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
                 'player_results' => array(
                     'khorowski' => 35,
                     'djurga' => 28,
-                    'sdudek' => 18,
+                    'ssadlo' => 18,
                     'lciolek' => 14,
                     'mgoraj' => 101,
                     'rslocinski' => 75,
@@ -383,6 +383,10 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
         ), false, array(
             array(
                 'player' => 'khorowski',
+                'team' => 'sd'
+            ),
+            array(
+                'player' => 'ssadlo',
                 'team' => 'sd'
             )
         ));
@@ -504,7 +508,8 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
                 'lpospiech' => 'Łukasz Pospiech',
                 'wsurmacz' => 'Wojciech Surmacz',
                 'dmasztalerz' => 'Dariusz Masztalerz',
-                'khorowski' => 'Karol Horowski'
+                'khorowski' => 'Karol Horowski',
+                'ssadlo' => 'Szymon Sadło'
             )
         );
 
@@ -631,7 +636,7 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
             'fgorny' => 'Filip',
             'lciolek' => array('EloRap', 'BackendDeveloper'),
             'rpalczynski' => 'radepal',
-            'sdudek' => array('d3dik', 'beriba'),
+            'sdudek' => array('d3dik'),
             'lrozniakowski' => 'lrozniakowski',
             'ddykszak' => 'WhySoSerious',
             'dkacban' => 'Kot Schrodingera',
@@ -642,6 +647,7 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
             'dmasztalerz' => 'MASZTI',
             'djurga' => 'Gummmibear',
             'khorowski' => 'karol',
+            'ssadlo' => 'beriba'
         );
 
         if(is_array($nickmap[$nick])) {
