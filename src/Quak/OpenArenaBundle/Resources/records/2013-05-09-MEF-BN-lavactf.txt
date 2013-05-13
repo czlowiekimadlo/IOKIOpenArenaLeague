@@ -1,0 +1,584 @@
+ioq3+oa 1.36_SVN1910M win_mingw-x86 Dec 25 2011
+----- FS_Startup -----
+Current search path:
+C:\Users\Hrabia Quak Metzger\AppData\Roaming\OpenArena/baseoa
+E:\gry\openarena-0.8.8\baseoa\pak6-patch088.pk3 (711 files)
+E:\gry\openarena-0.8.8\baseoa\pak6-patch085.pk3 (559 files)
+E:\gry\openarena-0.8.8\baseoa\pak6-misc.pk3 (229 files)
+E:\gry\openarena-0.8.8\baseoa\pak5-TA.pk3 (139 files)
+E:\gry\openarena-0.8.8\baseoa\pak4-textures.pk3 (1753 files)
+E:\gry\openarena-0.8.8\baseoa\pak2-players.pk3 (669 files)
+E:\gry\openarena-0.8.8\baseoa\pak2-players-mature.pk3 (231 files)
+E:\gry\openarena-0.8.8\baseoa\pak1-maps.pk3 (100 files)
+E:\gry\openarena-0.8.8\baseoa\pak0.pk3 (1042 files)
+E:\gry\openarena-0.8.8/baseoa
+
+----------------------
+5433 files in pk3 files
+execing default.cfg
+execing q3config.cfg
+execing autoexec.cfg
+Hunk_Clear: reset the hunk ok
+----- Client Initialization -----
+----- Initializing Renderer ----
+-------------------------------
+QKEY found.
+----- Client Initialization Complete -----
+----- R_Init -----
+SDL using driver "directx"
+Initializing OpenGL display
+Estimated display aspect: 1.250
+...setting mode 8: 1280 1024
+Using 8/8/8 Color bits, 24 depth, 0 stencil display.
+Available modes: '720x576 1280x1024 640x480 800x600 1024x768 1152x864 1280x960 720x480 1280x800 1280x768 1280x720'
+GL_RENDERER: GeForce 8800 GT/PCIe/SSE2
+Initializing OpenGL extensions
+...ignoring GL_EXT_texture_compression_s3tc
+...ignoring GL_S3_s3tc
+...using GL_EXT_texture_env_add
+...using GL_ARB_multitexture
+...using GL_EXT_compiled_vertex_array
+...ignoring GL_EXT_texture_filter_anisotropic
+...ignoring GL_ARB_vertex_shader
+
+GL_VENDOR: NVIDIA Corporation
+GL_RENDERER: GeForce 8800 GT/PCIe/SSE2
+GL_VERSION: 3.3.0
+GL_EXTENSIONS: GL_ARB_arrays_of_arrays GL_ARB_base_instance GL_ARB_blend_func_extended GL_ARB_clear_buffer_object GL_ARB_color_buffer_float GL_ARB_compatibility GL_ARB_compressed_texture_pixel_storage GL_ARB_conservative_depth GL_ARB_copy_buffer GL_ARB_copy_image GL_ARB_debug_output GL_ARB_depth_buffer_float GL_ARB_depth_clamp GL_ARB_depth_texture GL_ARB_draw_buffers GL_ARB_draw_elements_base_vertex GL_ARB_draw_instanced GL_ARB_ES2_compatibility GL_ARB_ES3_compatibility GL_ARB_explicit_attrib_location GL_ARB_explicit_uniform_location GL_ARB_fragment_coord_conventions GL_ARB_fragment_layer_viewport GL_ARB_fragment_program GL_ARB_fragment_program_shadow GL_ARB_fragment_shader GL_ARB_framebuffer_no_attachments GL_ARB_framebuffer_object GL_ARB_framebuffer_sRGB GL_ARB_geometry_shader4 GL_ARB_get_program_binary GL_ARB_half_float_pixel GL_ARB_half_float_vertex GL_ARB_imaging GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_internalformat_query2 GL_ARB_invalidate_subdata GL_ARB_map_buffer_alignment GL_ARB_map_buffer_range GL_ARB_multisample GL_ARB_multitexture GL_ARB_occlusion_query GL_ARB_occlusion_query2 GL_ARB_pixel_buffer_object GL_ARB_point_parameters GL_ARB_point_sprite GL_ARB_program_interface_query GL_ARB_provoking_vertex GL_ARB_robust_buffer_access_behavior GL_ARB_robustness GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_separate_shader_objects GL_ARB_shader_bit_encoding GL_ARB_shader_objects GL_ARB_shader_texture_lod GL_ARB_shading_language_100 GL_ARB_shading_language_420pack GL_ARB_shading_language_include GL_ARB_shading_language_packing GL_ARB_shadow GL_ARB_stencil_texturing GL_ARB_sync GL_ARB_texture_border_clamp GL_ARB_texture_buffer_object GL_ARB_texture_buffer_range GL_ARB_texture_compression GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map GL_ARB_texture_env_add GL_ARB_texture_env_combine GL_ARB_texture_env_crossbar GL_ARB_texture_env_dot3 GL_ARB_texture_float GL_ARB_texture_mirrored_repeat GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transpose_matrix GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_program GL_ARB_vertex_shader GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_ARB_window_pos GL_ATI_draw_buffers GL_ATI_texture_float GL_ATI_texture_mirror_once GL_S3_s3tc GL_EXT_texture_env_add GL_EXT_abgr GL_EXT_bgra GL_EXT_bindable_uniform GL_EXT_blend_color GL_EXT_blend_equation_separate GL_EXT_blend_func_separate GL_EXT_blend_minmax GL_EXT_blend_subtract GL_EXT_compiled_vertex_array GL_EXT_Cg_shader GL_EXT_depth_bounds_test GL_EXT_direct_state_access GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_draw_range_elements GL_EXT_fog_coord GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXTX_framebuffer_mixed_formats GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_geometry_shader4 GL_EXT_gpu_program_parameters GL_EXT_gpu_shader4 GL_EXT_multi_draw_arrays GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_packed_pixels GL_EXT_pixel_buffer_object GL_EXT_point_parameters GL_EXT_provoking_vertex GL_EXT_rescale_normal GL_EXT_secondary_color GL_EXT_separate_shader_objects GL_EXT_separate_specular_color GL_EXT_shadow_funcs GL_EXT_stencil_two_side GL_EXT_stencil_wrap GL_EXT_texture3D GL_EXT_texture_array GL_EXT_texture_buffer_object GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_latc GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_cube_map GL_EXT_texture_edge_clamp GL_EXT_texture_env_combine GL_EXT_texture_env_dot3 GL_EXT_texture_filter_anisotropic GL_EXT_texture_format_BGRA8888 GL_EXT_texture_integer GL_EXT_texture_lod GL_EXT_texture_lod_bias GL_EXT_texture_mirror_clamp GL_EXT_texture_object GL_EXT_texture_shared_exponent GL_EXT_texture_sRGB GL_EXGL_MAX_TEXTURE_SIZE: 8192
+GL_MAX_TEXTURE_UNITS_ARB: 4
+
+PIXELFORMAT: color(24-bits) Z(24-bit) stencil(0-bits)
+MODE: 8, 1280 x 1024 fullscreen hz:N/A
+GAMMA: hardware w/ 0 overbright bits
+rendering primitives: single glDrawElements
+texturemode: GL_LINEAR_MIPMAP_NEAREST
+picmip: 16
+texture bits: 0
+multitexture: enabled
+compiled vertex arrays: enabled
+texenv add: enabled
+compressed textures: disabled
+glsl programs: disabled
+Initializing Shaders
+----- finished R_Init -----
+------ Initializing Sound ------
+Loading "OpenAL32.dll"...
+Failed to load library: "OpenAL32.dll".
+SDL_Init( SDL_INIT_AUDIO )... OK
+SDL audio driver is "dsound".
+SDL_AudioSpec:
+  Format:   AUDIO_S16LSB
+  Freq:     22050
+  Samples:  512
+  Channels: 2
+Starting SDL audio callback...
+SDL audio initialized.
+----- Sound Info -----
+    1 stereo
+16384 samples
+   16 samplebits
+    1 submission_chunk
+22050 speed
+0x21c8958 dma buffer
+No background file.
+----------------------
+Sound initialization successful.
+--------------------------------
+Sound memory manager started
+Loading vm file vm/ui.qvm...
+File "vm/ui.qvm" found in "E:\gry\openarena-0.8.8\baseoa\pak6-patch088.pk3"
+...which has vmMagic VM_MAGIC_VER2
+Loading 1555 jump table targets
+VM file ui compiled to 739068 bytes of code
+ui loaded in 1451648 bytes on the hunk
+58 arenas parsed
+33 bots parsed
+--- Common Initialization Complete ---
+Winsock Initialized
+Hostname: SAL-9000
+IP6: fe80::4c3:20df:3f57:fe9b%16
+IP: 192.168.1.100
+IP6: 2001:0:5ef5:79fb:4c3:20df:3f57:fe9b
+Opening IP6 socket: [::]:27960
+Opening IP socket: 0.0.0.0:27960
+]\demo 2013-05-09-MEF-BN-lavactf 
+Not found: demos/2013-05-09-MEF-BN-lavactf.dm_66
+Not found: demos/2013-05-09-MEF-BN-lavactf.dm_67
+Not found: demos/2013-05-09-MEF-BN-lavactf.dm_68
+Not found: demos/2013-05-09-MEF-BN-lavactf.dm_69
+Not found: demos/2013-05-09-MEF-BN-lavactf.dm_70
+Demo file: demos/2013-05-09-MEF-BN-lavactf.dm_71
+----- FS_Startup -----
+Current search path:
+C:\Users\Hrabia Quak Metzger\AppData\Roaming\OpenArena/baseoa
+E:\gry\openarena-0.8.8\baseoa\pak6-patch088.pk3 (711 files)
+E:\gry\openarena-0.8.8\baseoa\pak6-patch085.pk3 (559 files)
+E:\gry\openarena-0.8.8\baseoa\pak6-misc.pk3 (229 files)
+E:\gry\openarena-0.8.8\baseoa\pak5-TA.pk3 (139 files)
+E:\gry\openarena-0.8.8\baseoa\pak4-textures.pk3 (1753 files)
+E:\gry\openarena-0.8.8\baseoa\pak2-players.pk3 (669 files)
+E:\gry\openarena-0.8.8\baseoa\pak2-players-mature.pk3 (231 files)
+E:\gry\openarena-0.8.8\baseoa\pak1-maps.pk3 (100 files)
+E:\gry\openarena-0.8.8\baseoa\pak0.pk3 (1042 files)
+E:\gry\openarena-0.8.8/baseoa
+
+handle 1: demos/2013-05-09-MEF-BN-lavactf.dm_71
+----------------------
+5433 files in pk3 files
+RE_Shutdown( 0 )
+Hunk_Clear: reset the hunk ok
+----- R_Init -----
+
+GL_VENDOR: NVIDIA Corporation
+GL_RENDERER: GeForce 8800 GT/PCIe/SSE2
+GL_VERSION: 3.3.0
+GL_EXTENSIONS: GL_ARB_arrays_of_arrays GL_ARB_base_instance GL_ARB_blend_func_extended GL_ARB_clear_buffer_object GL_ARB_color_buffer_float GL_ARB_compatibility GL_ARB_compressed_texture_pixel_storage GL_ARB_conservative_depth GL_ARB_copy_buffer GL_ARB_copy_image GL_ARB_debug_output GL_ARB_depth_buffer_float GL_ARB_depth_clamp GL_ARB_depth_texture GL_ARB_draw_buffers GL_ARB_draw_elements_base_vertex GL_ARB_draw_instanced GL_ARB_ES2_compatibility GL_ARB_ES3_compatibility GL_ARB_explicit_attrib_location GL_ARB_explicit_uniform_location GL_ARB_fragment_coord_conventions GL_ARB_fragment_layer_viewport GL_ARB_fragment_program GL_ARB_fragment_program_shadow GL_ARB_fragment_shader GL_ARB_framebuffer_no_attachments GL_ARB_framebuffer_object GL_ARB_framebuffer_sRGB GL_ARB_geometry_shader4 GL_ARB_get_program_binary GL_ARB_half_float_pixel GL_ARB_half_float_vertex GL_ARB_imaging GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_internalformat_query2 GL_ARB_invalidate_subdata GL_ARB_map_buffer_alignment GL_ARB_map_buffer_range GL_ARB_multisample GL_ARB_multitexture GL_ARB_occlusion_query GL_ARB_occlusion_query2 GL_ARB_pixel_buffer_object GL_ARB_point_parameters GL_ARB_point_sprite GL_ARB_program_interface_query GL_ARB_provoking_vertex GL_ARB_robust_buffer_access_behavior GL_ARB_robustness GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_separate_shader_objects GL_ARB_shader_bit_encoding GL_ARB_shader_objects GL_ARB_shader_texture_lod GL_ARB_shading_language_100 GL_ARB_shading_language_420pack GL_ARB_shading_language_include GL_ARB_shading_language_packing GL_ARB_shadow GL_ARB_stencil_texturing GL_ARB_sync GL_ARB_texture_border_clamp GL_ARB_texture_buffer_object GL_ARB_texture_buffer_range GL_ARB_texture_compression GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map GL_ARB_texture_env_add GL_ARB_texture_env_combine GL_ARB_texture_env_crossbar GL_ARB_texture_env_dot3 GL_ARB_texture_float GL_ARB_texture_mirrored_repeat GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transpose_matrix GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_program GL_ARB_vertex_shader GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_ARB_window_pos GL_ATI_draw_buffers GL_ATI_texture_float GL_ATI_texture_mirror_once GL_S3_s3tc GL_EXT_texture_env_add GL_EXT_abgr GL_EXT_bgra GL_EXT_bindable_uniform GL_EXT_blend_color GL_EXT_blend_equation_separate GL_EXT_blend_func_separate GL_EXT_blend_minmax GL_EXT_blend_subtract GL_EXT_compiled_vertex_array GL_EXT_Cg_shader GL_EXT_depth_bounds_test GL_EXT_direct_state_access GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_draw_range_elements GL_EXT_fog_coord GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXTX_framebuffer_mixed_formats GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_geometry_shader4 GL_EXT_gpu_program_parameters GL_EXT_gpu_shader4 GL_EXT_multi_draw_arrays GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_packed_pixels GL_EXT_pixel_buffer_object GL_EXT_point_parameters GL_EXT_provoking_vertex GL_EXT_rescale_normal GL_EXT_secondary_color GL_EXT_separate_shader_objects GL_EXT_separate_specular_color GL_EXT_shadow_funcs GL_EXT_stencil_two_side GL_EXT_stencil_wrap GL_EXT_texture3D GL_EXT_texture_array GL_EXT_texture_buffer_object GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_latc GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_cube_map GL_EXT_texture_edge_clamp GL_EXT_texture_env_combine GL_EXT_texture_env_dot3 GL_EXT_texture_filter_anisotropic GL_EXT_texture_format_BGRA8888 GL_EXT_texture_integer GL_EXT_texture_lod GL_EXT_texture_lod_bias GL_EXT_texture_mirror_clamp GL_EXT_texture_object GL_EXT_texture_shared_exponent GL_EXT_texture_sRGB GL_EXGL_MAX_TEXTURE_SIZE: 8192
+GL_MAX_TEXTURE_UNITS_ARB: 4
+
+PIXELFORMAT: color(24-bits) Z(24-bit) stencil(0-bits)
+MODE: 8, 1280 x 1024 fullscreen hz:N/A
+GAMMA: hardware w/ 0 overbright bits
+rendering primitives: single glDrawElements
+texturemode: GL_LINEAR_MIPMAP_NEAREST
+picmip: 16
+texture bits: 0
+multitexture: enabled
+compiled vertex arrays: enabled
+texenv add: enabled
+compressed textures: disabled
+glsl programs: disabled
+Initializing Shaders
+----- finished R_Init -----
+Loading vm file vm/ui.qvm...
+File "vm/ui.qvm" found in "E:\gry\openarena-0.8.8\baseoa\pak6-patch088.pk3"
+...which has vmMagic VM_MAGIC_VER2
+Loading 1555 jump table targets
+VM file ui compiled to 739068 bytes of code
+ui loaded in 1451648 bytes on the hunk
+58 arenas parsed
+33 bots parsed
+Loading vm file vm/cgame.qvm...
+File "vm/cgame.qvm" found in "E:\gry\openarena-0.8.8\baseoa\pak6-patch088.pk3"
+...which has vmMagic VM_MAGIC_VER2
+Loading 1235 jump table targets
+VM file cgame compiled to 1079730 bytes of code
+cgame loaded in 4743488 bytes on the hunk
+^3WARNING: could not find sound/items/cl_ammoregen.wav - using default
+^3WARNING: could not find sound/weapons/nailgun/wnalimpd.wav - using default
+^3WARNING: could not find sound/weapons/vulcan/wvulimpd.wav - using default
+^3WARNING: could not find sound/weapons/vulcan/wvulimpl.wav - using default
+^3WARNING: could not find sound/weapons/vulcan/wvulimpm.wav - using default
+^3WARNING: could not find sound/misc/yousuck.wav - using default
+stitched 0 LoD cracks
+...loaded 652 faces, 8 meshes, 24 trisurfs, 30 flares
+WARNING: reused image textures/flares/flarey.tga with mixed glWrapClampMode parm
+WARNING: reused image textures/flares/lava.tga with mixed glWrapClampMode parm
+^3WARNING: music file music/OA02.ogg is not 22k stereo
+CL_InitCGame:  1.53 seconds
+3 msec to draw all images
+Com_TouchMemory: 0 msec
+KrysPiwo^7 almost dodged SirHeadly^7's rocket
+SirHeadly^7 blew himself up.
+^7Czlowiek^1Imadlo^7 was railed by Marw^7
+Wladyslaw III^7 got the BLUE flag!
+^3WARNING: music file music/OA02.ogg is not 22k stereo
+Full lag compensation is OFF!
+^7Czlowiek^1Imadlo^7 entered the game
+Malgorzata I^7 entered the game
+KrysPiwo^7 entered the game
+kit^7 entered the game
+karol^7 entered the game
+Wladyslaw III^7 entered the game
+Marw^7 entered the game
+SirHeadly^7 entered the game
+^3WARNING: music file music/OA02.ogg is not 22k stereo
+Full lag compensation is OFF!
+^7Czlowiek^1Imadlo^7 entered the game
+Malgorzata I^7 entered the game
+KrysPiwo^7 entered the game
+kit^7 entered the game
+karol^7 entered the game
+Wladyslaw III^7 entered the game
+Marw^7 entered the game
+SirHeadly^7 entered the game
+^3WARNING: music file music/OA02.ogg is not 22k stereo
+Full lag compensation is OFF!
+^7Czlowiek^1Imadlo^7 entered the game
+Malgorzata I^7 entered the game
+KrysPiwo^7 entered the game
+kit^7 entered the game
+karol^7 entered the game
+Wladyslaw III^7 entered the game
+Marw^7 entered the game
+SirHeadly^7 entered the game
+kit^7 was railed by SirHeadly^7
+Wladyslaw III^7 was nailed by KrysPiwo^7
+KrysPiwo^7 was nailed by Marw^7
+karol^7 was railed by Malgorzata I^7
+Marw^7 does a back flip into the lava.
+SirHeadly^7 was nailed by kit^7
+karol^7 was nailed by Wladyslaw III^7
+Wladyslaw III^7 was nailed by kit^7
+Marw^7 ate KrysPiwo^7's rocket
+Malgorzata I^7 was machinegunned by ^7Czlowiek^1Imadlo^7
+Malgorzata I^7 does a back flip into the lava.
+KrysPiwo^7 almost dodged SirHeadly^7's rocket
+SirHeadly^7 almost dodged KrysPiwo^7's rocket
+SirHeadly^7 does a back flip into the lava.
+karol^7 was nailed by Malgorzata I^7
+Marw^7 was nailed by ^7Czlowiek^1Imadlo^7
+Malgorzata I^7 was nailed by KrysPiwo^7
+KrysPiwo^7 was gunned down by Wladyslaw III^7
+Wladyslaw III^7 was railed by ^7Czlowiek^1Imadlo^7
+KrysPiwo^7 does a back flip into the lava.
+kit^7 was machinegunned by Malgorzata I^7
+SirHeadly^7 was machinegunned by karol^7
+karol^7 was nailed by Malgorzata I^7
+kit^7 was gunned down by Wladyslaw III^7
+karol^7 does a back flip into the lava.
+Malgorzata I^7 got the BLUE flag!
+Wladyslaw III^7 was machinegunned by kit^7
+^7Czlowiek^1Imadlo^7 fragged RED's flag carrier!
+Malgorzata I^7 was nailed by ^7Czlowiek^1Imadlo^7
+KrysPiwo^7 got the RED flag!
+^7Czlowiek^1Imadlo^7 returned the BLUE flag!
+Marw^7 almost dodged kit^7's rocket
+kit^7 was nailed by SirHeadly^7
+KrysPiwo^7 captured the RED flag!
+^7Czlowiek^1Imadlo is on a killing spree with 5 kills
+Malgorzata I^7 was nailed by ^7Czlowiek^1Imadlo^7
+karol^7 got the RED flag!
+kit^7 does a back flip into the lava.
+^3WARNING: music file music/OA02.ogg is not 22k stereo
+^7Czlowiek^1Imadlo^7 ate Wladyslaw III^7's rocket
+KrysPiwo^7 almost dodged Wladyslaw III^7's rocket
+Wladyslaw III^7 was nailed by ^7Czlowiek^1Imadlo^7
+SirHeadly^7 ate KrysPiwo^7's rocket
+Malgorzata I^7 fragged BLUE's flag carrier!
+karol^7 was machinegunned by Malgorzata I^7
+Malgorzata I^7 returned the RED flag!
+karol^7 does a back flip into the lava.
+kit^7 was gunned down by Malgorzata I^7
+Marw^7 was nailed by kit^7
+Malgorzata I^7 was machinegunned by KrysPiwo^7
+^7Czlowiek^1Imadlo^7 blew himself up.
+SirHeadly^7 was machinegunned by KrysPiwo^7
+kit^7 was nailed by Wladyslaw III^7
+Wladyslaw III^7 was machinegunned by KrysPiwo^7
+karol^7 ate Malgorzata I^7's rocket
+Marw^7 was machinegunned by karol^7
+KrysPiwo is on a killing spree with 5 kills
+Wladyslaw III^7 ate KrysPiwo^7's rocket
+SirHeadly^7 ate kit^7's rocket
+^7Czlowiek^1Imadlo^7 almost dodged Marw^7's rocket
+Wladyslaw III^7 does a back flip into the lava.
+Marw^7 was gunned down by karol^7
+kit^7 was nailed by SirHeadly^7
+KrysPiwo^7 almost dodged Malgorzata I^7's rocket
+karol^7 almost dodged Marw^7's rocket
+kit^7 almost dodged SirHeadly^7's rocket
+Malgorzata I^7 was gunned down by ^7Czlowiek^1Imadlo^7
+SirHeadly^7 does a back flip into the lava.
+Marw^7 almost dodged KrysPiwo^7's rocket
+karol^7 got the RED flag!
+Wladyslaw III^7 fragged BLUE's flag carrier!
+karol^7 was nailed by Wladyslaw III^7
+Wladyslaw III^7 returned the RED flag!
+kit^7 got the RED flag!
+Malgorzata I^7 almost dodged ^7Czlowiek^1Imadlo^7's rocket
+SirHeadly^7 fragged BLUE's flag carrier!
+kit^7 almost dodged SirHeadly^7's rocket
+KrysPiwo^7 was machinegunned by Marw^7
+Wladyslaw III^7 returned the RED flag!
+^3WARNING: music file music/OA02.ogg is not 22k stereo
+Marw^7 was machinegunned by KrysPiwo^7
+karol^7 does a back flip into the lava.
+Malgorzata I^7 was nailed by ^7Czlowiek^1Imadlo^7
+kit^7 was nailed by Wladyslaw III^7
+Malgorzata I^7 was railed by KrysPiwo^7
+KrysPiwo^7 was nailed by Malgorzata I^7
+Marw^7 was nailed by kit^7
+Malgorzata I^7 was nailed by kit^7
+Malgorzata I^7 was machinegunned by KrysPiwo^7
+karol^7 does a back flip into the lava.
+Marw^7 got the BLUE flag!
+kit^7 was machinegunned by Wladyslaw III^7
+^7Czlowiek^1Imadlo^7 was nailed by SirHeadly^7
+SirHeadly^7 almost dodged ^7Czlowiek^1Imadlo^7's rocket
+KrysPiwo^7 got the RED flag!
+Wladyslaw III^7 fragged BLUE's flag carrier!
+KrysPiwo^7 almost dodged Wladyslaw III^7's rocket
+Malgorzata I^7 returned the RED flag!
+Marw^7 captured the BLUE flag!
+Malgorzata I^7 ate KrysPiwo^7's rocket
+SirHeadly^7 almost dodged KrysPiwo^7's rocket
+Marw^7 almost dodged ^7Czlowiek^1Imadlo^7's rocket
+^7Czlowiek^1Imadlo^7 got the RED flag!
+SirHeadly^7 fragged BLUE's flag carrier!
+^7Czlowiek^1Imadlo^7 was nailed by SirHeadly^7
+SirHeadly^7 returned the RED flag!
+karol^7 got the RED flag!
+Wladyslaw III^7 was gunned down by KrysPiwo^7
+KrysPiwo^7 was railed by Malgorzata I^7
+Wladyslaw III^7 was nailed by kit^7
+kit^7 was gunned down by Marw^7
+Malgorzata I^7 was nailed by KrysPiwo^7
+karol^7 captured the RED flag!
+KrysPiwo^7 was gunned down by Marw^7
+SirHeadly^7 got the BLUE flag!
+Marw^7 ate kit^7's rocket
+KrysPiwo^7 does a back flip into the lava.
+^7Czlowiek^1Imadlo^7 ate SirHeadly^7's rocket
+Malgorzata I^7 does a back flip into the lava.
+^7Czlowiek^1Imadlo^7 fragged RED's flag carrier!
+SirHeadly^7 was machinegunned by ^7Czlowiek^1Imadlo^7
+karol^7 returned the BLUE flag!
+Malgorzata I^7 does a back flip into the lava.
+^3WARNING: music file music/OA02.ogg is not 22k stereo
+Marw^7 was nailed by karol^7
+kit^7 was nailed by Wladyslaw III^7
+Marw^7 was nailed by karol^7
+karol^7 was machinegunned by Malgorzata I^7
+SirHeadly^7 does a back flip into the lava.
+kit^7 was nailed by Malgorzata I^7
+Marw^7 ate KrysPiwo^7's rocket
+Malgorzata I^7 got the BLUE flag!
+KrysPiwo^7 was railed by SirHeadly^7
+^7Czlowiek^1Imadlo^7 fragged RED's flag carrier!
+Malgorzata I^7 was gunned down by ^7Czlowiek^1Imadlo^7
+SirHeadly^7 does a back flip into the lava.
+karol^7 ate Wladyslaw III^7's rocket
+^7Czlowiek^1Imadlo^7 returned the BLUE flag!
+Marw^7 almost dodged KrysPiwo^7's rocket
+Malgorzata I^7 was nailed by ^7Czlowiek^1Imadlo^7
+kit^7 almost dodged SirHeadly^7's rocket
+karol^7 got the RED flag!
+SirHeadly^7 was nailed by ^7Czlowiek^1Imadlo^7
+^7Czlowiek^1Imadlo is on a killing spree with 5 kills
+Malgorzata I^7 was nailed by ^7Czlowiek^1Imadlo^7
+Marw^7 fragged BLUE's flag carrier!
+karol^7 was machinegunned by Marw^7
+Marw^7 returned the RED flag!
+SirHeadly^7 does a back flip into the lava.
+KrysPiwo^7 was machinegunned by Malgorzata I^7
+Malgorzata I^7 ate ^7Czlowiek^1Imadlo^7's rocket
+Marw^7 was gunned down by KrysPiwo^7
+Malgorzata I^7 does a back flip into the lava.
+KrysPiwo^7 was nailed by SirHeadly^7
+kit^7 was nailed by SirHeadly^7
+karol^7 was machinegunned by Marw^7
+SirHeadly^7 ate ^7Czlowiek^1Imadlo^7's rocket
+Wladyslaw III^7 was railed by KrysPiwo^7
+Marw^7 ate ^7Czlowiek^1Imadlo^7's rocket
+Malgorzata I^7 was nailed by kit^7
+^7Czlowiek^1Imadlo^7 was nailed by SirHeadly^7
+kit^7 got the RED flag!
+Malgorzata I^7 was railed by KrysPiwo^7
+Wladyslaw III^7 was nailed by kit^7
+karol^7 was gunned down by Marw^7
+SirHeadly^7 got the BLUE flag!
+^7Czlowiek^1Imadlo^7 fragged RED's flag carrier!
+SirHeadly^7 was machinegunned by ^7Czlowiek^1Imadlo^7
+^7Czlowiek^1Imadlo^7 returned the BLUE flag!
+KrysPiwo^7 was gunned down by Marw^7
+kit^7 captured the RED flag!
+Marw^7 was railed by KrysPiwo^7
+^3WARNING: music file music/OA02.ogg is not 22k stereo
+Malgorzata I^7 was nailed by ^7Czlowiek^1Imadlo^7
+SirHeadly^7 got the BLUE flag!
+Wladyslaw III^7 was nailed by ^7Czlowiek^1Imadlo^7
+karol^7 ate SirHeadly^7's rocket
+karol^7 was gunned down by Malgorzata I^7
+Marw^7 was nailed by kit^7
+KrysPiwo^7 fragged RED's flag carrier!
+SirHeadly^7 was railed by KrysPiwo^7
+KrysPiwo^7 returned the BLUE flag!
+kit^7 was gunned down by Marw^7
+Malgorzata I^7 ate ^7Czlowiek^1Imadlo^7's rocket
+Marw^7 was nailed by kit^7
+SirHeadly^7 got the BLUE flag!
+karol^7 was nailed by Malgorzata I^7
+KrysPiwo^7 fragged RED's flag carrier!
+SirHeadly^7 was railed by KrysPiwo^7
+KrysPiwo^7 returned the BLUE flag!
+kit^7 got the RED flag!
+Marw^7 fragged BLUE's flag carrier!
+kit^7 was nailed by Marw^7
+Wladyslaw III^7 returned the RED flag!
+kit^7 does a back flip into the lava.
+KrysPiwo^7 got the RED flag!
+Malgorzata I^7 was railed by KrysPiwo^7
+^7Czlowiek^1Imadlo^7 was nailed by SirHeadly^7
+KrysPiwo is on a killing spree with 5 kills
+SirHeadly^7 ate KrysPiwo^7's rocket
+karol^7 does a back flip into the lava.
+KrysPiwo^7 captured the RED flag!
+Malgorzata I^7 got the BLUE flag!
+^7Czlowiek^1Imadlo^7 was gunned down by Marw^7
+KrysPiwo^7 fragged RED's flag carrier!
+Malgorzata I^7 was railed by KrysPiwo^7
+Marw^7 got the BLUE flag!
+KrysPiwo^7 fragged RED's flag carrier!
+Marw^7 was railed by KrysPiwo^7
+karol^7 returned the BLUE flag!
+Wladyslaw III^7 got the BLUE flag!
+kit^7 was nailed by SirHeadly^7
+karol^7 almost dodged SirHeadly^7's rocket
+SirHeadly^7 was railed by KrysPiwo^7
+Malgorzata I^7 was railed by KrysPiwo^7
+Wladyslaw III^7 captured the BLUE flag!
+KrysPiwo is on a killing spree with 10 kills
+Wladyslaw III^7 was railed by KrysPiwo^7
+^7Czlowiek^1Imadlo^7 got the RED flag!
+SirHeadly^7 does a back flip into the lava.
+Wladyslaw III^7 fragged BLUE's flag carrier!
+^7Czlowiek^1Imadlo^7 was machinegunned by Wladyslaw III^7
+Malgorzata I^7 returned the RED flag!
+kit^7 got the RED flag!
+^3WARNING: music file music/OA02.ogg is not 22k stereo
+karol^7 was machinegunned by Malgorzata I^7
+Marw^7 ate KrysPiwo^7's rocket
+KrysPiwo^7 was nailed by Wladyslaw III^7
+Wladyslaw III^7 was nailed by ^7Czlowiek^1Imadlo^7
+SirHeadly^7 fragged BLUE's flag carrier!
+kit^7 ate SirHeadly^7's rocket
+SirHeadly^7 got the BLUE flag!
+SirHeadly^7 returned the RED flag!
+KrysPiwo^7 fragged RED's flag carrier!
+SirHeadly^7 was gunned down by KrysPiwo^7
+^7Czlowiek^1Imadlo^7 returned the BLUE flag!
+Marw^7 got the BLUE flag!
+^7Czlowiek^1Imadlo^7 fragged RED's flag carrier!
+Marw^7 was nailed by ^7Czlowiek^1Imadlo^7
+karol^7 almost dodged Malgorzata I^7's rocket
+Malgorzata I^7 got the BLUE flag!
+Wladyslaw III^7 was nailed by ^7Czlowiek^1Imadlo^7
+kit^7 ate SirHeadly^7's rocket
+KrysPiwo^7 almost dodged Malgorzata I^7's rocket
+karol^7 almost dodged Malgorzata I^7's rocket
+KrysPiwo^7 almost dodged SirHeadly^7's rocket
+^7Czlowiek^1Imadlo^7 fragged RED's flag carrier!
+Malgorzata I^7 almost dodged ^7Czlowiek^1Imadlo^7's rocket
+^7Czlowiek^1Imadlo^7 got the RED flag!
+karol^7 does a back flip into the lava.
+Wladyslaw III^7 got the BLUE flag!
+kit^7 fragged RED's flag carrier!
+Wladyslaw III^7 was nailed by kit^7
+SirHeadly^7 got the BLUE flag!
+kit^7 fragged RED's flag carrier!
+SirHeadly^7 was nailed by kit^7
+Malgorzata I^7 fragged BLUE's flag carrier!
+^7Czlowiek^1Imadlo^7 was nailed by Malgorzata I^7
+kit^7 returned the BLUE flag!
+Malgorzata I^7 returned the RED flag!
+Marw^7 was given a hot bath by karol^7
+SirHeadly^7 was nailed by kit^7
+kit^7 was machinegunned by Wladyslaw III^7
+KrysPiwo^7 was nailed by Wladyslaw III^7
+karol^7 almost dodged Wladyslaw III^7's rocket
+Malgorzata I^7 was nailed by ^7Czlowiek^1Imadlo^7
+KrysPiwo^7 does a back flip into the lava.
+Wladyslaw III^7 was nailed by ^7Czlowiek^1Imadlo^7
+SirHeadly^7 was nailed by kit^7
+Marw^7 was nailed by ^7Czlowiek^1Imadlo^7
+KrysPiwo^7 does a back flip into the lava.
+^7Czlowiek^1Imadlo^7 was nailed by Malgorzata I^7
+kit^7 was nailed by Malgorzata I^7
+Malgorzata I^7 was nailed by karol^7
+karol^7 was gunned down by Wladyslaw III^7
+^7Czlowiek^1Imadlo^7 does a back flip into the lava.
+Marw^7 got the BLUE flag!
+KrysPiwo^7 was railed by Malgorzata I^7
+kit^7 almost dodged Marw^7's rocket
+Wladyslaw III^7 was nailed by karol^7
+^7Czlowiek^1Imadlo^7 fragged RED's flag carrier!
+Marw^7 was gunned down by ^7Czlowiek^1Imadlo^7
+^7Czlowiek^1Imadlo^7 returned the BLUE flag!
+^7Czlowiek^1Imadlo^7 was railed by Malgorzata I^7
+karol^7 almost dodged Malgorzata I^7's rocket
+Marw^7 ate KrysPiwo^7's rocket
+^3WARNING: music file music/OA02.ogg is not 22k stereo
+Malgorzata I^7 almost dodged KrysPiwo^7's rocket
+Wladyslaw III^7 ate KrysPiwo^7's rocket
+KrysPiwo^7 ate Marw^7's rocket
+Marw^7 was nailed by kit^7
+Wladyslaw III^7 was nailed by ^7Czlowiek^1Imadlo^7
+Malgorzata I^7 got the BLUE flag!
+kit^7 blew himself up.
+^7Czlowiek^1Imadlo^7 fragged RED's flag carrier!
+Malgorzata I^7 was nailed by ^7Czlowiek^1Imadlo^7
+karol^7 does a back flip into the lava.
+^7Czlowiek^1Imadlo^7 returned the BLUE flag!
+^7Czlowiek^1Imadlo^7 was railed by Marw^7
+KrysPiwo^7 almost dodged Wladyslaw III^7's rocket
+Wladyslaw III^7 blew himself up.
+Malgorzata I^7 was machinegunned by KrysPiwo^7
+Wladyslaw III^7 does a back flip into the lava.
+Marw^7 was machinegunned by KrysPiwo^7
+Malgorzata I^7 ate KrysPiwo^7's rocket
+kit^7 was machinegunned by Marw^7
+Wladyslaw III^7 was nailed by ^7Czlowiek^1Imadlo^7
+KrysPiwo^7 was machinegunned by Wladyslaw III^7
+Marw^7 was nailed by ^7Czlowiek^1Imadlo^7
+karol^7 got the RED flag!
+Marw^7 was nailed by karol^7
+^7Czlowiek^1Imadlo^7 ate SirHeadly^7's rocket
+SirHeadly^7 got the BLUE flag!
+KrysPiwo^7 ate SirHeadly^7's rocket
+Marw^7 fragged BLUE's flag carrier!
+karol^7 was machinegunned by Marw^7
+Marw^7 returned the RED flag!
+^7Czlowiek^1Imadlo^7 almost dodged Marw^7's rocket
+kit^7 was nailed by Malgorzata I^7
+SirHeadly^7 captured the BLUE flag!
+KrysPiwo^7 almost dodged Marw^7's rocket
+Wladyslaw III^7 was machinegunned by kit^7
+karol^7 got the RED flag!
+SirHeadly^7 blew himself up.
+Malgorzata I^7 was gunned down by ^7Czlowiek^1Imadlo^7
+Wladyslaw III^7 fragged BLUE's flag carrier!
+karol^7 almost dodged Wladyslaw III^7's rocket
+Wladyslaw III^7 returned the RED flag!
+kit^7 ate Wladyslaw III^7's rocket
+^3WARNING: music file music/OA02.ogg is not 22k stereo
+Marw^7 almost dodged KrysPiwo^7's rocket
+SirHeadly^7 almost dodged KrysPiwo^7's rocket
+Wladyslaw III^7 blew himself up.
+Malgorzata I^7 was gunned down by ^7Czlowiek^1Imadlo^7
+Marw^7 ate kit^7's rocket
+SirHeadly^7 was gunned down by ^7Czlowiek^1Imadlo^7
+kit^7 was machinegunned by Wladyslaw III^7
+Wladyslaw III^7 almost dodged karol^7's rocket
+Malgorzata I^7 was railed by KrysPiwo^7
+Wladyslaw III^7 does a back flip into the lava.
+Wladyslaw III^7 does a back flip into the lava.
+Marw^7 almost dodged karol^7's rocket
+SirHeadly^7 was gunned down by kit^7
+^7Czlowiek^1Imadlo^7 almost dodged Malgorzata I^7's rocket
+Malgorzata I^7 was given a hot bath by kit^7
+Marw^7 almost dodged kit^7's rocket
+Wladyslaw III^7 does a back flip into the lava.
+kit^7 ate SirHeadly^7's rocket
+KrysPiwo^7 almost dodged SirHeadly^7's rocket
+SirHeadly^7 was given a hot bath by karol^7
+Malgorzata I^7 got the BLUE flag!
+^7Czlowiek^1Imadlo^7 fragged RED's flag carrier!
+Malgorzata I^7 was nailed by ^7Czlowiek^1Imadlo^7
+kit^7 almost dodged Marw^7's rocket
+SirHeadly^7 does a back flip into the lava.
+Marw^7 was nailed by ^7Czlowiek^1Imadlo^7
+kit^7 returned the BLUE flag!
+Wladyslaw III^7 was nailed by KrysPiwo^7
+Malgorzata I^7 was nailed by ^7Czlowiek^1Imadlo^7
+Marw^7 got the BLUE flag!
+karol^7 was gunned down by Marw^7
+KrysPiwo^7 fragged RED's flag carrier!
+Marw^7 was nailed by KrysPiwo^7
+KrysPiwo^7 almost dodged SirHeadly^7's rocket
+SirHeadly^7 got the BLUE flag!
+Timelimit hit.
+----- Client Shutdown (Client quit) -----
+Closing SDL audio device...
+SDL audio device shut down.
+RE_Shutdown( 1 )
+-----------------------

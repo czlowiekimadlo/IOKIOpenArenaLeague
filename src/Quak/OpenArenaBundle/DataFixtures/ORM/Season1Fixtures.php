@@ -396,7 +396,45 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
         $round2->setSeason($season);
         $manager->persist($round2);
 
-        $match = $this->createMatch(1, '07.05.2013 16:30', $round2, 'mef', 'bn');
+        $match = $this->createMatch(1, '07.05.2013 16:30', $round2, 'mef', 'bn', array(
+            'am_lavactf' => array(
+                'team_results' => array('mef' => 3, 'bn' => 4),
+                'player_results' => array(
+                    'mwozniak' => 51,
+                    'rslocinski' => 47,
+                    'mwlodek' => 47,
+                    'mgoraj' => 43,
+                    'wchojnacki' => 98,
+                    'kpiwowarczyk' => 86,
+                    'spawlowski' => 48,
+                    'khorowski' => 23
+                ),
+                'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-05-09-MEF-BN-lavactf.jpg',
+                'replay' => 'http://youtu.be/rj2tWCZ3L-k',
+                'log' => '2013-05-09-MEF-BN-lavactf.txt'
+            ),
+            'oasago2' => array(
+                'team_results' => array('mef' => 2, 'bn' => 3),
+                'player_results' => array(
+                    'rslocinski' => 46,
+                    'mwozniak' => 46,
+                    'mwlodek' => 43,
+                    'mgoraj' => 43,
+                    'kpiwowarczyk' => 85,
+                    'wchojnacki' => 62,
+                    'spawlowski' => 49,
+                    'khorowski' => 45
+                ),
+                'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-05-09-MEF-BN-oasago2.jpg',
+                'replay' => 'http://youtu.be/hrg4_Nyv0BY',
+                'log' => '2013-05-09-MEF-BN-oasago2.txt'
+            )
+        ), false, array(
+            array(
+                'player' => 'khorowski',
+                'team' => 'bn'
+            )
+        ));
         $match = $this->createMatch(2, '14.05.2013 16:30', $round2, 'tau', 'w');
         $match = $this->createMatch(3, '21.05.2013 16:30', $round2, 'tau', 'mef');
         $match = $this->createMatch(4, '28.05.2013 16:30', $round2, 'w', 'sd');
@@ -418,7 +456,7 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
             'ctf_gate1',
             'oa_bases3plus3',
             'oa_reptctf11',
-            'oasage2',
+            'oasago2',
             'am_lavactf',
             'hydronex2',
             'ps37ctf2',
@@ -516,7 +554,7 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
         $scores = array(
             'mef' => 9,
             'tau' => 9,
-            'bn'  => 9,
+            'bn'  => 12,
             'sd'  => 0,
             'w'   => 3,
             'na'  => 0
@@ -621,10 +659,10 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
     protected function matchPlayerStats($nick, $stats)
     {
         $nickmap = array(
-            'mgoraj' => array('Kaczumbinator', 'Kaczumba'),
+            'mgoraj' => array('Kaczumbinator', 'Kaczumba', 'Malgorzata I'),
             'awaleska' => 'Ketrzynski ssie',
             'rslocinski' => 'SirHeadly',
-            'mwozniak' => array('MarW', "Don't Shoot"),
+            'mwozniak' => array('MarW', "Don't Shoot", 'Marw'),
             'tnebes' => array('vagino_rossi', 'TNebes', 'vaginoRossi'),
             'akucyrka' => 'kuyk',
             'mzimny' => array('Kaltgesicht', 'Coldface'),
@@ -641,7 +679,7 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
             'ddykszak' => 'WhySoSerious',
             'dkacban' => 'Kot Schrodingera',
             'dbudynek' => 'Dario',
-            'mwlodek' => array('Wolodymyr', 'Wladyslaw'),
+            'mwlodek' => array('Wolodymyr', 'Wladyslaw', 'Wladyslaw III'),
             'lpospiech' => 'ZoCiM',
             'wsurmacz' => null,
             'dmasztalerz' => 'MASZTI',
