@@ -396,7 +396,7 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
         $round2->setSeason($season);
         $manager->persist($round2);
 
-        $match = $this->createMatch(1, '07.05.2013 16:30', $round2, 'mef', 'bn', array(
+        $match = $this->createMatch(1, '09.05.2013 16:30', $round2, 'mef', 'bn', array(
             'am_lavactf' => array(
                 'team_results' => array('mef' => 3, 'bn' => 4),
                 'player_results' => array(
