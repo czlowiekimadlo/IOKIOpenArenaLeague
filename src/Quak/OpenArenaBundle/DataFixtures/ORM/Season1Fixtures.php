@@ -435,15 +435,22 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
                 'team' => 'bn'
             )
         ));
-        $match = $this->createMatch(2, '17.05.2013 16:30', $round2, 'tau', 'w');
-        $match = $this->createMatch(3, '21.05.2013 16:30', $round2, 'tau', 'mef');
-        $match = $this->createMatch(4, '28.05.2013 16:30', $round2, 'w', 'sd');
-        $match = $this->createMatch(5, '04.06.2013 16:30', $round2, 'w', 'bn');
-        $match = $this->createMatch(6, '11.06.2013 16:30', $round2, 'sd', 'tau');
-        $match = $this->createMatch(7, '18.06.2013 16:30', $round2, 'sd', 'bn');
-        $match = $this->createMatch(8, '25.06.2013 16:30', $round2, 'mef', 'w');
-        $match = $this->createMatch(9, '02.07.2013 16:30', $round2, 'bn', 'tau');
-        $match = $this->createMatch(10, '09.07.2013 16:30', $round2, 'mef', 'sd');
+        $match = $this->createMatch(2, '27.05.2013 16:30', $round2, 'tau', 'w', array(
+            'mlctf1beta' => array(
+                'team_results' => array('tau' => 1, 'w' => 0)
+            ),
+            'oasago2' => array(
+                'team_results' => array('tau' => 1, 'w' => 0)
+            )
+        ), true);
+        $match = $this->createMatch(3, '04.06.2013 16:30', $round2, 'tau', 'mef');
+        $match = $this->createMatch(4, '11.06.2013 16:30', $round2, 'w', 'sd');
+        $match = $this->createMatch(5, '18.06.2013 16:30', $round2, 'w', 'bn');
+        $match = $this->createMatch(6, '25.06.2013 16:30', $round2, 'sd', 'tau');
+        $match = $this->createMatch(7, '02.07.2013 16:30', $round2, 'sd', 'bn');
+        $match = $this->createMatch(8, '09.07.2013 16:30', $round2, 'mef', 'w');
+        $match = $this->createMatch(9, '16.07.2013 16:30', $round2, 'bn', 'tau');
+        $match = $this->createMatch(10, '23.07.2013 16:30', $round2, 'mef', 'sd');
 
         $manager->flush();
     }
@@ -539,21 +546,21 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
                 'lrozniakowski' => 'Leszek Rożniakowski',
                 'ddykszak' => 'Daniel Dykszak',
                 'dkacban' => 'Dariusz Kacban',
-                'dbudynek' => 'Dariusz Budynek'
+                'dbudynek' => 'Dariusz Budynek',
+                'khorowski' => 'Karol Horowski'
             ),
             'na'  => array(
                 'awaleska' => 'Adam Wałęska',
                 'lpospiech' => 'Łukasz Pospiech',
                 'wsurmacz' => 'Wojciech Surmacz',
                 'dmasztalerz' => 'Dariusz Masztalerz',
-                'khorowski' => 'Karol Horowski',
                 'ssadlo' => 'Szymon Sadło'
             )
         );
 
         $scores = array(
             'mef' => 9,
-            'tau' => 9,
+            'tau' => 12,
             'bn'  => 12,
             'sd'  => 0,
             'w'   => 3,
