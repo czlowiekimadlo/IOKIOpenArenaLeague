@@ -443,14 +443,21 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
                 'team_results' => array('tau' => 1, 'w' => 0)
             )
         ), true);
-        $match = $this->createMatch(3, '04.06.2013 16:30', $round2, 'tau', 'mef');
-        $match = $this->createMatch(4, '11.06.2013 16:30', $round2, 'w', 'sd');
-        $match = $this->createMatch(5, '18.06.2013 16:30', $round2, 'w', 'bn');
-        $match = $this->createMatch(6, '25.06.2013 16:30', $round2, 'sd', 'tau');
-        $match = $this->createMatch(7, '02.07.2013 16:30', $round2, 'sd', 'bn');
-        $match = $this->createMatch(8, '09.07.2013 16:30', $round2, 'mef', 'w');
-        $match = $this->createMatch(9, '16.07.2013 16:30', $round2, 'bn', 'tau');
-        $match = $this->createMatch(10, '23.07.2013 16:30', $round2, 'mef', 'sd');
+        $match = $this->createMatch(3, '14.06.2013 16:30', $round2, 'tau', 'mef', array(
+            'am_lavactf' => array(
+                'team_results' => array('tau' => 2, 'mef' => 5)
+            ),
+            'oasago2' => array(
+                'team_results' => array('tau' => 0, 'mef' => 2)
+            )
+        ));
+        $match = $this->createMatch(4, '18.06.2013 16:30', $round2, 'w', 'sd');
+        $match = $this->createMatch(5, '25.06.2013 16:30', $round2, 'w', 'bn');
+        $match = $this->createMatch(6, '02.07.2013 16:30', $round2, 'sd', 'tau');
+        $match = $this->createMatch(7, '09.07.2013 16:30', $round2, 'sd', 'bn');
+        $match = $this->createMatch(8, '16.07.2013 16:30', $round2, 'mef', 'w');
+        $match = $this->createMatch(9, '23.07.2013 16:30', $round2, 'bn', 'tau');
+        $match = $this->createMatch(10, '30.07.2013 16:30', $round2, 'mef', 'sd');
 
         $manager->flush();
     }
@@ -559,7 +566,7 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
         );
 
         $scores = array(
-            'mef' => 9,
+            'mef' => 12,
             'tau' => 12,
             'bn'  => 12,
             'sd'  => 0,
