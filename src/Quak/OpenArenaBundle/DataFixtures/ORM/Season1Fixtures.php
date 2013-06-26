@@ -451,13 +451,13 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
                 'team_results' => array('tau' => 0, 'mef' => 2)
             )
         ));
-        $match = $this->createMatch(4, '18.06.2013 16:30', $round2, 'w', 'sd');
-        $match = $this->createMatch(5, '25.06.2013 16:30', $round2, 'w', 'bn');
-        $match = $this->createMatch(6, '02.07.2013 16:30', $round2, 'sd', 'tau');
-        $match = $this->createMatch(7, '09.07.2013 16:30', $round2, 'sd', 'bn');
-        $match = $this->createMatch(8, '16.07.2013 16:30', $round2, 'mef', 'w');
-        $match = $this->createMatch(9, '23.07.2013 16:30', $round2, 'bn', 'tau');
-        $match = $this->createMatch(10, '30.07.2013 16:30', $round2, 'mef', 'sd');
+        // $match = $this->createMatch(4, '18.06.2013 16:30', $round2, 'w', 'sd');
+        // $match = $this->createMatch(5, '25.06.2013 16:30', $round2, 'w', 'bn');
+        // $match = $this->createMatch(6, '02.07.2013 16:30', $round2, 'sd', 'tau');
+        // $match = $this->createMatch(7, '09.07.2013 16:30', $round2, 'sd', 'bn');
+        // $match = $this->createMatch(8, '16.07.2013 16:30', $round2, 'mef', 'w');
+        // $match = $this->createMatch(9, '23.07.2013 16:30', $round2, 'bn', 'tau');
+        // $match = $this->createMatch(10, '30.07.2013 16:30', $round2, 'mef', 'sd');
 
         $manager->flush();
     }
