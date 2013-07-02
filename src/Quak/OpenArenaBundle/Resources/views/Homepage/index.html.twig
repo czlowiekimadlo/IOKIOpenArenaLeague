@@ -8,6 +8,7 @@
 {% block body %}
 <div id="currentSeason">
 	<h1><a href="{{ path('QuakOpenArenaBundle_season', { id : latestSeason.number }) }}">Season {{ latestSeason.number }}</a></h1>
+    {% if nextMatch %}
 	<div id="nextMatch">
         <h2>Next match</h2>
 		<h2><a href="{{ path('QuakOpenArenaBundle_match', { id: nextMatch.id }) }}">Round {{ nextMatch.round.number }}, Match {{ nextMatch.number }}</a></h2>
@@ -16,6 +17,8 @@
         vs<br />
         {{ nextMatch.teams[1].name }}</h3>
 	</div>
+    {% endif %}
+    {% if lastMatch %}
 	<div id="lastMatch">
         <h2>Last match</h2>
 		<h2><a href="{{ path('QuakOpenArenaBundle_match', { id: lastMatch.id }) }}">Round {{ lastMatch.round.number }}, Match {{ lastMatch.number }}</a></h2>
@@ -31,5 +34,6 @@
             {% endif %}
         {% endfor %}
 	</div>
+    {% endif %}
 </div>
 {% endblock %}
