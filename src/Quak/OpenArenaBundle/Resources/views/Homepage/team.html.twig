@@ -14,6 +14,9 @@
 <div id="team">
     <div id="stats">
         <h1><a href="{{ path('QuakOpenArenaBundle_season', { id: team.season.number }) }}">Season {{ team.season.number }}</a></h1>
+        {%if team.group %}
+        <h1>Group {{ team.group.name }}</h1>
+        {%endif %}
         <h1>{{ team.name }}</h1>
         <h1><img width="200" height="200" src="{{ asset(team.logo) }}" /></h1>
         <table align="center">
