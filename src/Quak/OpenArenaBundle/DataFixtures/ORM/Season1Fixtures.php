@@ -21,9 +21,9 @@ use Quak\OpenArenaBundle\Entity\Substitute;
 
 class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
 {
+    protected $manager;
     protected $maps;
     protected $teams;
-    protected $manater;
     protected $players;
     protected $weapons;
 
@@ -586,6 +586,7 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
         foreach ($teams as $key => $team) {
             $newTeam = new Team();
             $newTeam->setName($team);
+            $newTeam->setShort(strtoupper($team));
             $newTeam->setSeason($season);
             $newTeam->setScore($scores[$key]);
             $newTeam->setLogo($logos[$key]);

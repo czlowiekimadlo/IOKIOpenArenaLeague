@@ -26,6 +26,11 @@ class Team
     /**
      * @ORM\Column(type="string")
      */
+    protected $short;
+
+    /**
+     * @ORM\Column(type="string")
+     */
     protected $logo;
 
     /**
@@ -62,6 +67,14 @@ class Team
      */
     protected $score;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="\Quak\OpenArenaBundle\Entity\Group", inversedBy="teams")
+     * @ORM\JoinColumns({
+     *      @ORM\JoinColumn(name="group_id", referencedColumnName="id", onDelete="CASCADE")
+     * })
+     */
+    protected $group;
+
     public function __construct()
     {
         $this->matches = new ArrayCollection();
@@ -86,6 +99,16 @@ class Team
     public function setName($name)
     {
         $this->name = $name;
+    }
+
+    public function getShort()
+    {
+        return $this->short;
+    }
+
+    public function setShort($short)
+    {
+        $this->short = $short;
     }
 
     public function getLogo()
@@ -255,5 +278,15 @@ class Team
     public function setScore($score)
     {
         $this->score = $score;
+    }
+
+    public function setGroup(\Quak\OpenArenaBundle\Entity\Group $group)
+    {
+        $this->group = $group;
+    }
+
+    public function getGroup()
+    {
+        return $this->group;
     }
 }

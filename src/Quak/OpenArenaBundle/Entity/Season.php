@@ -208,4 +208,9 @@ class Season
 
         return $teams;
     }
+
+    public function getStyleSheetName()
+    {
+        return 'css/season' . $this->number . '.css';
+    }
 }

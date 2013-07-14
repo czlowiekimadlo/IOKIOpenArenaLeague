@@ -5,6 +5,11 @@
     Homepage
 {% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset(latestSeason.getStyleSheetName()) }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+
 {% block body %}
 <div id="currentSeason">
 	<h1><a href="{{ path('QuakOpenArenaBundle_season', { id : latestSeason.number }) }}">Season {{ latestSeason.number }}</a></h1>

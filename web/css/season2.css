@@ -1,0 +1,12 @@
+
+body {
+    background: url('../images/season2.jpg') no-repeat;
+}
+
+#homelink {
+    display: block;
+    background: url('../images/utlogo.png') no-repeat;
+    height: 256px;
+    width: 256px;
+    margin: auto;
+}

@@ -5,6 +5,11 @@
     {{ player.name }}, Season {{ player.team.season.number }}
 {% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset(player.team.season.getStyleSheetName()) }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+
 {% block body %}
 <div id="player">
     <div id="name">

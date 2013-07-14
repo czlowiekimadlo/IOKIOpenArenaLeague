@@ -5,6 +5,11 @@
     {{ team.name }}
 {% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset(team.season.getStyleSheetName()) }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+
 {% block body %}
 <div id="team">
     <div id="stats">

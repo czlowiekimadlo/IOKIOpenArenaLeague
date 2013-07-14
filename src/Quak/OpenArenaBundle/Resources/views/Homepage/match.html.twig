@@ -5,6 +5,11 @@
     Season {{ match.round.season.number }}, Round {{ match.round.number }}, Match {{ match.number }}
 {% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset(match.round.season.getStyleSheetName()) }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+
 {% block body %}
 <div id="match">
     <div id="teams">

@@ -59,6 +59,10 @@ a:hover {
     text-decoration: none;
     color: #fff;
 }
+#header ul li {
+    display: inline;
+    padding: 0 5px;
+}
 
 .main-col {
     background: rgba(200,200,200,0.8);
