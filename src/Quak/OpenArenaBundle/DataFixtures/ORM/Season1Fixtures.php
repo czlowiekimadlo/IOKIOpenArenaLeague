@@ -586,7 +586,7 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
         foreach ($teams as $key => $team) {
             $newTeam = new Team();
             $newTeam->setName($team);
-            $newTeam->setShort(strtoupper($team));
+            $newTeam->setShort(strtoupper($key));
             $newTeam->setSeason($season);
             $newTeam->setScore($scores[$key]);
             $newTeam->setLogo($logos[$key]);

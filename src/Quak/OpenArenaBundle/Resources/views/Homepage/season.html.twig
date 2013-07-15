@@ -44,9 +44,7 @@
 			<li>
 				<p><a href="{{ path('QuakOpenArenaBundle_match', { id: match.id }) }}">Round {{ match.round.number }}, Match {{ match.number }}</a></p>
 				<p>{{ match.date.format('Y-m-d H:i') }}</p>
-        		<p class="name">{{ match.teams[0].name }}</p>
-                <p>vs</p>
-                <p class="name">{{ match.teams[1].name }}</p>
+        		<p class="name">{{ match.teams[0].short }} vs {{ match.teams[1].short }}</p>
 			</li>
 		{% endfor %}
 		</ul>
@@ -61,9 +59,7 @@
                 {% for clash in match.clashes %}
                     <p class="name">{{ clash.map.name }}</p>
                     {% if clash.clashResults.count > 0 %}
-                        <p>{{ clash.clashResults[0].team.name }}</p>
-                        <p>{{ clash.clashResults[0].score }} : {{ clash.clashResults[1].score }}</p>
-                        <p>{{ clash.clashResults[1].team.name }}</p>
+                        <p>{{ clash.clashResults[0].team.short }} {{ clash.clashResults[0].score }} : {{ clash.clashResults[1].score }} {{ clash.clashResults[1].team.short }}</p>
                     {% endif %}
                 {% endfor %}
             </li>

@@ -165,9 +165,7 @@ class Season2Fixtures implements FixtureInterface, ContainerAwareInterface
         );
 
         $groups = array(
-            'A' => array(
-                'bn'
-            ),
+            'A' => array(),
             'B' => array()
         );
 
@@ -182,19 +180,19 @@ class Season2Fixtures implements FixtureInterface, ContainerAwareInterface
         );
 
         $logos = array(
-            'edi' => 'team_logo.png',
-            'tsm' => 'team_logo.png',
+            'edi' => 'utlogo.gif',
+            'tsm' => 'utlogo.gif',
             'bn'  => 'bn.jpg',
             'sd'  => 'sd.jpg',
             'w'   => 'w.jpg',
-            '-2'  => 'team_logo.png',
-            'na'  => 'team_logo.png',
+            '-2'  => 'utlogo.gif',
+            'na'  => 'utlogo.gif',
         );
 
         foreach ($teams as $key => $team) {
             $newTeam = new Team();
             $newTeam->setName($team);
-            $newTeam->setShort(strtoupper($team));
+            $newTeam->setShort(strtoupper($key));
             $newTeam->setSeason($season);
             $newTeam->setScore($scores[$key]);
             $newTeam->setLogo($logos[$key]);
