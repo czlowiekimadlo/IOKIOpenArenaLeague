@@ -48,6 +48,29 @@ class Season2Fixtures implements FixtureInterface, ContainerAwareInterface
 
         $this->loadTeams($manager, $season);
 
+        $round1 = new Round();
+        $round1->setNumber(1);
+        $round1->setSeason($season);
+        $manager->persist($round1);
+
+        $match = $this->createMatch(1, '30.07.2013 16:30', $round1, 'edi', 'tsm');
+        $match = $this->createMatch(2, '01.08.2013 16:30', $round1, 'sd', 'w');
+        $match = $this->createMatch(3, '06.08.2013 16:30', $round1, 'edi', 'bn');
+        $match = $this->createMatch(4, '08.08.2013 16:30', $round1, 'sd', '-2');
+        $match = $this->createMatch(5, '13.08.2013 16:30', $round1, 'tsm', 'bn');
+        $match = $this->createMatch(6, '15.08.2013 16:30', $round1, 'w', '-2');
+
+        $round2 = new Round();
+        $round2->setNumber(2);
+        $round2->setSeason($season);
+        $manager->persist($round2);
+
+        $match = $this->createMatch(1, '20.08.2013 16:30', $round2, 'tsm', 'edi');
+        $match = $this->createMatch(2, '22.08.2013 16:30', $round2, 'w', 'sd');
+        $match = $this->createMatch(3, '27.08.2013 16:30', $round2, 'bn', 'edi');
+        $match = $this->createMatch(4, '29.08.2013 16:30', $round2, '-2', 'sd');
+        $match = $this->createMatch(5, '03.09.2013 16:30', $round2, 'bn', 'tsm');
+        $match = $this->createMatch(6, '05.09.2013 16:30', $round2, '-2', 'w');
 
         $manager->flush();
     }
@@ -165,8 +188,16 @@ class Season2Fixtures implements FixtureInterface, ContainerAwareInterface
         );
 
         $groups = array(
-            'A' => array(),
-            'B' => array()
+            'A' => array(
+                'edi',
+                'tsm',
+                'bn'
+            ),
+            'B' => array(
+                'sd',
+                'w',
+                '-2'
+            )
         );
 
         $scores = array(
