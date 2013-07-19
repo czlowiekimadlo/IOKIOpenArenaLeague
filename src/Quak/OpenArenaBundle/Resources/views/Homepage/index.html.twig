@@ -17,7 +17,10 @@
 	<div id="nextMatch">
         <h2>Next match</h2>
 		<h2><a href="{{ path('QuakOpenArenaBundle_match', { id: nextMatch.id }) }}">Round {{ nextMatch.round.number }}, Match {{ nextMatch.number }}</a></h2>
-		<h3>{{ nextMatch.date.format('Y-m-d H:i') }}<br /><br />
+		<h3>{{ nextMatch.date.format('Y-m-d H:i') }}<br />
+        <strong>{{ nextMatchTimeLeft.d }} days {{ nextMatchTimeLeft.h }} hours {{ nextMatchTimeLeft.i }} minutes left!</strong>
+        <br />
+        <br />
         {{ nextMatch.teams[0].name }}<br />
         vs<br />
         {{ nextMatch.teams[1].name }}</h3>

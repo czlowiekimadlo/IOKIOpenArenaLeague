@@ -87,6 +87,10 @@ a:hover {
     text-align: center;
 }
 
+#nextMatch strong {
+    color: red;
+}
+
 #lastMatch {
     margin-bottom: 10px;
 }

@@ -16,11 +16,20 @@ class HomepageController extends Controller
         $lastMatch = $latestSeason->getLastMatch();
         $nextMatch = $latestSeason->getNextMatch();
 
+        if ($nextMatch) {
+            $now = new \DateTime();
+            $matchDate = $nextMatch->getDate();
+            $nextMatchTimeLeft = $matchDate->diff($now);
+        } else {
+            $nextMatchTimeLeft = array();
+        }
+
         return $this->render('QuakOpenArenaBundle:Homepage:index.html.twig', array(
         	'seasons' => $seasons,
         	'latestSeason' => $latestSeason,
         	'lastMatch' => $lastMatch,
-        	'nextMatch' => $nextMatch
+        	'nextMatch' => $nextMatch,
+            'nextMatchTimeLeft' => $nextMatchTimeLeft
         ));
     }
 
