@@ -26,11 +26,11 @@
                     <td class="statValue">{{ team.getScore() }}</td>
                 </tr>
                 <tr>
-                    <td class="statLabel">Average flags</td>
+                    <td class="statLabel">Average {% if season.ctf %}flags{% else %}frags{% endif %}</td>
                     <td class="statValue">{{ team.getAverageScore() }}</td>
                 </tr>
                 <tr>
-                    <td class="statLabel">Total flags</td>
+                    <td class="statLabel">Total {% if season.ctf %}flags{% else %}frags{% endif %}</td>
                     <td class="statValue">{{ team.getTotalScore() }}</td>
                 </tr>
                 <tr>

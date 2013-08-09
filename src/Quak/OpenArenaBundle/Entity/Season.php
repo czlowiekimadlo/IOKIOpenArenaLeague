@@ -24,6 +24,11 @@ class Season
     protected $number;
 
     /**
+     * @ORM\Column(type="integer")
+     */
+    protected $ctf;
+
+    /**
      * @ORM\OneToMany(targetEntity="\Quak\OpenArenaBundle\Entity\Round", mappedBy="season", cascade={"all"})
      */
     protected $rounds;
@@ -57,6 +62,16 @@ class Season
     public function setNumber($number)
     {
         $this->number = $number;
+    }
+
+    public function getCtf()
+    {
+        return $this->ctf;
+    }
+
+    public function setCtf($ctf)
+    {
+        $this->ctf = $ctf;
     }
 
     public function addRound(\Quak\OpenArenaBundle\Entity\Round $round)

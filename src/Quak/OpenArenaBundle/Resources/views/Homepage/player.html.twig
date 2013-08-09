@@ -28,6 +28,7 @@
                     <td class="statLabel">Kills</td>
                     <td class="statValue">{{ player.getTotalKills() }} ({{ player.getAverageKills() }})</td>
                 </tr>
+                {% if season.ctf %}
                 <tr>
                     <td class="statLabel">Carrier kills</td>
                     <td class="statValue">{{ player.getTotalCarrierKills() }} ({{ player.getAverageCarrierKills() }})</td>
@@ -44,6 +45,7 @@
                     <td class="statLabel">Flag captures</td>
                     <td class="statValue">{{ player.getTotalFlagCaptures() }} ({{ player.getAverageFlagCaptures() }})</td>
                 </tr>
+                {% endif %}
                 <tr>
                     <td class="statLabel">Sprees</td>
                     <td class="statValue">{{ player.getTotalSprees() }} ({{ player.getAverageSprees() }})</td>

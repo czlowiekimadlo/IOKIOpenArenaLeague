@@ -43,6 +43,7 @@ class Season1Fixtures implements FixtureInterface, ContainerAwareInterface
 
         $season = new Season();
         $season->setNumber(1);
+        $season->setCtf(1);
         $manager->persist($season);
 
         $this->loadTeams($manager, $season);

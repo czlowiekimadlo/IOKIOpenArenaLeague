@@ -17,8 +17,8 @@
         <form>
             <select>
                 <option value="teamsScore" selected="selected">Points</option>
-                <option value="teamsAverageScore">Average flags</option>
-                <option value="teamsTotalScore">Total flags</option>
+                <option value="teamsAverageScore">Average {% if season.ctf %}flags{% else %}frags{% endif %}</option>
+                <option value="teamsTotalScore">Total {% if season.ctf %}flags{% else %}frags{% endif %}</option>
             </select>
         </form>
 		<ol id="teamsScore">
