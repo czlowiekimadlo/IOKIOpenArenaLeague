@@ -53,10 +53,90 @@ class Season2Fixtures implements FixtureInterface, ContainerAwareInterface
         $round1->setSeason($season);
         $manager->persist($round1);
 
-        $match = $this->createMatch(1, '30.07.2013 16:30', $round1, 'edi', 'tsm');
-        $match = $this->createMatch(2, '01.08.2013 16:30', $round1, 'sd', 'w');
-        $match = $this->createMatch(3, '06.08.2013 16:30', $round1, 'edi', 'bn');
-        $match = $this->createMatch(4, '08.08.2013 16:30', $round1, 'sd', '-2');
+        $match = $this->createMatch(1, '30.07.2013 16:30', $round1, 'edi', 'tsm', array(
+            'DM-Tempest' => array(
+                'team_results' => array('edi' => 37, 'tsm' => 36),
+                'player_results' => array(
+                    'rslocinski' => 21,
+                    'mwlodek' => 11,
+                    'mgoraj' => 5,
+                    'tnebes' => 18,
+                    'aadamczewski' => 13,
+                    'akucyrka' => 5,
+                ),
+                'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-07-30-edi-tsm-tempest.jpg',
+            ),
+            'DM-HyperBlast' => array(
+                'team_results' => array('edi' => 5, 'tsm' => 35),
+                'player_results' => array(
+                    'rslocinski' => 3,
+                    'mgoraj' => 3,
+                    'mwlodek' => -1,
+                    'tnebes' => 18,
+                    'akucyrka' => 9,
+                    'aadamczewski' => 8,
+                ),
+                'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-07-30-edi-tsm-hyperblast.jpg',
+            )
+        ));
+        $match = $this->createMatch(2, '01.08.2013 16:30', $round1, 'sd', 'w', array(
+            'DM-Grinder' => array(
+                'team_results' => array('sd' => 48, 'w' => 40),
+                'player_results' => array(
+                    'rpalczynski' => 19,
+                    'lciolek' => 17,
+                    'sdudek' => 12,
+                    'lrozniakowski' => 18,
+                    'dkacban' => 12,
+                    'ssadlo' => 10,
+                ),
+                'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-08-01-sd-w-grinder.jpg',
+            ),
+            'DM-Deck16][' => array(
+                'team_results' => array('sd' => 33, 'w' => 21),
+                'player_results' => array(
+                    'sdudek' => 19,
+                    'rpalczynski' => 10,
+                    'lciolek' => 4,
+                    'ssadlo' => 14,
+                    'lrozniakowski' => 4,
+                    'dkacban' => 3,
+                ),
+                'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-08-01-sd-w-deck.jpg',
+            )
+        ), false, array(
+            array(
+                'player' => 'ssadlo',
+                'team' => 'w'
+            )
+        ));
+        $match = $this->createMatch(3, '12.08.2013 16:30', $round1, 'edi', 'bn');
+        $match = $this->createMatch(4, '08.08.2013 16:30', $round1, 'sd', '-2', array(
+            'DM-Tempest' => array(
+                'team_results' => array('sd' => 37, '-2' => 36),
+                'player_results' => array(
+                    'rpalczynski' => 20,
+                    'sdudek' => 11,
+                    'lciolek' => 10,
+                    'mjaniszewski' => 20,
+                    'cnosek' => 13,
+                    'sgrzmiel' => 10,
+                ),
+                'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-08-08-sd-2-deck.jpg',
+            ),
+            'DM-HyperBlast' => array(
+                'team_results' => array('sd' => 38, '-2' => 31),
+                'player_results' => array(
+                    'lciolek' => 15,
+                    'rpalczynski' => 12,
+                    'sdudek' => 11,
+                    'mjaniszewski' => 16,
+                    'cnosek' => 11,
+                    'sgrzmiel' => 4,
+                ),
+                'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-08-08-sd-2-grinder.jpeg',
+            )
+        ));
         $match = $this->createMatch(5, '13.08.2013 16:30', $round1, 'tsm', 'bn');
         $match = $this->createMatch(6, '15.08.2013 16:30', $round1, 'w', '-2');
 
@@ -202,9 +282,9 @@ class Season2Fixtures implements FixtureInterface, ContainerAwareInterface
 
         $scores = array(
             'edi' => 0,
-            'tsm' => 0,
+            'tsm' => 3,
             'bn'  => 0,
-            'sd'  => 0,
+            'sd'  => 6,
             'w'   => 0,
             '-2'  => 0,
             'na'  => 0
@@ -347,7 +427,10 @@ class Season2Fixtures implements FixtureInterface, ContainerAwareInterface
             'dmasztalerz' => 'MASZTI',
             'djurga' => 'Gummmibear',
             'khorowski' => 'karol',
-            'ssadlo' => 'beriba'
+            'ssadlo' => 'beriba',
+            'mjaniszewski' => 'Maciej',
+            'sgrzmiel' => 'Slawek_-2',
+            'cnosek' => 'Cypi_Pogromca_Dudkow'
         );
 
         if(is_array($nickmap[$nick])) {
