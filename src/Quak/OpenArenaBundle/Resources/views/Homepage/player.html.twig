@@ -28,7 +28,7 @@
                     <td class="statLabel">Kills</td>
                     <td class="statValue">{{ player.getTotalKills() }} ({{ player.getAverageKills() }})</td>
                 </tr>
-                {% if season.ctf %}
+                {% if player.team.season.ctf %}
                 <tr>
                     <td class="statLabel">Carrier kills</td>
                     <td class="statValue">{{ player.getTotalCarrierKills() }} ({{ player.getAverageCarrierKills() }})</td>
