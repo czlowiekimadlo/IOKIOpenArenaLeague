@@ -111,8 +111,8 @@ class Season2Fixtures implements FixtureInterface, ContainerAwareInterface
             )
         ));
         $match = $this->createMatch(3, '08.08.2013 16:30', $round1, 'sd', '-2', array(
-            'DM-Tempest' => array(
-                'team_results' => array('sd' => 37, '-2' => 36),
+            'DM-Deck16][' => array(
+                'team_results' => array('sd' => 41, '-2' => 43),
                 'player_results' => array(
                     'rpalczynski' => 20,
                     'sdudek' => 11,
@@ -123,7 +123,7 @@ class Season2Fixtures implements FixtureInterface, ContainerAwareInterface
                 ),
                 'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-08-08-sd-2-deck.jpg',
             ),
-            'DM-HyperBlast' => array(
+            'DM-Grinder' => array(
                 'team_results' => array('sd' => 38, '-2' => 31),
                 'player_results' => array(
                     'lciolek' => 15,
