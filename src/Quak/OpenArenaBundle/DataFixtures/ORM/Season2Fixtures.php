@@ -110,8 +110,7 @@ class Season2Fixtures implements FixtureInterface, ContainerAwareInterface
                 'team' => 'w'
             )
         ));
-        $match = $this->createMatch(3, '12.08.2013 16:30', $round1, 'edi', 'bn');
-        $match = $this->createMatch(4, '08.08.2013 16:30', $round1, 'sd', '-2', array(
+        $match = $this->createMatch(3, '08.08.2013 16:30', $round1, 'sd', '-2', array(
             'DM-Tempest' => array(
                 'team_results' => array('sd' => 37, '-2' => 36),
                 'player_results' => array(
@@ -137,20 +136,21 @@ class Season2Fixtures implements FixtureInterface, ContainerAwareInterface
                 'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-08-08-sd-2-grinder.jpeg',
             )
         ));
-        $match = $this->createMatch(5, '13.08.2013 16:30', $round1, 'tsm', 'bn');
-        $match = $this->createMatch(6, '15.08.2013 16:30', $round1, 'w', '-2');
+        $match = $this->createMatch(4, '13.08.2013 16:30', $round1, 'tsm', 'bn');
+        $match = $this->createMatch(5, '20.08.2013 16:30', $round1, 'edi', 'bn');
+        $match = $this->createMatch(6, '22.08.2013 16:30', $round1, 'w', '-2');
 
         $round2 = new Round();
         $round2->setNumber(2);
         $round2->setSeason($season);
         $manager->persist($round2);
 
-        $match = $this->createMatch(1, '20.08.2013 16:30', $round2, 'tsm', 'edi');
-        $match = $this->createMatch(2, '22.08.2013 16:30', $round2, 'w', 'sd');
-        $match = $this->createMatch(3, '27.08.2013 16:30', $round2, 'bn', 'edi');
-        $match = $this->createMatch(4, '29.08.2013 16:30', $round2, '-2', 'sd');
-        $match = $this->createMatch(5, '03.09.2013 16:30', $round2, 'bn', 'tsm');
-        $match = $this->createMatch(6, '05.09.2013 16:30', $round2, '-2', 'w');
+        $match = $this->createMatch(1, '27.08.2013 16:30', $round2, 'tsm', 'edi');
+        $match = $this->createMatch(2, '29.08.2013 16:30', $round2, 'w', 'sd');
+        $match = $this->createMatch(3, '03.09.2013 16:30', $round2, 'bn', 'edi');
+        $match = $this->createMatch(4, '05.09.2013 16:30', $round2, '-2', 'sd');
+        $match = $this->createMatch(5, '10.09.2013 16:30', $round2, 'bn', 'tsm');
+        $match = $this->createMatch(6, '12.09.2013 16:30', $round2, '-2', 'w');
 
         $manager->flush();
     }
