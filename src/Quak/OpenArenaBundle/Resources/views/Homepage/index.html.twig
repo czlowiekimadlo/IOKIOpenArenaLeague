@@ -34,10 +34,10 @@
         {% for clash in lastMatch.clashes %}
             <h3 class="mapname">{{ clash.map.name }}</h3>
             {% if clash.clashResults.count > 0 %}
-                <p class="teamname">{{ clash.clashResults[0].team.name }}</p>
+                <p class="teamname">{{ clash.clashResults[0].team.nameTrim }}</p>
                 <p class="result">{{ clash.clashResults[0].score }}</p>
                 <p class="result">{{ clash.clashResults[1].score }}</p>
-                <p class="teamname">{{ clash.clashResults[1].team.name }}</p>
+                <p class="teamname">{{ clash.clashResults[1].team.nameTrim }}</p>
                 <div class="clearfix"></div>
             {% endif %}
         {% endfor %}

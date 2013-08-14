@@ -95,6 +95,14 @@ class Team
     {
         return $this->name;
     }
+    public function getNameTrim()
+    {
+        if (strlen($this->name) > 14) {
+            return substr($this->name, 0, 14) . "...";
+        }
+
+        return $this->name;
+    }
 
     public function setName($name)
     {

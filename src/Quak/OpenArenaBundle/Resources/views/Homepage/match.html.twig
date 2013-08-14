@@ -32,8 +32,8 @@
         <h1>
             <table>
                 <tr>
-                    <td>{{ match.teams[0].name }}</td>
-                    <td>{{ match.teams[1].name }}</td>
+                    <td>{{ match.teams[0].nameTrim }}</td>
+                    <td>{{ match.teams[1].nameTrim }}</td>
                 </tr>
                 <tr>
                     <td>{{ clash.getScoreForTeam(match.teams[0].id) }}</td>
@@ -46,15 +46,17 @@
             <h2><a href="{{ path('QuakOpenArenaBundle_player', { id : result.player.id }) }}">{{ result.player.name }}</a> {{ result.score }}
             </h2>
             <ul class="playerStats">
-                <li>Kills: {{ result.kills }}</li>
-                <li>Carrier Kills: {{ result.carrierKills }}</li>
-                <li>Flag Captures: {{ result.flagCaptures }}</li>
-                <li>Flag Pickups: {{ result.flagPickups }}</li>
-                <li>Flag Returns: {{ result.flagReturns }}</li>
-                <li>Sprees: {{ result.sprees }}</li>
+                <li>Kills : {{ result.kills }}</li>
+                {% if match.round.season.ctf %}
+                <li>Carrier Kills : {{ result.carrierKills }}</li>
+                <li>Flag Captures : {{ result.flagCaptures }}</li>
+                <li>Flag Pickups : {{ result.flagPickups }}</li>
+                <li>Flag Returns : {{ result.flagReturns }}</li>
+                {% endif %}
+                <li>Sprees : {{ result.sprees }}</li>
                 {% for weaponResult in result.weaponResults %}
                 {% if weaponResult.score > 0 %}
-                <li>{{ weaponResult.weapon.name }}: {{ weaponResult.score }}</li>
+                <li>{{ weaponResult.weapon.name }} : {{ weaponResult.score }}</li>
                 {% endif %}
                 {% endfor %}
             </ul>
@@ -65,15 +67,17 @@
             <h2>{{ result.score }} <a href="{{ path('QuakOpenArenaBundle_player', { id : result.player.id }) }}">{{ result.player.name }}</a>
             </h2>
             <ul class="playerStats">
-                <li>Kills: {{ result.kills }}</li>
-                <li>Carrier Kills: {{ result.carrierKills }}</li>
-                <li>Flag Captures: {{ result.flagCaptures }}</li>
-                <li>Flag Pickups: {{ result.flagPickups }}</li>
-                <li>Flag Returns: {{ result.flagReturns }}</li>
-                <li>Sprees: {{ result.sprees }}</li>
+                <li>{{ result.kills }} : Kills</li>
+                {% if match.round.season.ctf %}
+                <li>{{ result.carrierKills }} : Carrier Kills</li>
+                <li>{{ result.flagCaptures }} : Flag Captures</li>
+                <li>{{ result.flagPickups }} : Flag Pickups</li>
+                <li>{{ result.flagReturns }} : Flag Returns</li>
+                {% endif %}
+                <li>{{ result.sprees }} : Sprees</li>
                 {% for weaponResult in result.weaponResults %}
                 {% if weaponResult.score > 0 %}
-                <li>{{ weaponResult.weapon.name }}: {{ weaponResult.score }}</li>
+                <li>{{ weaponResult.score }} : {{ weaponResult.weapon.name }}</li>
                 {% endif %}
                 {% endfor %}
             </ul>

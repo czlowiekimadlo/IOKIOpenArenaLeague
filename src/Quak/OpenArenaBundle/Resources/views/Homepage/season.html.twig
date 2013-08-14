@@ -23,17 +23,17 @@
         </form>
 		<ol id="teamsScore">
 		{% for team in season.getTopTeams() %}
-			<li><a href="{{ path('QuakOpenArenaBundle_team', { id: team.id }) }}">{{ team.name }}</a> ({{ team.getScore() }})</li>
+			<li><a href="{{ path('QuakOpenArenaBundle_team', { id: team.id }) }}">{{ team.nameTrim }}</a> ({{ team.getScore() }})</li>
 		{% endfor %}
 		</ol>
         <ol id="teamsAverageScore">
         {% for team in season.getTopTeams('getAverageScore') %}
-            <li><a href="{{ path('QuakOpenArenaBundle_team', { id: team.id }) }}">{{ team.name }}</a> ({{ team.getAverageScore() }})</li>
+            <li><a href="{{ path('QuakOpenArenaBundle_team', { id: team.id }) }}">{{ team.nameTrim }}</a> ({{ team.getAverageScore() }})</li>
         {% endfor %}
         </ol>
         <ol id="teamsTotalScore">
         {% for team in season.getTopTeams('getTotalScore') %}
-            <li><a href="{{ path('QuakOpenArenaBundle_team', { id: team.id }) }}">{{ team.name }}</a> ({{ team.getTotalScore() }})</li>
+            <li><a href="{{ path('QuakOpenArenaBundle_team', { id: team.id }) }}">{{ team.nameTrim }}</a> ({{ team.getTotalScore() }})</li>
         {% endfor %}
         </ol>
 	</div>
