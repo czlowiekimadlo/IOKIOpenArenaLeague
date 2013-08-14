@@ -137,7 +137,32 @@ class Season2Fixtures implements FixtureInterface, ContainerAwareInterface
                 'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-08-08-sd-2-grinder.jpeg',
             )
         ));
-        $match = $this->createMatch(4, '13.08.2013 16:30', $round1, 'tsm', 'bn');
+        $match = $this->createMatch(4, '13.08.2013 16:30', $round1, 'tsm', 'bn', array(
+            'DM-Grinder' => array(
+                'team_results' => array('tsm' => 43, 'bn' => 57),
+                'player_results' => array(
+                    'tnebes' => 20,
+                    'akucyrka' => 14,
+                    'aadamczewski' => 9,
+                    'kpiwowarczyk' => 20,
+                    'spawlowski' => 19,
+                    'mmucha' => 18,
+                ),
+                'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-08-13-tsm-bn-grinder.jpeg',
+            ),
+            'DM-Deck16][' => array(
+                'team_results' => array('tsm' => 35, 'bn' => 54),
+                'player_results' => array(
+                    'tnebes' => 19,
+                    'akucyrka' => 10,
+                    'aadamczewski' => 6,
+                    'kpiwowarczyk' => 32,
+                    'spawlowski' => 15,
+                    'mmucha' => 7,
+                ),
+                'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-08-13-tsm-bn-deck.jpg',
+            )
+        ));
         $match = $this->createMatch(5, '20.08.2013 16:30', $round1, 'edi', 'bn');
         $match = $this->createMatch(6, '22.08.2013 16:30', $round1, 'w', '-2');
 
@@ -284,7 +309,7 @@ class Season2Fixtures implements FixtureInterface, ContainerAwareInterface
         $scores = array(
             'edi' => 0,
             'tsm' => 3,
-            'bn'  => 0,
+            'bn'  => 3,
             'sd'  => 6,
             'w'   => 0,
             '-2'  => 0,
