@@ -163,17 +163,46 @@ class Season2Fixtures implements FixtureInterface, ContainerAwareInterface
                 'screen' => 'http://dev112.ioki.com.pl/~wchojnacki/openarena/league/2013-08-13-tsm-bn-grinder.jpeg',
             ),
         ));
-        $match = $this->createMatch(5, '20.08.2013 16:30', $round1, 'edi', 'bn');
-        $match = $this->createMatch(6, '22.08.2013 16:30', $round1, 'w', '-2');
+        $match = $this->createMatch(5, '20.08.2013 16:30', $round1, 'edi', 'bn', array(
+            'DM-Deck16][' => array(
+                'team_results' => array('edi' => 0, 'bn' => 1),
+            ),
+            'DM-Grinder' => array(
+                'team_results' => array('edi' => 0, 'bn' => 1),
+            ),
+        ), true);
+        $match = $this->createMatch(6, '22.08.2013 16:30', $round1, 'w', '-2', array(
+            'DM-Stalwart' => array(),
+            'DM-Deck16][' => array(),
+        ), false, array(
+            array(
+                'player' => 'ssadlo',
+                'team' => 'w'
+            )
+        ));
 
         $round2 = new Round();
         $round2->setNumber(2);
         $round2->setSeason($season);
         $manager->persist($round2);
 
-        $match = $this->createMatch(1, '27.08.2013 16:30', $round2, 'tsm', 'edi');
+        $match = $this->createMatch(1, '27.08.2013 16:30', $round2, 'tsm', 'edi', array(
+            'DM-Deck16][' => array(
+                'team_results' => array('tsm' => 1, 'edi' => 0),
+            ),
+            'DM-Grinder' => array(
+                'team_results' => array('tsm' => 1, 'edi' => 0),
+            ),
+        ), true);
         $match = $this->createMatch(2, '29.08.2013 16:30', $round2, 'w', 'sd');
-        $match = $this->createMatch(3, '03.09.2013 16:30', $round2, 'bn', 'edi');
+        $match = $this->createMatch(3, '03.09.2013 16:30', $round2, 'bn', 'edi', array(
+            'DM-Deck16][' => array(
+                'team_results' => array('bn' => 1, 'edi' => 0),
+            ),
+            'DM-Grinder' => array(
+                'team_results' => array('bn' => 1, 'edi' => 0),
+            ),
+        ), true);
         $match = $this->createMatch(4, '05.09.2013 16:30', $round2, '-2', 'sd');
         $match = $this->createMatch(5, '10.09.2013 16:30', $round2, 'bn', 'tsm');
         $match = $this->createMatch(6, '12.09.2013 16:30', $round2, '-2', 'w');
@@ -308,8 +337,8 @@ class Season2Fixtures implements FixtureInterface, ContainerAwareInterface
 
         $scores = array(
             'edi' => 0,
-            'tsm' => 3,
-            'bn'  => 3,
+            'tsm' => 6,
+            'bn'  => 9,
             'sd'  => 6,
             'w'   => 0,
             '-2'  => 0,
